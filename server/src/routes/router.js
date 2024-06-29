@@ -1,8 +1,8 @@
 import {Router} from "express";
 
 import userRouter from "./userRouter.js";
-import seniorFriendlyRouter from "./seniorFriendlyRouter.js";
-import silverFriendlyRouter from "./silverFriendlyRouter.js";
+import packRouter from "./packRouter.js";
+import moduloRouter from "./modulosRouter.js";
 
 import authRouter from "./authRouter.js";
 
@@ -14,10 +14,10 @@ const router  =  Router();
 router.get("/",(req,res)=>{
     res.json({data:"Hola API"});
 })
-// router.use("/users",isAuthenticated,userRouter); Para uso desde el front
+router.use("/users",isAuthenticated,userRouter); //Para uso desde el front
 router.use("/users",userRouter);
-router.use("/seniorFriendly",seniorFriendlyRouter);
-router.use("/silverFriendly",silverFriendlyRouter);
+router.use("/packs",packRouter);
+router.use("/modulos",moduloRouter);
 
 
 router.use("/",authRouter);

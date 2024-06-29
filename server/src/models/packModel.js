@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const seniorFriendlySchema = new mongoose.Schema({
+const packSchema = new mongoose.Schema({
     packName: {
         type:String,
         required:true
@@ -8,14 +8,16 @@ const seniorFriendlySchema = new mongoose.Schema({
     description: {
         type:String,
     },
-    include: String,
+    include: {
+        type:String,
+    },
     deliverables: String,
-    user: {
+    seniorFriendly: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "users"
     }
 })
 
-const seniorFriendlyModel = mongoose.model("seniorFriendly",seniorFriendlySchema);
+const packModel = mongoose.model("packs",packSchema);
 
-export default seniorFriendlyModel;
+export default packModel;
