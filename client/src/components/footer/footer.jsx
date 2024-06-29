@@ -10,6 +10,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
+
         <div className='footer-icons'>
           <a href="https://www.instagram.com" className='icon-link' target='_blank' rel='noopener noreferrer'>
             <FontAwesomeIcon icon={faInstagram} size="2x" className="footer-icon" />
@@ -24,6 +25,12 @@ const Footer = () => {
             <FontAwesomeIcon icon={faWhatsapp} size='2x' className='footer-icon' />
           </a>
         </div>
+
+        <div className='footer-logo'>
+          <img src="./seniority_logoblanco_sinfondo_uso_en_fondo_oscuro.png" alt="logo" />
+        </div>
+
+        <p className="footer-text">Copyright © 2023 | Seniority AI, S.L. Todos los derechos reservados.</p>
       </div>
     </footer>
   );

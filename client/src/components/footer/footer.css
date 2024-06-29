@@ -47,3 +47,18 @@ html, body {
   .footer-icon {
     font-size: 2rem;
   }
+
+  .footer-logo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-logo img {
+    width: 350px;
+    height: 150px;
+  }
+
+  .footer-text {
+    font-size: 0.8rem;
+    margin-top: 10px;
+  }
