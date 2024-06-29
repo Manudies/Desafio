@@ -1,0 +1,68 @@
+[
+    {
+        "phaseName": "Fase 0: Discovering",
+        "description": "Identificación de problemas reales en la Silver Economy, análisis profundo del sector, y generación de ideas de negocio mediante Design Thinking.",
+        "objetive": "Detectar desafíos para diseñar soluciones sostenibles y escalables.",
+        "duration": 2
+    },
+    {
+        "phaseName": "Fase 1: Mindset 1",
+        "description": "Comprensión de los principios de la Silver Economy y su aplicación en áreas críticas del proyecto.",
+        "objetive": "Integrar los principios de la Silver Economy en marketing, UI/UX y modelo de negocio.",
+        "duration": 6
+    },
+    {
+        "phaseName": "Fase 2: Mindset 2",
+        "description": "Validación de la idea de negocio específica dentro de la Silver Economy.",
+        "objetive": "Alcanzar un fit claro y demostrable entre problema y solución.",
+        "duration": 6
+    },
+    {
+        "phaseName": "Fase 3: Potential 3",
+        "description": "Desarrollo y evaluación de un prototipo o diseño visual del MVP.",
+        "objetive": "Crear un prototipo tangible y validarlo con usuarios.",
+        "duration": 8
+    },
+    {
+        "phaseName": "Fase 4: Potential 4",
+        "description": "Desarrollo del MVP funcional y su validación en el mercado.",
+        "objetive": "Alcanzar un ajuste efectivo entre producto y problema.",
+        "duration": 12
+    },
+    {
+        "phaseName": "Fase 5: Scalability 5",
+        "description": "Desarrollo y validación de un modelo de negocio alrededor del MVP funcional.",
+        "objetive": "Asegurar la viabilidad económica del producto.",
+        "duration": 4
+    },
+    {
+        "phaseName": "Fase 6: Scalability 6",
+        "description": "Refinamiento y mejora del modelo de negocio para maximizar su éxito.",
+        "objetive": "Optimizar el modelo de negocio para escalabilidad futura.",
+        "duration": 4
+    },
+    {
+        "phaseName": "Fase 7: Scalability 7",
+        "description": "Desarrollo de una estrategia comercial y de branding completa.",
+        "objetive": "Fortalecer la presencia del producto en el mercado.",
+        "duration": 4
+    },
+    {
+        "phaseName": "Fase 8: Performance 8",
+        "description": "Expansión y optimización del negocio a nivel internacional.",
+        "objetive": "Validar hipótesis de escalabilidad en nuevos mercados.",
+        "duration": 1
+    },
+    {
+        "phaseName": "Fase 9: Performance 9",
+        "description": "Consolidación y expansión basada en los aprendizajes adquiridos.",
+        "objetive": "Implementar mejoras para optimizar el crecimiento y la eficacia.",
+        "duration": 1
+    },
+    {
+        "phaseName": "Fase 10: Exit 10",
+        "description": "Desarrollo de plan estratégico que define el futuro de la empresa. Las opciones de salida pueden incluir la venta a una corporación más grande, la recaudación de fondos adicionales para una expansión independiente u otra opción viable.",
+        "objetive": "Facilitar una transición exitosa ya sea a través de la venta de la empresa, la recaudación de fondos adicionales, o cualquier otro objetivo final.",
+        "duration": 1
+    }
+]

@@ -1,0 +1,41 @@
+[
+    {
+        "packName": "Pack 1: Descubrimiento y Estrategia",
+        "description": "Este es tu pack si buscas entender profundamente a tus usuarios senior y diseñar productos digitales accesibles y efectivos.",
+        "include": {
+            "Uno": "Investigación de usuarios: Entrevistas, encuestas, grupos focales específicamente con usuarios senior para entender sus necesidades reales, comportamientos y modelos mentales.",
+            "Dos": "Evaluación de accesibilidad: Auditoría de accesibilidad de productos existentes para identificar áreas de mejora, ayudar a cumplir la normativa y optimizar el producto digital para todas las personas usuarias.",
+            "Tres": "Personas y escenarios: Creación de perfiles y situaciones de uso que representan a los usuarios mayores, basándonos en datos reales y en cómo se comportan realmente.",
+            "Cuatro": "Mapas de experiencia: Desarrollo de mapas de experiencia para visualizar las interacciones de los usuarios con el producto.",
+            "Cinco": "Objetivos de negocio: Alineación de los objetivos de negocio con las necesidades de las personas usuarias para asegurar que las estrategias de UX también contribuyan al éxito comercial del producto."
+        },
+        "deliverables": "Informe de la investigación, Informe de la auditoría de accesibilidad, Mapa de empatía de las personas senior, Mapa de flujo de la experiencia con el producto y un plan de acción estratégico."
+    },
+    {
+        "packName": "Pack 2: Diseño y Prototipado",
+        "description": "Este es tu pack si quieres diseñar productos digitales irresistibles y accesibles, perfeccionados con feedback real de usuarios senior.",
+        "include": {
+            "Uno": "Diseño de la arquitectura de la información e interacción accesibles: Desarrollo de la estructura de información comprensible y definición de patrones de interacción intuitivos para todas las personas.",
+            "Dos": "Prototipos de alta fidelidad: Desarrollo de versiones finales del diseño incorporando las consideraciones de accesibilidad según la normativa vigente para validar la usabilidad con personas senior.",
+            "Tres": "Pruebas de usabilidad con el prototipo de alta fidelidad: Realización de pruebas de usabilidad en las que personas mayores interactúan con el diseño para evaluar su facilidad de uso y comprensión.",
+            "Cuatro": "Iteraciones de diseño: Ajustes y mejoras en los prototipos basados en el feedback de las pruebas de usabilidad."
+        },
+        "deliverables": "Prototipo de baja fidelidad, prototipo de alta fidelidad, UI Kit y documentación básica, Informe de resultados de las pruebas de usabilidad y Modificaciones sobre el diseño según el informe de resultados de las pruebas."
+    },
+    {
+        "packName": "Pack 3: Lanzamiento y Optimización continua",
+        "description": "Este es tu pack si deseas un lanzamiento impecable y mejoras continuas basadas en feedback real de tus usuarios senior.",
+        "include": {
+            "Uno": "Lanzamiento: Despliegue del producto con soporte inicial para resolver cualquier problema que pueda surgir.",
+            "Dos": "Revisiones de accesibilidad del desarrollo: Verificación continua durante el desarrollo para asegurar que se mantengan las consideraciones de accesibilidad.",
+            "Tres": "Monitorización y feedback: Seguimiento del uso del producto y recolección de feedback continuo de usuarios senior."
+        },
+        "deliverables": "Plan de lanzamiento, Informe de accesibilidad para desarrollo, Informes de monitorización y feedback y Plan de medición y evaluación de resultados."
+    },
+    {
+        "packName": "Pack Usable y accesible",
+        "description": "Realizamos una auditoría de accesibilidad y usabilidad del producto para identificar áreas de mejora y ayudar a cumplir la normativa ofreciendo un soporte personalizado.",
+        "include": "",
+        "deliverables": "Informe de accesibilidad y acompañamiento para mejorar el producto."
+    }
+]
