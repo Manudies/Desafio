@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const silverEconomySchema = new mongoose.Schema({
+const moduloSchema = new mongoose.Schema({
     phaseName: {
         type:String,
         required:true
@@ -8,12 +8,12 @@ const silverEconomySchema = new mongoose.Schema({
     description: String,
     objetive: String,
     duration: Number,
-    user: {
+    silverEconomy: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "users"
     }
 })
 
-const silverEconomyModel = mongoose.model("silverEconomy",silverEconomySchema);
+const moduloModel = mongoose.model("modulos",moduloSchema);
 
-export default silverEconomyModel;
+export default moduloModel;
