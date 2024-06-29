@@ -1,19 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Textbox from './components/textbox/Textbox'
+import { useState , useEffect } from "react";
+import { RouterProvider } from "react-router-dom";
+import router from "./router";
+import UserContext from "./context/userContext";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [loadingUser, setLoadingUser] = useState(true);
+  const [user, setUser] = useState(null);
+      useEffect(() => {
+        handlefetchUserData()
+    }, [])
+
+  async function handlefetchUserData() {
+    const result = await fetchUserData();
+    setLoadingUser(false);
+    console.log("user",result)
+    if (result.error) {
+      return null;
+    }
+    setUser(result.data); 
+  }
+  const logOut = () => {
+    deleteToken()
+    setUser(null)
+
+  }
 
   return (
     <>
       <div>
-        <Textbox/>
+        <UserContext.Provider
+          value={{ user, handlefetchUserData, logOut, loadingUser }}
+        >
+          <RouterProvider router={router} />
+        </UserContext.Provider>
       </div>
     </>
   );
-};
+}
 
-export default App
+export default App;
