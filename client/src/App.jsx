@@ -2,6 +2,7 @@ import { useState , useEffect } from "react";
 import { RouterProvider } from "react-router-dom";
 import router from "./router";
 import UserContext from "./context/userContext";
+import {fetchUserData} from "./utils/fetch"
 import "./App.css";
 
 function App() {
