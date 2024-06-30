@@ -2,6 +2,7 @@ import { useState , useContext} from "react";
 import { register, login } from "../../utils/fetch";
 import { saveToken } from "../../utils/local";
 import { useNavigate } from "react-router-dom";
+import ActionButton from "../../components/actionButton/actionButton";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faUser, faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import UserContext from "../../context/userContext";
@@ -83,9 +84,11 @@ const Register = ({}) => {
                         <input name="passwordRepeat" type="password" placeholder="Repeat Password" value={userData.passwordRepeat} onChange={handleUserData} />
                     </div>
                 }
-                <button>{isRegister ? "Register" : "Login"}</button>
+                <ActionButton label={isRegister ? "Register" : "Login"} />
+                {/* <button>{isRegister ? "Register" : "Login"}</button> */}
             </form>
-            <button onClick={() => setIsRegister(register => !register)}>{isRegister ? "Go to Login" : "Go to Register"}</button>
+            <ActionButton onClick={() => setIsRegister(register => !register)} label={isRegister ? "Go to Login" : "Go to Register"} />
+            {/* <button onClick={() => setIsRegister(register => !register)}>{isRegister ? "Go to Login" : "Go to Register"}</button> */}
         </section>
     );
 };
