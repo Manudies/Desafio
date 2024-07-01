@@ -5,6 +5,7 @@ import UserContext from "./context/userContext";
 import {fetchUserData} from "./utils/fetch"
 import "./App.css";
 import Navbar from "./components/navbar/navbar";
+import Footer from "./components/footer/footer";
 
 function App() {
   const [loadingUser, setLoadingUser] = useState(true);
@@ -38,6 +39,7 @@ function App() {
           <RouterProvider router={router} />
         </UserContext.Provider>
       </div>
+      <Footer/>
     </>
   );
 }
