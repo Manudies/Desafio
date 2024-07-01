@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import './textarea.css';
 
 const Textarea = ({ label, rows, cols, placeholder, value, onChange }) => {
   return (
