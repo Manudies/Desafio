@@ -4,6 +4,7 @@ import router from "./router";
 import UserContext from "./context/userContext";
 import {fetchUserData} from "./utils/fetch"
 import "./App.css";
+import Navbar from "./components/navbar/navbar";
 
 function App() {
   const [loadingUser, setLoadingUser] = useState(true);
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <>
+    <Navbar/>
       <div>
         <UserContext.Provider
           value={{ user, handlefetchUserData, logOut, loadingUser }}
