@@ -10,16 +10,28 @@ const Navbar = () => {
         </a>
         <ul className="navbar-menu">
           <li className="navbar-item">
-            <a href="#home" className="navbar-link">Home</a>
+            <a href="#home" className="navbar-link">Inicio</a>
           </li>
           <li className="navbar-item">
-            <a href="#about" className="navbar-link">About</a>
+            <a href="#about" className="navbar-link">Consultoria</a>
           </li>
           <li className="navbar-item">
-            <a href="#services" className="navbar-link">Services</a>
+            <a href="#services" className="navbar-link">Formacion</a>
           </li>
           <li className="navbar-item">
-            <a href="#contact" className="navbar-link">Contact</a>
+            <a href="#contact" className="navbar-link">Plataforma de reservas</a>
+          </li>
+          <li className="navbar-item">
+            <a href="#contact" className="navbar-link">Sobre Seniority</a>
+          </li>
+          <li className="navbar-item">
+            <a href="#contact" className="navbar-link">Blog</a>
+          </li>
+          <li className="navbar-item">
+            <button className='contact-button'>CONTACTA</button>
+          </li>
+          <li className="navbar-item">
+            <button className='register-button'>Registrar</button>
           </li>
         </ul>
       </div>
