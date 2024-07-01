@@ -48,7 +48,7 @@ const create = async(req,res)=>{
 }
 
 const updateUser = async(req,res)=>{
-    console.log ("body",req.body)
+    // console.log ("body",req.body)
     const id =req.params.id;
     const user = await userController.updateUser(id,req.body);
     res.json({data:user})
@@ -64,8 +64,8 @@ const addTrip = async(req,res)=>{
     const userId = req.params.id;
     const tripId = req.body.tripId;
     const loggedUser = req.user;
-    console.log("userId", userId)
-    console.log("usuario logueado", loggedUser._id)
+    // console.log("userId", userId)
+    // console.log("usuario logueado", loggedUser._id)
     if(loggedUser._id.equals(userId) || loggedUser.role === "admin"){
         const user = await userController.addTrip(userId,tripId);
         res.json({data:user})

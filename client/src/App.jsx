@@ -17,7 +17,7 @@ function App() {
   async function handlefetchUserData() {
     const result = await fetchUserData();
     setLoadingUser(false);
-    console.log("user",result)
+    // console.log("user",result)
     if (result.error) {
       return null;
     }

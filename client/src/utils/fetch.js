@@ -82,7 +82,7 @@ const removeUser = async(userId)=>{
     return result;
 }
 const updateUser = async(userId,userData)=>{
-    console.log("estmps asfsaf")
+    // console.log("estmps asfsaf")
     const result = await fetchData("/users/"+userId,"put",userData);
     return result;
 }

@@ -48,7 +48,7 @@ const Register = ({}) => {
         } else {
             result = await login(userData);
             if (!result.error) {
-                console.log("token", result);
+                // console.log("token", result);
                 setError("login correct");
                 saveToken(result.token);
                 handlefetchUserData();

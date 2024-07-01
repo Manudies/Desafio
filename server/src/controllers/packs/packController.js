@@ -34,8 +34,8 @@ const update = async (id, data) => {
 }
 const getByProperty = async (property, value) => {
     try { 
-        console.log("property",property)
-        console.log("value",value)
+        // console.log("property",property)
+        // console.log("value",value)
         const pack = await packModel.find({ [property]: value })
         return pack;
     } catch (error) {

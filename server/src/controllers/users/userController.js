@@ -67,16 +67,16 @@ const login = async(data) =>{
             const users = await getByProperty("username",username,true);
             user = users[0];
         }
-        console.log("usurio",user);
+        // console.log("usurio",user);
         if(!user){
             return {error:"No existe el usurio",status:400};
         }
-        console.log("contraseña",password,user.password);
+        // console.log("contraseña",password,user.password);
         const isPasswordCorrect = await bcrypt.compare(password,user.password);
         if(!isPasswordCorrect){
             return {error:"Combinación de usuario y contraseña erroneos",status:400};
         }
-        console.log("login user",user)
+        // console.log("login user",user)
         const token = jwt.sign({_id:user._id,username:user.username,role:user.role},process.env.JWT_SECRET,{expiresIn: 60 * 60 * 24})
         const userData ={
             _id: user._id,
@@ -124,7 +124,7 @@ const updateUser = async(id,data) =>{
     try {
         const oldUser = await userModel.findByIdAndUpdate(id,data);
         const user = await userModel.findById(id, userRows);
-        console.log("usurio",user);
+        // console.log("usurio",user);
         return user;
     } catch (error) {
         console.error(error);
@@ -144,9 +144,9 @@ const removeUser = async(id) =>{
 //REVISAR CON DANEL
 const addTrip = async(userId,tripId)=>{
     try {
-        console.log("add trip",userId)
+        // console.log("add trip",userId)
         const user = await getById(userId);
-        console.log("users",tripId);
+        // console.log("users",tripId);
         if(!user.trips.includes(tripId)){
             user.trips.push(tripId);
             await user.save();
@@ -159,7 +159,7 @@ const addTrip = async(userId,tripId)=>{
     }
 }
 const removeTrip = async(userId,tripId)=>{
-    console.log("remove trip",userId,tripId)
+    // console.log("remove trip",userId,tripId)
     if(!userId || !tripId){
         return {error:"faltan datos"};
     }
