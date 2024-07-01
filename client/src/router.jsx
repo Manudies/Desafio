@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/textbox",
-        element: <Textbox />,
+        element: <Textbox  label="Email" error={"error"} placeholder={"placeholder"}/>,
       },
       {
         path: "/register",
