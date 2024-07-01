@@ -31,6 +31,7 @@ body {
 .logo-image {
   height: 200px;
   width: auto;
+  margin-left: -50px;
 }
 
 .navbar-menu {
@@ -42,16 +43,55 @@ body {
 
 .navbar-item {
   margin-left: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .navbar-link {
-  color: #050E3C;
+  color: #000;
   text-decoration: none;
   font-size: 18px;
+  display: inline-block;
+}
+
+.navbar-link:after {
+  content: '';
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: black;
+  transition: 300ms;
+}
+
+.navbar-link:hover:after {
+  width: 100%;
 }
 
 .navbar-link:hover {
-  color: #a9a9a9;
+  color: #000;
+}
+
+.navbar-item button {
+  margin-right: 5px;
+  height: 40px;
+  width: auto;
+  border-radius: 20px;
+}
+
+.navbar-item button:hover {
+  border-color: #000;
+  background-color: #fff;
+  color: #000;
+}
+
+.contact-button {
+  font-size: 14px;
+  margin-left: 24px;
+}
+
+.register-button {
+  font-size: 16px;
+  margin-left: -10px;
 }
 
 @media screen and (max-width: 768px) {
