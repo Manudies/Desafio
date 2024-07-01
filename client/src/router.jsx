@@ -2,6 +2,7 @@ import { createBrowserRouter, redirect } from "react-router-dom";
 
 import Register from "./pages/register/Register";
 import Textbox from "./components/textbox/Textbox";
+import FormularioPack from "./components/formularioPack/formularioPack";
 import ErrorPage from "./pages/ErrorPage";
 
 import Root from "./pages/Root";
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/textbox",
         element: <Textbox />,
+      },
+      {
+        path: "/formularioPack",
+        element: <FormularioPack />,
       },
       {
         path: "/register",

@@ -1,0 +1,82 @@
+{
+    "questions": [
+      {
+        "question": "1.¿Cuál es el principal objetivo de tu proyecto?",
+        "answers": {
+          "a": "Entender mejor a mis usuarios",
+          "b": "Diseñar una interfaz atractiva y accesible",
+          "c": "Lanzar un producto impecable y asegurar mejoras continuas",
+          "d": "Mejorar la accesibilidad y usabilidad de un producto existente"
+        }
+      },
+      {
+        "question": "2.¿Cuál es el perfil principal de tus usuarios?",
+        "answers": {
+          "a": "Usuarios senior",
+          "b": "Usuarios con necesidades específicas de accesibilidad",
+          "c": "Usuarios variados sin necesidades específicas"
+        }
+      },
+      {
+        "question": "3.¿En qué etapa se encuentra tu proyecto?",
+        "answers": {
+          "a": "Inicio/Descubrimiento",
+          "b": "Diseño/Desarrollo",
+          "c": "Preparación para el lanzamiento",
+          "d": "Producto ya lanzado en uso"
+        }
+      },
+      {
+        "question": "4.¿Cuál es tu presupuesto aproximado para este proyecto?",
+        "answers": {
+          "a": "Bajo",
+          "b": "Medio",
+          "c": "Alto"
+        }
+      },
+      {
+        "question": "5.¿Qué tipo de entregables te interesan más?",
+        "answers": {
+          "a": "Informes detallados y estrategias",
+          "b": "Prototipos y documentación de diseño",
+          "c": "Planes de lanzamiento y evaluación continua",
+          "d": "Informes de auditoría y soporte personalizado"
+        }
+      },
+      {
+        "question": "6.¿Qué tan importante es para ti la accesibilidad en tu proyecto?",
+        "answers": {
+          "a": "Muy importante",
+          "b": "Moderadamente importante",
+          "c": "Poco importante",
+          "d": "No es una prioridad"
+        }
+      },
+      {
+        "question": "7.¿Qué nivel de soporte técnico esperas durante la implementación del proyecto?",
+        "answers": {
+          "a": "Soporte continuo y dedicado",
+          "b": "Soporte durante etapas críticas",
+          "c": "Soporte mínimo",
+          "d": "No necesito soporte"
+        }
+      },
+      {
+        "question": "8.¿Cuál es el tamaño de tu equipo de desarrollo?",
+        "answers": {
+          "a": "Pequeño (1-5 personas)",
+          "b": "Mediano (6-15 personas)",
+          "c": "Grande (más de 15 personas)"
+        }
+      },
+      {
+        "question": "9.¿Tienes experiencia previa trabajando con principios de UX?",
+        "answers": {
+          "a": "Sí, amplia experiencia",
+          "b": "Sí, algo de experiencia",
+          "c": "No, poca o ninguna experiencia"
+        }
+      }
+    ]
+  }
+  
