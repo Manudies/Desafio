@@ -21,10 +21,8 @@ const Textbox = ({ label, placeholder, error }) => {
 
   return (
     <div className="textbox-container">
-      {/* <label className="textbox-label">{label}</label> */}
-      <label className="textbox-label">label</label>
-      {/* <input type="text" className={textboxClass} placeholder={placeholder} onFocus={handleFocus} onBlur={handleBlur}/> */}
-      <input type="text" className="textboxClass" placeholder="placeholder" onFocus={handleFocus} onBlur={handleBlur}/>
+      <label className="textbox-label">{label}</label>
+      <input type="text" className={textboxClass} placeholder={placeholder} onFocus={handleFocus} onBlur={handleBlur}/>
       {error && <span className="textbox-error-message">{error}</span>}
     </div>
   );
