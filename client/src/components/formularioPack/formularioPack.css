@@ -42,4 +42,12 @@
   .answers button:hover {
     background-color: #e0e0e0;
   }
-  
+  .selected {
+    border: 2px solid rgb(0, 0, 0); 
+  }
+  .warning {
+    color: red; /* Cambia el color según tus necesidades */
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
