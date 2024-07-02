@@ -10,9 +10,9 @@ const router  = Router();
 router.get("/",packApiController.getAll);
 router.get("/byproperty",packApiController.getByProperty);
 router.get("/:id",packApiController.getById);
-router.post("/",isAdmin,packApiController.create);
-router.put("/:id",isAdmin,packApiController.update);
-router.delete("/:id",isAdmin,packApiController.remove);
+router.post("/",packApiController.create);
+router.put("/:id",packApiController.update);
+router.delete("/:id",packApiController.remove);
 
 
 export default router;
