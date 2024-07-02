@@ -1,53 +1,81 @@
-.main-content {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .section-form {
-    text-align: center;
-  }
-  
-  .questionForm {
-    font-size: 1.5em;
-    margin-bottom: 1em;
-  }
-  
-  .answers-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .answers button {
-    background-color: #f0f0f0;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin: 5px 0;
-    cursor: pointer;
-    width: 200px;
-    text-align: left;
-    font-size: 1em;
-    display: flex;
-    align-items: center;
-    transition: background-color 0.3s;
-  }
-  
-  .answers button:hover {
-    background-color: #e0e0e0;
-  }
-  .selected {
-    border: 2px solid rgb(0, 0, 0); 
-  }
-  .warning {
-    color: red; /* Cambia el color según tus necesidades */
-    font-weight: bold;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
+.main-content-pack {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.section-form-pack  {
+  text-align: center;
+}
+
+.question-header-pack  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.questionForm-pack  {
+  font-size: 75px;
+  color: #07124b;
+  margin-bottom: 1em;
+  text-align: right;
+  margin: 0.5rem;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+
+
+}
+
+.answers-container-pack  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.answers-pack  button {
+  background-color: #f0f0f0;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px 0;
+  cursor: pointer;
+  width: 200px;
+  text-align: left;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.answers-pack  button:hover {
+  background-color: #e0e0e0;
+}
+
+.selected {
+  border: 2px solid rgb(0, 0, 0); 
+}
+
+.warning {
+  color: red; 
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.navigation-buttons-pack  {
+  margin-top: 1em;
+}
+.button-anterior{
+  background-color: #f0f0f0;
+  color:#000000;
+
+
+}
