@@ -1,7 +1,7 @@
 import userModel from "../../models/userModel.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-const userRows = {_id:1, username:1, email:1, role:1,trips:1};
+const userRows = {_id:1, username:1, email:1, role:1,packs:1};
 const getAll = async(query=null)=> {
     try {
         const filter = {};
@@ -142,31 +142,31 @@ const removeUser = async(id) =>{
     }
 }
 //REVISAR CON DANEL
-const addTrip = async(userId,tripId)=>{
+const addPack = async(userId,packId)=>{
     try {
         console.log("add trip",userId)
         const user = await getById(userId);
-        console.log("users",tripId);
-        if(!user.trips.includes(tripId)){
-            user.trips.push(tripId);
+        console.log("users",packId);
+        if(!user.packs.includes(packId)){
+            user.packs.push(packId);
             await user.save();
             return user;
         }
         return user;
     } catch (error) {
         console.error(error);
-        return {error:"no se ha podido añadir el trip"};
+        return {error:"no se ha podido añadir el pack"};
     }
 }
-const removeTrip = async(userId,tripId)=>{
-    console.log("remove trip",userId,tripId)
-    if(!userId || !tripId){
+const removePack = async(userId,packId)=>{
+    console.log("remove pack",userId,packId)
+    if(!userId || !packId){
         return {error:"faltan datos"};
     }
     try {
         const user = await getById(userId);
-        if(user.trips.some(trip => trip.toString() === tripId.toString())) {
-            user.trips = user.trips.filter(trip => trip.toString() !== tripId.toString());
+        if(user.packs.some(trip => trip.toString() === packId.toString())) {
+            user.packs = user.packs.filter(trip => trip.toString() !== packId.toString());
             await user.save();
             return user;
         }
@@ -174,7 +174,7 @@ const removeTrip = async(userId,tripId)=>{
         return user;
     } catch (error) {
         console.error(error);
-        return {error:"no se ha podido quitar el trip"};
+        return {error:"no se ha podido quitar el pack"};
     }
 }
 
@@ -188,8 +188,8 @@ export const functions = {
     register,
     updateUser,
     removeUser,
-    addTrip,
-    removeTrip
+    addPack,
+    removePack
 }
 
 export default functions;

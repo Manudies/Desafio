@@ -31,7 +31,7 @@ function App() {
 
   return (
     <>
-    <Navbar/>
+      <Navbar/>
       <div>
         <UserContext.Provider
           value={{ user, handlefetchUserData, logOut, loadingUser }}
