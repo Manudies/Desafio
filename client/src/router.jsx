@@ -4,9 +4,9 @@ import Register from "./pages/register/Register";
 import Textbox from "./components/textbox/Textbox";
 import ErrorPage from "./pages/ErrorPage";
 import Footer from "./components/footer/footer";
+import Home from "./pages/home/Home";
 
 import Root from "./pages/Root";
-import "./router.css";
 // import TripsList from "./pages/trips/tripList";
 // import TripsListAdmin from "./pages/trips/tripListAdmin";
 // import UserList from "./pages/User/UserList";
@@ -21,10 +21,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: 
-        <div>
-          <img className="fondo" src="../../public/Captura.png" alt="Foto de fondo" />
-        </div>,
+        element: <Home />,
       },
       {
         path: "/textbox",
