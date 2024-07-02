@@ -5,27 +5,31 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <a href="#" className="navbar-logo">
-          <img src="./Seniority_logoprincipal_sinfondo.png" className="logo-image" alt="logo" />
-        </a>
+        <div className="logo-wrapper">
+          
+            <img src="./seniority_logoprincipal_sinfondo.svg" className="logo-image" alt="logo" />
+            <a href="#" className="navbar-logo">
+            <div className="logo-overlay"></div>
+          </a>
+        </div>
         <ul className="navbar-menu">
           <li className="navbar-item">
-            <a href="#home" className="navbar-link">Inicio</a>
+            <a href="#inicio" className="navbar-link">Inicio</a>
           </li>
           <li className="navbar-item">
-            <a href="#about" className="navbar-link">Consultoria</a>
+            <a href="#consultoria" className="navbar-link">Consultoria</a>
           </li>
           <li className="navbar-item">
-            <a href="#services" className="navbar-link">Formacion</a>
+            <a href="#formacion" className="navbar-link">Formacion</a>
           </li>
           <li className="navbar-item">
-            <a href="#contact" className="navbar-link">Plataforma de reservas</a>
+            <a href="#reservas" className="navbar-link">Plataforma de reservas</a>
           </li>
           <li className="navbar-item">
-            <a href="#contact" className="navbar-link">Sobre Seniority</a>
+            <a href="#sobre" className="navbar-link">Sobre Seniority</a>
           </li>
           <li className="navbar-item">
-            <a href="#contact" className="navbar-link">Blog</a>
+            <a href="#blog" className="navbar-link">Blog</a>
           </li>
           <li className="navbar-item">
             <button className='contact-button'>CONTACTA</button>
