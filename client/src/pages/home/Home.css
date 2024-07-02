@@ -14,6 +14,15 @@ body, html {
     object-fit: cover;
     z-index: -1; /* Asegura que la imagen esté detrás de otros contenidos */
   }
+  .fondo2 {
+    position: absolute;
+    top: 680px;
+    left: 0;
+    width: 100vw;
+    height: 53%;
+    object-fit: cover;
+    z-index: 0; /* Asegura que la imagen esté detrás de otros contenidos */
+  }
   
   /* Media Query para dispositivos móviles */
   @media (max-width: 768px) {
@@ -22,5 +31,10 @@ body, html {
       width: 100%;
       height: auto;
     }
+    .fondo2 {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
   }
   

@@ -10,7 +10,11 @@ const home = () => {
         src="../../public/Captura.png"
         alt="Foto de fondo"
       />
-      <Footer />
+      <img 
+      className="fondo2" 
+      src="../../public/Captura2.png" 
+      alt="Foto de fondo" />
+      {/* <Footer /> */}
     </div>
   );
 };
