@@ -10,6 +10,8 @@ import FormularioPack from "./components/formularioPack/FormularioPack";
 import FormularioModulo from "./components/formularioModulos/formularioModulo";
 
 import PacksList from "./components/packs/PacksList";
+import Footer from "./components/footer/footer";
+import Home from "./pages/home/Home";
 
 import Root from "./pages/Root";
 
@@ -29,7 +31,7 @@ async function fetchPacks() {
   return result.data;
 }
 
-async function fetchTripsByProperty(packName) {
+async function fetchPacksByProperty(packName) {
   const result = await getByProperty(packName);
   if (result.error) {
     return redirect ("/register");
@@ -47,14 +49,32 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: 
-        <div>
-          <h1>Hola Silver</h1>
-        </div>,
+        element: <Home />,
       },
       {
         path: "/textbox",
-        element: <Textbox  label="Email" error={"error"} placeholder={"placeholder"}/>,
+        element: <>
+                  <Textbox  label="Email" error={"error"} placeholder={"placeholder"}/>
+                  <Footer/>
+        </>,
+      },
+      {
+        path: "/formularioPack",
+        element: <FormularioPack />,
+      },
+      {
+        path: "/formularioModulo",
+        element: <FormularioModulo />,
+      },
+      {
+        path: "/packs",
+        element: <PacksList />,
+        loader: () => fetchPacks(),
+      },
+      {
+        path: "/packs/:packName",
+        element: <PacksList />,
+        loader: ({ params }) => fetchPacksByProperty(params.packName),
       },
       {
         path: "/formularioPack",
