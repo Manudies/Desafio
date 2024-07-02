@@ -1,17 +1,42 @@
 import { createBrowserRouter, redirect } from "react-router-dom";
 
+import {getPacks, getUsers, getByProperty} from "./utils/fetch";
+
 import Register from "./pages/register/Register";
-import Textbox from "./components/textbox/Textbox";
-import FormularioPack from "./components/formularioPack/formularioPack";
-import FormularioModulo from "./components/formularioModulos/formularioModulo";
 import ErrorPage from "./pages/ErrorPage";
+
+import Textbox from "./components/textbox/Textbox";
+import FormularioPack from "./components/formularioPack/FormularioPack";
+import FormularioModulo from "./components/formularioModulos/formularioModulo";
+
+import PacksList from "./components/packs/PacksList";
 
 import Root from "./pages/Root";
 
-// import TripsList from "./pages/trips/tripList";
-// import TripsListAdmin from "./pages/trips/tripListAdmin";
-// import UserList from "./pages/User/UserList";
-// import Bienvenida from "./components/bienvenida/bienvenida";
+// async function fetchUsers() {
+//   const result = await getUsers();
+//   if (result.error) {
+//     return redirect ("/register");
+//   }
+//   return result.data;
+// }
+
+async function fetchPacks() {
+  const result = await getPacks();
+  if (result.error) {
+    return redirect ("/register");
+  }
+  return result.data;
+}
+
+async function fetchTripsByProperty(packName) {
+  const result = await getByProperty(packName);
+  if (result.error) {
+    return redirect ("/register");
+  }
+  return result.data;
+}
+
 
 const router = createBrowserRouter([
   {
@@ -38,6 +63,16 @@ const router = createBrowserRouter([
       {
         path: "/formularioModulo",
         element: <FormularioModulo />,
+      },
+      {
+        path: "/packs",
+        element: <PacksList />,
+        loader: () => fetchPacks(),
+      },
+      {
+        path: "/packs/:packName",
+        element: <PacksList />,
+        loader: ({ params }) => fetchTripsByProperty(params.packName),
       },
       {
         path: "/register",

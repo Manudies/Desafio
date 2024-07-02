@@ -8,14 +8,10 @@ const packSchema = new mongoose.Schema({
     description: {
         type:String,
     },
-    include: {
+    include: [{
         type:String,
-    },
-    deliverables: String,
-    seniorFriendly: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "users"
-    }
+    }],
+    deliverables: [{type:String,}],
 })
 
 const packModel = mongoose.model("packs",packSchema);
