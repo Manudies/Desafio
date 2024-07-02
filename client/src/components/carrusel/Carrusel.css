@@ -1,0 +1,81 @@
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #81827C;
+    color: #F8F3F2;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    margin: 0px auto 60px auto; 
+    position: relative;
+  }
+  
+  .carousel-slide {
+    text-align: center;
+    margin-bottom: 20px;
+    transition: transform 0.5s ease-in-out;
+
+  }
+  
+  
+  .carousel-slide h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .carousel-slide p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .carousel-dots .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+  }
+  
+  .carousel-dots .dot.active {
+    background-color: #223D3C;
+  }
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: rgba(184, 184, 184, 0.062);
+    color:#223D3C;
+    cursor: pointer;
+    transform: translateY(-50%);
+  }
+  .carousel-button.left {
+    left: 10px;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .carousel-button.right {
+    right: 10px;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  .carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
