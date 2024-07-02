@@ -1,5 +1,6 @@
 import "./Home.css";
 import Navbar from "../../components/navbar/navbar";
+import Footer from "../../components/footer/footer";
 const home = () => {
   return (
     <div>
@@ -9,6 +10,7 @@ const home = () => {
         src="../../public/Captura.png"
         alt="Foto de fondo"
       />
+      <Footer />
     </div>
   );
 };
