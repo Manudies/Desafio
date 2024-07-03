@@ -1,0 +1,62 @@
+  .noti{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-3xl);
+    padding: var(--padding-lg) var(--padding-xl);
+    box-sizing: border-box; 
+  }
+  
+  .hero {
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+    align-self: stretch;
+    background-color: var(--main);
+    color: black;
+    overflow: hidden;
+    flex-direction: row;
+    justify-content: center;
+    padding: var(--padding-lg) var(--padding-xl) var(--padding-mid)
+      var(--padding-2xl);
+    box-sizing: border-box;
+  }
+
+  .hero-content-parent {
+    width: 1185px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--gap-xl);
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+  }  
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: var(--padding-7xs) 0 0;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  .da-el-primer-container {
+    height: 13px;
+    position: relative;
+    line-height: 160%;
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  .aqui {
+    text-decoration: underline;
+  }
+  
+  .arrowleft-icon {
+    height: 25px;
+    width: 29px;
+    position: relative;
+  }
+
