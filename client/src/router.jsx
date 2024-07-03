@@ -14,6 +14,7 @@ import Timeline from "./components/timeLine/Timeline";
 import Footer from "./components/footer/footer";
 import Home from "./pages/home/Home";
 import Consultoria from "./pages/consultoria/Consultoria";
+import Contacto from "./pages/contacto/contacto";
 
 import Root from "./pages/Root";
 
@@ -116,6 +117,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register />,
+      },
+      {
+        path: "/contacto",
+        element: <Contacto />,
       }
     ],
 
