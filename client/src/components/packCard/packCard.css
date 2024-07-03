@@ -6,7 +6,8 @@
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 16px;
-  width: 300px; /* Ajusta el ancho según sea necesario */
+  width: 300px;
+  /* Ajusta el ancho según sea necesario */
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -25,7 +26,8 @@
   margin: 10px 0;
 }
 
-.card-include, .card-deliverables {
+.card-include,
+.card-deliverables {
   text-align: left;
   margin: 10px 0;
 }
@@ -54,4 +56,26 @@
 
 .none {
   display: none;
+}
+
+
+.packCompleto {
+  width: 100%;
+  height: 100%;
+
+}
+
+.card-include {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.contratar {
+  color: #fabada;
+
+  cursor: pointer;
+  width: 50%;
 }

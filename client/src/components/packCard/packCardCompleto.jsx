@@ -53,11 +53,11 @@ const TarjetaPack = ({ pack }) => {
 
 
     return (
-        <button className="pack-card">
+        <div className="packCompleto">
             {/* <img src={packData.image} alt={packData.packName} className="pack-card-image" /> */}
             <div className="pack-card-content">
                 <h2 className="card-title">{pack.packName}</h2>
-                <div>
+                <div className='card-body'>
                     <p className="card-description">{pack.description}</p>
                     <div className="card-include">
                         <p>Incluye:</p>
@@ -66,19 +66,21 @@ const TarjetaPack = ({ pack }) => {
                             <li key={index}>{item}</li>
                         ))}
                         </ul>
+                        <ActionButton label="Contratar" className={"contratar"} />
+
                     </div>
-                    <div className="card-deliverables">
+                    {/* <div className="card-deliverables">
                         <p>Entregables:</p>
                         <ul>
                             {pack.deliverables?.map((item, index) => (
                                 <li key={index}>{item}</li>
                             ))}
                         </ul>
-                    </div>
+                    </div> */}
                 </div>
             </div>
-            {/* <ActionButton label={isContratar ? "Cancelar" : "Solicitar más información"} onClick={handleContratar} className="pack-card-button" /> */}
-        </button>
+            {/* <Actiondiv label={isContratar ? "Cancelar" : "Solicitar más información"} onClick={handleContratar} className="pack-card-button" /> */}
+        </div>
     );
 };
 

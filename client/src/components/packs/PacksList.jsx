@@ -3,10 +3,11 @@ import { useLoaderData } from "react-router-dom"
 import PackCard from "../packCard/packCard";
 import PackCardCompleto from "../packCard/packCardCompleto";
 import "./packList.css";
+import ActionButton from "../actionButton/actionButton";
 
 const packList = () => {
     const packs = useLoaderData();
-    const [selectedPack, setSelectedPack] = useState(null);
+    const [selectedPack, setSelectedPack] = useState(packs[0]);
 
     console.log("packs",packs)
 
