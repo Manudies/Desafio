@@ -39,7 +39,7 @@ function App() {
           <RouterProvider router={router} />
         </UserContext.Provider>
       </div>
-      {/* <Footer/> */}
+      <Footer/>
     </>
   );
 }
