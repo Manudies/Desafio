@@ -12,6 +12,7 @@ import FormularioModulo from "./components/formularioModulos/formularioModulo";
 import PacksList from "./components/packs/PacksList";
 import Footer from "./components/footer/footer";
 import Home from "./pages/home/Home";
+import Consultoria from "./pages/consultoria/Consultoria";
 
 import Root from "./pages/Root";
 
@@ -52,11 +53,8 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/textbox",
-        element: <>
-                  <Textbox  label="Email" error={"error"} placeholder={"placeholder"}/>
-                  <Footer/>
-        </>,
+        path: "/consultoria",
+        element: <Consultoria />,
       },
       {
         path: "/formularioPack",
