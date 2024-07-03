@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import questions from './preguntasPack.js';
 import './formularioPack.css';
 import ActionButton from '../../components/actionButton/actionButton';
-
+import BarraProgreso from '../../components/barraProgreso/BarraProgreso';
+import '../../components/barraProgreso/BarraProgreso.css';
 
 const Main = () => {
   const [index, setIndex] = useState(0);
@@ -16,7 +17,7 @@ const Main = () => {
     if (index < questions.length - 1 && answers[index] !== undefined) {
       setIndex(index + 1);
       setShowWarning(false);
-    }else{
+    } else {
       setShowWarning(true);
     }
   };
@@ -42,45 +43,40 @@ const Main = () => {
     // Aquí puedes agregar lógica para enviar las respuestas, por ejemplo, a una API
   };
 
-  const handleAnswerRemove = (answer) => {
-    const newAnswers = [];
-    setAnswers(newAnswers);
+  const handleAnswerRemove = () => {
+    setAnswers([]);
   };
 
   return (
-    <main className="main-content">
-      <section className="section-form">
-        <div className='questionForm'>{formulario.question}</div>
+    <main className="main-content-pack ">
+      <div className='question-header-pack '>
+        <ActionButton label="← Atras" onClick={handlePrev} disabled={index === 0} className="button-anterior" />
+        <BarraProgreso className="progress-bar-pack " currentQuestion={index + 1} totalQuestions={questions.length} />
+      </div>
+
+      <section className="section-form-pack ">
+        <div className='questionForm-pack '>{formulario.question}</div>
         {showWarning && <div className="warning">Por favor, responde todas las preguntas</div>}
-        <div className='answers-container'>
+        <div className='answers-container-pack '>
           {Object.entries(formulario.answers).map(([key, value]) => (
-            <div className='answers' key={key}>
+            <div className='answers-pack ' key={key}>
               <button onClick={() => handleAnswer(key)}>{value}</button>
             </div>
           ))}
         </div>
       </section>
 
-      <div className="navigation-buttons">
-          <ActionButton label="Anterior" onClick={handlePrev} disabled={index === 0} className="button" />
-
-          {index === questions.length - 1 ? (
-            <ActionButton label="Enviar" onClick={handleSubmit} className="button" />
-          ) : (
-            <ActionButton label="Siguiente" onClick={handleNext} className="button" disabled={answers[index] === undefined} />
-          )}
-        </div>
+      <div>
+        {index === questions.length - 1 ? (
+                <ActionButton label="Enviar" onClick={handleSubmit} className="button" />
+              ) : (
+                <ActionButton label="Siguiente" onClick={handleNext} className="button-siguiente" disabled={answers[index] === undefined} />
+              )}
+      </div>
+      
       <div>
         <button onClick={handleAnswerRemove}>Borrar respuestas</button>
       </div>
-      {/* <div className="answers-summary">
-        <h3>Respuestas:</h3>
-        <ul>
-          {answers.map((answer, idx) => (
-            <li key={idx}>Pregunta {idx + 1}: {answer}</li>
-          ))}
-        </ul>
-      </div> */}
     </main>
   );
 }

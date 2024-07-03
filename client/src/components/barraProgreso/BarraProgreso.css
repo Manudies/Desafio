@@ -1,0 +1,27 @@
+.progress-bar-container-pack  {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+
+}
+
+.progress-bar-pack  {
+    position: relative;
+    width: 347px;
+    height: 25px;
+    background-color: #D9D9D9;
+    border-radius: 16px;
+    margin-right: 10px;
+}
+
+.progress-pack  {
+    height: 100%;
+    background-color: #000080;
+    border-radius: 16px;
+}
+
+.progress-text-pack  {
+    font-size: 14px;
+}
+
