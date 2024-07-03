@@ -13,13 +13,13 @@ const consultoria = () => {
     <div>
       <Navbar />
         <Noti />
-       {/*  <Beneficios/>
+        <Beneficios/>
         <Carrusel/>
         <Herramientas/>
         <h2>Otro Texto</h2>
         <RealizarTest/>
         <PacksList/>
-      <Footer /> */}
+      <Footer />
     </div>
   );
 };
