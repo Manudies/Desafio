@@ -1,22 +1,25 @@
 .main-content-pack {
   width: 90%;
   padding: 1rem;
-  margin: 1rem;
+  margin: 3rem 1rem 1rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
 
 .question-header-pack  {
+  width: 100%;
   display: flex;
   align-items: center;
   margin-bottom: 4rem;
+  justify-content: center;
 }
 
 .button-anterior  {
-  margin-left: 4rem;
-  margin-right: 30rem;
+  position: absolute;
+  left: 45px;
   background-color: transparent;
   cursor: pointer;
   font-size: 1.5rem;
@@ -74,9 +77,8 @@
   justify-content: center;
   transition: all 0.3s;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  width: 370px;
   height: 57px;
-  max-width: 400px;
+  max-width: 350px;
 }
 
 .answers-pack  button:hover {
