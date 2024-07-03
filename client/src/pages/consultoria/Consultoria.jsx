@@ -12,13 +12,14 @@ const consultoria = () => {
   return (
     <div>
       <Navbar />
-        <Beneficios/>
+        <Noti />
+       {/*  <Beneficios/>
         <Carrusel/>
         <Herramientas/>
         <h2>Otro Texto</h2>
         <RealizarTest/>
         <PacksList/>
-      <Footer />
+      <Footer /> */}
     </div>
   );
 };
