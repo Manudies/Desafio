@@ -20,13 +20,13 @@ const userSchema  = new mongoose.Schema({
         enum : ["user","admin"],
         default: "user"
     },
-    seniorFriendly:[
+    pack:[
         {
             type: mongoose.Schema.Types.ObjectId,
             ref: "seniorFriendly"
         }
     ],
-    silverEconomy:[
+    modulo:[
         {
             type: mongoose.Schema.Types.ObjectId,
             ref: "silverEconomy"

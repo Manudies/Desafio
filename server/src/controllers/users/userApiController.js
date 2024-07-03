@@ -14,7 +14,7 @@ const getById = async (req,res) =>{
 const getByToken = async (req,res) =>{
     const id = req.user._id;
     const user = await userController.getById(id);
-    await user.populate("trips");
+    // await user.populate("packs");
     res.json({data:user});
 }
 
@@ -60,24 +60,24 @@ const removeUser = async(req,res)=>{
     res.json({data:user})
 }
 
-const addTrip = async(req,res)=>{
+const addPack = async(req,res)=>{
     const userId = req.params.id;
-    const tripId = req.body.tripId;
+    const packId = req.body.packId;
     const loggedUser = req.user;
     console.log("userId", userId)
     console.log("usuario logueado", loggedUser._id)
     if(loggedUser._id.equals(userId) || loggedUser.role === "admin"){
-        const user = await userController.addTrip(userId,tripId);
+        const user = await userController.addPack(userId,packId);
         res.json({data:user})
     }
     else
-        res.json({error:"no tienes permisos para anadir trips"})
+        res.json({error:"no tienes permisos para anadir packs"})
 }
 
-const removeTrip = async(req,res)=>{
+const removePack = async(req,res)=>{
     const userId = req.params.id;
-    const tripId = req.params.tripId;
-    const user = await userController.removeTrip(userId,tripId);
+    const packId = req.params.packId;
+    const user = await userController.removePack(userId,packId);
     res.json({data:user})
 }
 
@@ -91,7 +91,7 @@ export default{
     create,
     updateUser,
     removeUser,
-    addTrip,
-    removeTrip
+    addPack,
+    removePack
 }
 

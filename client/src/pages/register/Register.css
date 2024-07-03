@@ -1,0 +1,88 @@
+/* Register.css */
+.register-login {
+  background-color: #81827C;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 80px auto;
+  width: 80%;
+  max-width: 500px;
+  min-width: 300px;
+}
+
+.register-login h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: #223D3C;
+  text-align: center;
+}
+
+.register-login form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-login label {
+  margin-bottom: 5px;
+  color: #F8F3F2;
+  font-weight: 600;
+  width: 100%;
+  text-align: left;
+}
+
+.register-login .input-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.register-login input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #F8F3F2;
+  background-color: #F8F3F2;
+  border-color: #F8F3F2;
+  color: #223D3C;
+}
+
+.register-login button {
+  background-color: #223D3C;
+  color: #F8F3F2;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.icon {
+  width: 16px;
+  margin: 0;
+  padding-right: 8px;
+}
+
+@media (max-width: 900px) {
+  .register-login {
+    width: 90%;
+    margin: 50px auto;
+    padding: 20px;
+  }
+
+  .register-login form {
+    width: 100%;
+  }
+
+  .register-login label {
+    width: 100%;
+  }
+
+  .register-login .input-group {
+    width: 100%;
+  }
+
+  .register-login input {
+    width: calc(100% - 40px);
+  }
+}
