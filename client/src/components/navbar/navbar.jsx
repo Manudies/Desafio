@@ -12,7 +12,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="logo-wrapper">
-          <img src="./seniority_logoprincipal_sinfondo.svg" className="logo-image" alt="logo" />
+          <img src="./seniority_logoblanco_sinfondo_uso_en_fondo_oscuro.png" className="logo-image" alt="logo" />
           <a href="#" className="navbar-logo">
             <div className="logo-overlay"></div>
           </a>
@@ -26,28 +26,22 @@ const Navbar = () => {
         {/* Navbar Menu */}
         <ul className={`navbar-menu ${menuOpen ? 'active' : ''}`}>
           <li className="navbar-item">
-            <a href="#inicio" className="navbar-link">Inicio</a>
+            <a href="#consultoria" className="navbar-link">Consultoría</a>
           </li>
           <li className="navbar-item">
-            <a href="#consultoria" className="navbar-link">Consultoria</a>
+            <a href="#formacion" className="navbar-link">Formación</a>
           </li>
           <li className="navbar-item">
-            <a href="#formacion" className="navbar-link">Formacion</a>
-          </li>
-          <li className="navbar-item">
-            <a href="#reservas" className="navbar-link">Plataforma de reservas</a>
+            <a href="#reservas" className="navbar-link">Plataformas de reservas</a>
           </li>
           <li className="navbar-item">
             <a href="#sobre" className="navbar-link">Sobre Seniority</a>
           </li>
           <li className="navbar-item">
-            <a href="#blog" className="navbar-link">Blog</a>
+            <a href="#contacto" className="navbar-link">Contacto</a>
           </li>
           <li className="navbar-item">
-            <button className='contact-button'>CONTACTA</button>
-          </li>
-          <li className="navbar-item">
-            <button className='register-button'>Registrar</button>
+            <button className='accede-button'>Accede</button>
           </li>
         </ul>
       </div>
