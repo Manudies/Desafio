@@ -50,14 +50,20 @@ const TarjetaModulo = ({ modulo }) => {
     //     }
     //     return user.packs.some(userPack => userPack._id === packData._id);
     // };
+    const getPhaseName = (phaseName) => {
+        const parts = phaseName.split(':');
+        return parts.length > 1 ? parts[1].trim() : phaseName;
+    };
 
 
     return (
         <div className="modulo-card">
             {/* <img src={packData.image} alt={packData.packName} className="modulo-card-image" /> */}
             <div className="modulo-card-content">
-                <h2 className="card-title">{modulo.phaseName}</h2>
+                <h2 className="card-title">{getPhaseName(modulo.phaseName)}</h2>
                 <p className="description">{modulo.description}"</p>
+                <p className='objetivo'>{modulo.objetive}</p>
+                <p className='duracion'>{modulo.duration}</p>
             </div>
         </div>
     );

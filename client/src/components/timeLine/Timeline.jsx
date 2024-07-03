@@ -6,8 +6,7 @@ const timelime = () => {
     const modulos = useLoaderData();
     console.log("modulos",modulos)
     return (
-        <div>
-            <h1>{modulos.phaseName}</h1>
+        <div className="timeline">
             <section className="modulos_container">
                 {modulos.map((modulo) => (
                     <ModuloCard key={modulo._id} modulo={modulo} />
