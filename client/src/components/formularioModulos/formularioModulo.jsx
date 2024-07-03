@@ -2,11 +2,14 @@ import React, { useState } from 'react';
 import questions from './preguntasModulo.js';
 import './formularioModulo.css';
 import ActionButton from '../../components/actionButton/actionButton';
+import BarraProgreso from '../../components/barraProgreso/BarraProgreso';
+import '../../components/barraProgreso/BarraProgreso.css';
 
 const Main = () => {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [showWarning, setShowWarning] = useState(false);
+
   const formulario = questions[index];
 
   // Función para avanzar a la siguiente pregunta
@@ -45,38 +48,35 @@ const Main = () => {
   };
 
   return (
-    <main className="main-content">
-      <>
-        <section className="section-form">
-          <div className='questionForm'>{formulario.question}</div>
+    <main className="main-content-modulo">
+      <div className="question-header-modulo">
+        <ActionButton label="← Atras" onClick={handlePrev} disabled={index === 0} className="button-atras" />
+        <BarraProgreso className="progress-bar-modulo " currentQuestion={index + 1} totalQuestions={questions.length} />
+      </div>
+      
+      <section className="section-form-modulo">
+          <div className='questionForm-modulo'>{formulario.question}</div>
           {showWarning && <div className="warning">Por favor, responde todas las preguntas</div>}
-          <div className='answers-container'>
+          <div className='answers-container-modulo'>
             {Object.entries(formulario.answers).map(([key, value]) => (
-              <div className='answers' key={key}>
-                <button
-                  onClick={() => handleAnswer(key)}
-                  className={answers[index] === key ? 'selected' : ''}
-                >
-                  {value}
-                </button>
+              <div className='answers-modulo' key={key}>
+                <button onClick={() => handleAnswer(key)}> {value}</button>
               </div>
             ))}
           </div>
         </section>
 
         <div className="navigation-buttons">
-          <ActionButton label="Anterior" onClick={handlePrev} disabled={index === 0} className="button" />
 
           {index === questions.length - 1 ? (
             <ActionButton label="Enviar" onClick={handleSubmit} className="button" />
           ) : (
-            <ActionButton label="Siguiente" onClick={handleNext} className="button" disabled={answers[index] === undefined} />
+            <ActionButton label="Siguiente" onClick={handleNext} className="button-siguiente" disabled={answers[index] === undefined} />
           )}
         </div>
         <div>
           <button onClick={handleAnswerRemove}>Borrar respuestas</button>
         </div>
-      </>
     </main>
   );
 }
