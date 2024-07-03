@@ -5,7 +5,7 @@ import Carrusel from "../../components/carrusel/Carrusel";
 import Beneficios from "../../components/beneficios/Beneficios";
 import Herramientas from "../../components/herramientas/Herramientas";
 import RealizarTest from "../../components/realizarTest/RealizarTest";
-
+import PacksList from "../../components/packs/PacksList";
 
 const consultoria = () => {
   return (
@@ -16,6 +16,7 @@ const consultoria = () => {
         <Herramientas/>
         <h2>Otro Texto</h2>
         <RealizarTest/>
+        <PacksList/>
       <Footer />
     </div>
   );
