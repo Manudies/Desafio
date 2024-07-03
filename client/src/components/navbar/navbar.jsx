@@ -1,18 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './navbar.css';
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
         <div className="logo-wrapper">
-          
-            <img src="./seniority_logoprincipal_sinfondo.svg" className="logo-image" alt="logo" />
-            <a href="#" className="navbar-logo">
+          <img src="./seniority_logoprincipal_sinfondo.svg" className="logo-image" alt="logo" />
+          <a href="#" className="navbar-logo">
             <div className="logo-overlay"></div>
           </a>
         </div>
-        <ul className="navbar-menu">
+
+        {/* Hamburger menu icon */}
+        <div className={`navbar-toggle ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+          <div className="navbar-toggle-icon"></div>
+        </div>
+
+        {/* Navbar Menu */}
+        <ul className={`navbar-menu ${menuOpen ? 'active' : ''}`}>
           <li className="navbar-item">
             <a href="#inicio" className="navbar-link">Inicio</a>
           </li>

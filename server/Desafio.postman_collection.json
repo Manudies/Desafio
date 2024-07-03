@@ -193,14 +193,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/users/666825e2765196c744adc034/trips",
+							"raw": "{{base_url}}/users/666825e2765196c744adc034/packs",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"users",
 								"666825e2765196c744adc034",
-								"trips"
+								"packs"
 							]
 						}
 					},
@@ -322,14 +322,14 @@
 							}
 						},
 						"url": {
-							"raw": "{{base_url}}/users/666825e2765196c744adc034/trips",
+							"raw": "{{base_url}}/users/666825e2765196c744adc034/packs",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"users",
 								"666825e2765196c744adc034",
-								"trips"
+								"packs"
 							]
 						},
 						"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
@@ -393,12 +393,12 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/trips/byproperty?property=destino&value=América",
+							"raw": "{{base_url}}/packs/byproperty?property=destino&value=América",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
-								"trips",
+								"packs",
 								"byproperty"
 							],
 							"query": [
