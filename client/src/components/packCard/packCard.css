@@ -50,3 +50,8 @@
   height: 50px;
   margin-bottom: 16px;
 }
+
+
+.none {
+  display: none;
+}
