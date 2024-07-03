@@ -1,0 +1,23 @@
+.timeline{
+    margin-top: 83px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.modulos_container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 83px;
+    margin-bottom: 83px;
+    width: 100%;
+    height: 100%;
+}
+.modulo_card{
+    width: 200px;
+    height: 200px;
+}

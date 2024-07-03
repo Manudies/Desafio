@@ -1,73 +1,57 @@
-.card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    max-width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    width: 50vw;
-    height: 50vw;
-  }
-  
-  .card-image {
-    width: 100%;
-    height: auto;
-  }
-  
-  .card-content {
-    padding: 16px;
-  }
-  
-  .card-title {
-    font-size: 1.5rem;
-    margin: 0;
-    color: #333;
-  }
-  
-  .card-description {
-    font-size: 1rem;
-    margin: 8px 0;
-    color: #666;
-  }
-  
-  .card-subtitle {
-    font-size: 1.2rem;
-    margin: 16px 0 8px;
-    color: #333;
-  }
-  
-  .card-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .card-list li {
-    font-size: 1rem;
-    margin-bottom: 8px;
-    color: #666;
-  }
-  
-  .card-footer {
-    padding: 16px;
-    border-top: 1px solid #ddd;
-    display: flex;
-    justify-content: flex-end;
-  }
-  
-  .card-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-  }
-  
-  .card-button:hover {
-    background-color: #0056b3;
-  }
-  
+.pack-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px;
+  width: 300px; /* Ajusta el ancho según sea necesario */
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pack-card-content {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.card-description {
+  font-size: 0.9em;
+  margin: 10px 0;
+}
+
+.card-include, .card-deliverables {
+  text-align: left;
+  margin: 10px 0;
+}
+
+.pack-card-button {
+  margin-top: 20px;
+  background-color: #1E2A78;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pack-card-button:hover {
+  background-color: #1B256A;
+}
+
+.pack-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 16px;
+}
+
+
+.none {
+  display: none;
+}
