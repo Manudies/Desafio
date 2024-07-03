@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom"
 import PackCard from "../packCard/packCard";
+import PackCardCompleto from "../packCard/packCardCompleto";
 import "./packList.css";
 
 const packList = () => {
@@ -14,7 +15,7 @@ const packList = () => {
                 ))}
             </section>
             <section className="packs_info">
-                <p>prueba</p>
+                <PackCardCompleto pack={packs[1]} />
             </section>
 
         </div>
