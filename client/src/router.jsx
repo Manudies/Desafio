@@ -75,6 +75,7 @@ const router = createBrowserRouter([
       {
         path: "/consultoria",
         element: <Consultoria />,
+        loader: () => fetchPacks(),
       },
       {
         path: "/formularioPack",
