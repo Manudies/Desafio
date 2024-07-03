@@ -1,66 +1,96 @@
 .main-content-pack {
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.section-form-pack  {
-  text-align: center;
-}
-
-.question-header-pack  {
+  width: 90%;
+  padding: 1rem;
+  margin: 3rem 1rem 1rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 1rem;
+  justify-content: center;
+
 }
+
+.question-header-pack  {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem;
+  justify-content: center;
+}
+
+.button-anterior  {
+  position: absolute;
+  left: 45px;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000080;
+  transition: all 0.3s
+}
+
+
+/* Es el boton de anterior por si nos dicen de ponerlo, por ahora lo muestro, para ocultarlo descomentar la linea */
+/* .button-siguiente  {
+  margin-left: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000080;
+  transition: all 0.3s;
+  display: none;
+
+} */
+
 
 .questionForm-pack  {
   font-size: 75px;
-  color: #07124b;
-  margin-bottom: 1em;
-  text-align: right;
-  margin: 0.5rem;
   font-weight: bold;
+  line-height: 90%;
+  color: #07124B;
+  margin: 8rem 0;
   width: 100%;
-  height: 100%;
-  padding: 0.5rem;
-
+  text-align: right;
 
 }
 
 .answers-container-pack  {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 20px 0;
+
 }
 
 .answers-pack  button {
-  background-color: #f0f0f0;
-  border: 1px solid #cccccc;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 5px 0;
+  background-color: #ffffff;
+  border: 2px solid #cccccc;
+  border-radius: 10px;
+  padding: 15px 25px;
   cursor: pointer;
-  width: 200px;
-  text-align: left;
+  text-align: center;
   font-size: 1em;
   display: flex;
   align-items: center;
-  transition: background-color 0.3s;
+  justify-content: center;
+  transition: all 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  height: 57px;
+  max-width: 350px;
 }
 
 .answers-pack  button:hover {
   background-color: #e0e0e0;
+  border-color: #000080;
+  color: #000080;
 }
 
 .selected {
-  border: 2px solid rgb(0, 0, 0); 
+border-color: #000080;
+color: #000080;
+background-color: #e0e0e0;
 }
 
 .warning {
@@ -70,12 +100,4 @@
   margin-bottom: 10px;
 }
 
-.navigation-buttons-pack  {
-  margin-top: 1em;
-}
-.button-anterior{
-  background-color: #f0f0f0;
-  color:#000000;
 
-
-}
