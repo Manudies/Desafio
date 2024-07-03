@@ -1,6 +1,6 @@
 import "./Home.css";
 import Navbar from "../../components/navbar/navbar";
-/*import Footer from "../../components/footer/footer";*/
+import Footer from "../../components/footer/footer";
 import Noti from "../../components/noti/noti";
 
 const home = () => {
@@ -17,7 +17,7 @@ const home = () => {
       className="fondo2" 
       src="../../public/Captura2.png" 
       alt="Foto de fondo" />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
