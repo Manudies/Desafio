@@ -1,0 +1,67 @@
+/* Estilos para el contenedor principal */
+.comienzoContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('./comienzo.jpeg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; /* No repetir la imagen */
+    color: black; 
+    padding: 20px;
+
+}
+
+/* Estilos para el contenedor de texto */
+.comienzotexto {
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 149px;
+
+}
+
+.comienzotexto h2 {
+    font-size: 55px;
+    font-weight: bold;
+    width: 417px;
+    height: 92px;
+    margin-top: 500px;
+    margin-bottom: 4rem;
+}
+
+.comienzotexto h3 {
+    font-size: 40x;
+    margin-top: 0;
+    width: 512px;
+    height: 27px;
+}
+
+/* Estilos para el botón */
+.comienzoButton {
+    background-color: #001f3f;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+.botonComienzo{
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 149px;
+
+}
