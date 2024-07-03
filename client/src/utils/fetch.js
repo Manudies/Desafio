@@ -95,7 +95,18 @@ const removePack = async(userId, packId)=>{
     const result = await fetchData("/users/"+userId+"/packs/"+packId,"delete");
     return result;
 }
- 
+const getModulos = async()=>{
+    const result = await fetchData("/modulos","get");
+    return result;
+}
+const addModulo = async(userId, moduloId)=>{
+    const result = await fetchData("/users/"+userId+"/modulos","post",{moduloId});
+    return result;
+}
+const removeModulo = async(userId, moduloId)=>{
+    const result = await fetchData("/users/"+userId+"/modulos/"+moduloId,"delete");
+    return result;
+}   
 const sendMail = async (data) => {
     const result = await fetchData ("/send-email", "post", data);
     return result;
@@ -117,5 +128,8 @@ export {
     updateUser,
     addPack,
     removePack,
+    getModulos,
+    addModulo,
+    removeModulo,
     sendMail
 }
