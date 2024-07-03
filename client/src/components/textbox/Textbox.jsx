@@ -14,9 +14,9 @@ const Textbox = ({ label, placeholder, error }) => {
 
   let textboxClass = 'textbox';
   if (isFocused) {
-    textboxClass += ' textbox-focus';
+    textboxClass = 'textbox-focus';
   } else if (error) {
-    textboxClass += ' textbox-error';
+    textboxClass = 'textbox-error';
   }
 
   return (

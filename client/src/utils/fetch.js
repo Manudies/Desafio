@@ -46,24 +46,24 @@ const fetchUserData = async()=>{
     return result;
 }
 
-const getTrips = async()=>{
-    const result = await fetchData("/trips","get");
+const getPacks = async()=>{
+    const result = await fetchData("/packs","get");
     return result;
 }
-const createTrip = async(tripData)=>{
-    const result = await fetchData("/trips","post",tripData);
+const createPack = async(packData)=>{
+    const result = await fetchData("/packs","post",packData);
     return result;
 }
-const remove = async(tripId)=>{
-    const result = await fetchData("/trips/"+tripId,"delete");
+const remove = async(packId)=>{
+    const result = await fetchData("/packs/"+packId,"delete");
     return result;
 }
-const update = async(tripId,tripData)=>{
-    const result = await fetchData("/trips/"+tripId,"put",tripData);
+const update = async(packId,packData)=>{
+    const result = await fetchData("/packs/"+packId,"put",packData);
     return result;
 }
-const getByProperty = async(tripDestino)=>{
-    const result = await fetchData(`/trips/byproperty?property=destino&value=${tripDestino}`,"get");
+const getByProperty = async(packName)=>{
+    const result = await fetchData(`/packs/byproperty?property=packName&value=${packName}`,"get");
     return result;
 }
 
@@ -86,13 +86,13 @@ const updateUser = async(userId,userData)=>{
     const result = await fetchData("/users/"+userId,"put",userData);
     return result;
 }
- const addTrip = async(userId, tripId)=>{
-    const result = await fetchData("/users/"+userId+"/trips","post",{tripId});
+ const addPack = async(userId, packId)=>{
+    const result = await fetchData("/users/"+userId+"/packs","post",{packId});
     return result;
 }
 
-const removeTrip = async(userId, tripId)=>{
-    const result = await fetchData("/users/"+userId+"/trips/"+tripId,"delete");
+const removePack = async(userId, packId)=>{
+    const result = await fetchData("/users/"+userId+"/packs/"+packId,"delete");
     return result;
 }
  
@@ -106,8 +106,8 @@ export {
     register,
     login,
     fetchUserData,
-    getTrips,
-    createTrip,
+    getPacks,
+    createPack,
     remove,
     update,
     getByProperty,
@@ -115,7 +115,7 @@ export {
     createUser,
     removeUser,
     updateUser,
-    addTrip,
-    removeTrip,
+    addPack,
+    removePack,
     sendMail
 }
