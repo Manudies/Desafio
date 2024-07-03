@@ -31,15 +31,13 @@ function App() {
 
   return (
     <>
-      <Navbar/>
-      <div>
+      {/* <Navbar/> */}
         <UserContext.Provider
           value={{ user, handlefetchUserData, logOut, loadingUser }}
         >
           <RouterProvider router={router} />
         </UserContext.Provider>
-      </div>
-      <Footer/>
+      {/* <Footer/> */}
     </>
   );
 }

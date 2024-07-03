@@ -53,30 +53,32 @@ const TarjetaPack = ({ pack }) => {
 
 
     return (
-        <div className="pack-card">
+        <button className="pack-card">
             {/* <img src={packData.image} alt={packData.packName} className="pack-card-image" /> */}
             <div className="pack-card-content">
                 <h2 className="card-title">{pack.packName}</h2>
-                <p className="card-description">{pack.description}</p>
-                <div className="card-include">
-                    <p>Incluye:</p>
-                    <ul>
-                       {pack.include?.map((item, index) => (
-                           <li key={index}>{item}</li>
-                       ))}
-                    </ul>
-                </div>
-                <div className="card-deliverables">
-                    <p>Entregables:</p>
-                    <ul>
-                        {pack.deliverables?.map((item, index) => (
+                <div className='none'>
+                    <p className="card-description">{pack.description}</p>
+                    <div className="card-include">
+                        <p>Incluye:</p>
+                        <ul>
+                        {pack.include?.map((item, index) => (
                             <li key={index}>{item}</li>
                         ))}
-                    </ul>
+                        </ul>
+                    </div>
+                    <div className="card-deliverables">
+                        <p>Entregables:</p>
+                        <ul>
+                            {pack.deliverables?.map((item, index) => (
+                                <li key={index}>{item}</li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <ActionButton label={isContratar ? "Cancelar" : "Solicitar más información"} onClick={handleContratar} className="pack-card-button" />
-        </div>
+            {/* <ActionButton label={isContratar ? "Cancelar" : "Solicitar más información"} onClick={handleContratar} className="pack-card-button" /> */}
+        </button>
     );
 };
 

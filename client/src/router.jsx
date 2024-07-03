@@ -1,6 +1,6 @@
 import { createBrowserRouter, redirect } from "react-router-dom";
 
-import {getPacks, getUsers, getByProperty} from "./utils/fetch";
+import {getPacks, getUsers, getByProperty, getModulos} from "./utils/fetch";
 
 import Register from "./pages/register/Register";
 import ErrorPage from "./pages/ErrorPage";
@@ -10,8 +10,10 @@ import FormularioPack from "./components/formularioPack/FormularioPack";
 import FormularioModulo from "./components/formularioModulos/formularioModulo";
 
 import PacksList from "./components/packs/PacksList";
+import Timeline from "./components/timeLine/Timeline";
 import Footer from "./components/footer/footer";
 import Home from "./pages/home/Home";
+import Consultoria from "./pages/consultoria/Consultoria";
 
 import Root from "./pages/Root";
 
@@ -23,6 +25,7 @@ import Root from "./pages/Root";
 //   return result.data;
 // }
 
+//Funciones de Packs
 async function fetchPacks() {
   const result = await getPacks();
   if (result.error) {
@@ -33,6 +36,24 @@ async function fetchPacks() {
 
 async function fetchPacksByProperty(packName) {
   const result = await getByProperty(packName);
+  if (result.error) {
+    return redirect ("/register");
+  }
+  return result.data;
+}
+
+//Funciones de Modulos
+
+async function fetchModulos() {
+  const result = await getModulos();
+  if (result.error) {
+    return redirect ("/register");
+  }
+  return result.data;
+}
+
+async function fetchModulosByProperty(moduloName) {
+  const result = await getByProperty(moduloName);
   if (result.error) {
     return redirect ("/register");
   }
@@ -52,11 +73,9 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/textbox",
-        element: <>
-                  <Textbox  label="Email" error={"error"} placeholder={"placeholder"}/>
-                  <Footer/>
-        </>,
+        path: "/consultoria",
+        element: <Consultoria />,
+        loader: () => fetchPacks(),
       },
       {
         path: "/formularioPack",
@@ -85,15 +104,15 @@ const router = createBrowserRouter([
         element: <FormularioModulo />,
       },
       {
-        path: "/packs",
-        element: <PacksList />,
-        loader: () => fetchPacks(),
+        path: "/modulos",
+        element: <Timeline />,
+        loader: () => fetchModulos(),
       },
-      {
-        path: "/packs/:packName",
-        element: <PacksList />,
-        loader: ({ params }) => fetchTripsByProperty(params.packName),
-      },
+      // {
+      //   path: "/packs/:packName",
+      //   element: <PacksList />,
+      //   loader: ({ params }) => fetchTripsByProperty(params.packName),
+      // },
       {
         path: "/register",
         element: <Register />,

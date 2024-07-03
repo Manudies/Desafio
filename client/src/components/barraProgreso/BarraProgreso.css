@@ -1,8 +1,9 @@
 .progress-bar-container-pack  {
     display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
-    margin-left: 10px; 
+    justify-content: center;
+    align-content: center;
+
+
 }
 
 .progress-bar-pack  {
