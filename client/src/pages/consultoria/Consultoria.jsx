@@ -7,18 +7,19 @@ import Herramientas from "../../components/herramientas/Herramientas";
 import RealizarTest from "../../components/realizarTest/RealizarTest";
 import PacksList from "../../components/packs/PacksList";
 import Descubre from "../../components/descubre/Descubre";
-
+import Comienzo from "../../components/comienzo/Comienzo";
 const consultoria = () => {
   return (
     <div>
       <Navbar />
+        <Comienzo/>
         <Beneficios/>
         <Carrusel/>
-        <Herramientas/>
+        {/* <Herramientas/>
         <h2>Otro Texto</h2>
         <RealizarTest/>
         <PacksList/>
-        <Descubre/>
+        <Descubre/> */}
       {/* <Footer /> */}
     </div>
   );
