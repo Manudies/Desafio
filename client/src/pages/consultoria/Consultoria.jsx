@@ -6,6 +6,7 @@ import Beneficios from "../../components/beneficios/Beneficios";
 import Herramientas from "../../components/herramientas/Herramientas";
 import RealizarTest from "../../components/realizarTest/RealizarTest";
 import PacksList from "../../components/packs/PacksList";
+import Descubre from "../../components/descubre/Descubre";
 
 const consultoria = () => {
   return (
@@ -17,7 +18,8 @@ const consultoria = () => {
         <h2>Otro Texto</h2>
         <RealizarTest/>
         <PacksList/>
-      <Footer />
+        <Descubre/>
+      {/* <Footer /> */}
     </div>
   );
 };
