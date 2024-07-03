@@ -12,7 +12,6 @@
     display: flex;
     flex-direction: column;
     justify-content:flex-start;
-    /* align-items: justify; */
     gap: 20px;
     padding: 20px 0 20px 80px;
     height: 200px;
