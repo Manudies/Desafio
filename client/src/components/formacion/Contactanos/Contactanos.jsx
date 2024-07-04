@@ -13,11 +13,11 @@ const Contactanos = () => {
     <div className="contactoontainer">
         <section className="contactoContainer">
             <div className='contactoTexto'>
-                <h1>Solicita una reunion</h1>
+                <h1 className='contactoText'>Solicita una reunion</h1>
             </div>
 
             <div className='contactoBoton'>
-                <button onClick={showAll} className='button'>Contáctanos</button>
+                <button onClick={showAll} className='buttonContactanos'>Contáctanos</button>
             </div>
 
 
