@@ -1,22 +1,13 @@
 import "./Home.css";
 import Navbar from "../../components/navbar/navbar";
 import Footer from "../../components/footer/footer";
-import Noti from "../../components/noti/noti";
+import FondoHome from "../../components/fondohome/FondoHome";
 
 const home = () => {
   return (
     <div  className="home">
       <Navbar />
-      <Noti />
-      <img
-        className="fondo"
-        src="../../public/Captura.png"
-        alt="Foto de fondo"
-      />
-      <img 
-      className="fondo2" 
-      src="../../public/Captura2.png" 
-      alt="Foto de fondo" />
+      <FondoHome />
       <Footer />
     </div>
   );
