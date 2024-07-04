@@ -31,6 +31,7 @@ const consultoria = () => {
       </div>
       <HerramientasF />
       <RealizarTestF />
+      <Timeline/>
       {/* <Timeline/> */}
       <RealizarTestF />
       <div>
@@ -38,6 +39,7 @@ const consultoria = () => {
       </div>
       <Contactanos/>
       <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

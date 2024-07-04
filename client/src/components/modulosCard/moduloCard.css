@@ -1,3 +1,120 @@
-/* .modulo-card-content{
-    margin-top: 60px;
-} */
+.modulo-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    /* padding: 20px; */
+    margin-bottom: 30px;
+    margin-right: 80px;
+    /* width: 80%; */
+    min-width: 600px;
+    height: 320px;
+}
+
+
+.modulo-card-content {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.card-title {
+    font-size: 20px;
+    color: #003366;
+    margin: 0 0 10px 0;
+}
+
+.description {
+    font-size: 16px;
+    color: #666;
+    margin: 0 0 20px 0;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.detail-item-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    flex: 1;
+    border-radius: 10px;
+    margin: 0 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 150px;
+}
+
+.detail-item-duration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f5f5f5;
+    flex: 1;
+    border-radius: 10px;
+    margin: 0 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.detail-title {
+    width: 100%;
+    height: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000;
+    margin: 0 0 5px 0;
+    background-color:#318C6F ;
+    border-radius: 10px 10px 0 0;
+}
+
+.detail-content {
+    font-size: 16px;
+    color: #003366;
+    font-weight: bold;
+    margin: 0;
+    
+}
+.detail-content {
+    font-size: 16px;
+    color: #003366;
+    font-weight: bold;
+    margin: 0;
+    max-height: 150px; /* Ajusta el valor según sea necesario */
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: wrap;
+}
+
+.learn-more-button {
+    background-color: #003366;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-bottom: 10px;
+}
+
+.learn-more-button:hover {
+    background-color: #0055a5;
+}
+
+.learn-more-container {
+    display: flex;
+    height: 100%;
+    width: 25%;
+    align-items:flex-end;
+    justify-content: center;
+    background-image: url('../../../public/yayo-portatil.png'); /* Ruta de la imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    border-radius: 0 10px 10px 0;
+}
+
+
