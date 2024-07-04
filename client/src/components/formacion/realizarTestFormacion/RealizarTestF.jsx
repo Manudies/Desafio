@@ -13,15 +13,12 @@ const realizarTestFormacion = () => {
     <div className="realizarTestFContainer">
         <section className="realizarFContainer">
             <div className='realizarFTexto'>
-                <h1>Encuentre la formación que más te convenga</h1>
+                <h1 className='realizarFText'>Encuentre la formación que más te convenga</h1>
             </div>
 
             <div className='realizarFTest'>
-                <button onClick={showAll} className='button'>Realizar test</button>
+                <button onClick={showAll} className='buttonTest'>Realizar test</button>
             </div>
-
-
-
         </section>
     </div>
   );
