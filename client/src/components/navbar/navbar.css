@@ -81,7 +81,7 @@
   width: 0px;
   height: 2px;
   display: block;
-  background: #fff;
+  background: #59FFC9;
   transition: 300ms;
 }
 
@@ -90,7 +90,7 @@
 }
 
 .navbar-link:hover {
-  color: #fff;
+  color: #59FFC9;
 }
 
 .accede-button {
