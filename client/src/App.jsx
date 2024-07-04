@@ -6,6 +6,7 @@ import {fetchUserData} from "./utils/fetch"
 import "./App.css";
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
+import ScrollButton from "./components/scrollButton/ScrollButton";
 
 function App() {
   const [loadingUser, setLoadingUser] = useState(true);
@@ -37,6 +38,7 @@ function App() {
         >
           <RouterProvider router={router} />
         </UserContext.Provider>
+        <ScrollButton />
       {/* <Footer/> */}
     </>
   );
