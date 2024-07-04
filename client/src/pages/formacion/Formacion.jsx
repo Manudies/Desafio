@@ -6,6 +6,7 @@ import Timeline from "../../components/timeLine/Timeline";
 import ComienzoF from "../../components/formacion/ComienzoF/ComienzoF";
 import HerramientasF from "../../components/formacion/herramientasF/HerramientasF";
 import RealizarTestF from "../../components/formacion/realizarTestFormacion/RealizarTestF";
+import Contactanos from "../../components/formacion/Contactanos/Contactanos";
 
 const consultoria = () => {
   return (
@@ -31,7 +32,12 @@ const consultoria = () => {
       <HerramientasF />
       <RealizarTestF />
       {/* <Timeline/> */}
-      {/* <Footer /> */}
+      <RealizarTestF />
+      <div>
+        <h1>No dejes que tu idea se quede en sólo una idea.Únete a nuestro programa y déjanos ayudarte a hacerla realidad</h1>
+      </div>
+      <Contactanos/>
+      <Footer />
     </div>
   );
 };
