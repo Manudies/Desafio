@@ -14,6 +14,7 @@ import Timeline from "./components/timeLine/Timeline";
 import Footer from "./components/footer/footer";
 import Home from "./pages/home/Home";
 import Consultoria from "./pages/consultoria/Consultoria";
+import Formacion from "./pages/formacion/Formacion";
 import Contacto from "./pages/contacto/contacto";
 
 import Root from "./pages/Root";
@@ -105,8 +106,8 @@ const router = createBrowserRouter([
         element: <FormularioModulo />,
       },
       {
-        path: "/modulos",
-        element: <Timeline />,
+        path: "/formacion",
+        element: <Formacion />,
         loader: () => fetchModulos(),
       },
       // {
