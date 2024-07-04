@@ -10,7 +10,7 @@ const consultoria = () => {
       <Navbar />
       <Noti />
       <Timeline/>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };
