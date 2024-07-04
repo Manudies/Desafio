@@ -1,3 +1,39 @@
-.realizarTestFContainer {
-    margin-bottom: 100px;
+.contactoontainer {
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.contactoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50%;
+    width: 100%;
+    gap: 2rem;
+
+}
+.contactoTexto{
+    width: 100%;
+    height: auto;
+}
+
+.contactoText{
+    font-size: 30px;
+    color: black;
+}
+
+.buttonContactanos{
+    background-color: #07124B;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 284px;
+    height: 50px;
+}
+

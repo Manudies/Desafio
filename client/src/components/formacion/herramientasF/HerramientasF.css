@@ -1,5 +1,6 @@
 .herramientasFContainer {
     width: 100%;
+    height: 245px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,6 +17,8 @@
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+
   }
   
   .herramientaF {
@@ -23,6 +26,7 @@
     flex-direction: column;
     align-items: center;
     width: 30%;
+    height: 240px;
   }
   
   .imgherramientaF {
@@ -45,5 +49,7 @@
     text-align: center;
     font-size: 1em;
     color: #333;
+    width: 187px;
+    height: 120px;
   }
   
