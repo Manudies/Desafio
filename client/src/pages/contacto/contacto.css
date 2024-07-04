@@ -22,7 +22,6 @@ body{
     position: absolute;
     left: 0;
     top: 143px; /* Ajusta este valor según la posición vertical deseada */
-    width: 35%;
     color:#091864;
 }
 /* Estilo general para el contenedor principal */
