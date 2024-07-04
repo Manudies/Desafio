@@ -15,7 +15,7 @@
 .da-el-primer-container {
   font-size: 20px;
   top: 15px;
-  left: -265px;
+  left: -17.5%;
   height: 25px;
   position: relative;
   line-height: 160%;
@@ -45,7 +45,7 @@
 .close-container {
   position: relative;
   top: 15px;
-  right: -280px;
+  right: -18.5%;
 }
 
 .arrowleft-icon {
