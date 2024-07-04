@@ -8,7 +8,6 @@ const home = () => {
     <div  className="home">
       <Navbar />
       <FondoHome />
-      <Footer />
     </div>
   );
 };

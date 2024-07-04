@@ -11,18 +11,18 @@ import Descubre from "../../components/descubre/Descubre";
 import Comienzo from "../../components/comienzo/Comienzo";
 const consultoria = () => {
   return (
-    <div>
+    <div className="consultoria">
       <Navbar />
       <Noti />
-        <Comienzo/>
-        <Beneficios/>
-        <Carrusel/>
-        {/* <Herramientas/>
-        <h2>Otro Texto</h2>
-        <RealizarTest/>
-        <PacksList/>
-        <Descubre/> */}
-      {/* <Footer /> */}
+      <Comienzo />
+      <Beneficios />
+      <Carrusel />
+      <Herramientas />
+      <h2>Otro Texto</h2>
+      <RealizarTest />
+      <PacksList />
+      <Descubre />
+      <Footer />
     </div>
   );
 };
