@@ -9,7 +9,7 @@ import Modal from '../modal/modal';
 import ActionButton from '../actionButton/actionButton';
 import { addPack, removePack } from '../../utils/fetch';
 
-const TarjetaPack = ({ pack }) => {
+const TarjetaPack = ({ pack, onClick }) => {
     const { user, handlefetchUserData } = useContext(UserContext);
     const [isContratar, setIsContratar] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -53,7 +53,7 @@ const TarjetaPack = ({ pack }) => {
 
 
     return (
-        <button className="pack-card">
+        <button className="pack-card" onClick={onClick}>
             {/* <img src={packData.image} alt={packData.packName} className="pack-card-image" /> */}
             <div className="pack-card-content">
                 <h2 className="card-title">{pack.packName}</h2>

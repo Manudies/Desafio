@@ -99,7 +99,7 @@ const Main = () => {
       <div>
         <button onClick={handleAnswerRemove}>Borrar respuestas</button>
       </div>
-    </main>
+    </div>
   );
 };
 
