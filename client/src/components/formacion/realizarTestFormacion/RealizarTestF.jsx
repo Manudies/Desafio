@@ -13,7 +13,7 @@ const realizarTestFormacion = () => {
     <div className="realizarTestFContainer">
         <section className="realizarFContainer">
             <div className='realizarFTexto'>
-                <h1>Conoce nuestra sugerencia de pack mas adecuado a ti</h1>
+                <h1>Encuentre la formación que más te convenga</h1>
             </div>
 
             <div className='realizarFTest'>
