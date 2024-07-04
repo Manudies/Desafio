@@ -8,12 +8,11 @@ const Comienzo = () => {
   return (
     <div className="comienzoContainer">
         <div className='comienzotexto'>
-            <h2>Optimiza tu camino al éxito</h2>
-            <h3>¡Descubre tu solución ideal!</h3>
+            <h2>Impulsa tu negocio con diseño accesible</h2>
+            <h3>Descubre el pack de servicios perfecto para ti.</h3>
+            <ActionButton label="Haz el test" className={"comienzoButton"}/>
         </div>
-        <div className='botonComienzo'>
-            <ActionButton label="Descúbrelo Ahora" className={"comienzoButton"}/>
-        </div>
+
     </div>
   );
 }

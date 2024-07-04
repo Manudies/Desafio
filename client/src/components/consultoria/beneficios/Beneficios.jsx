@@ -6,21 +6,18 @@ const Beneficios = () => {
 
   return (
     <div className="beneficiosContainer">
-        <h2>Beneficios</h2>
+        <h2>¿Cómo beneficia tener un diseño accesible?</h2>
         <section className="cardContainer">
             <div className='cardBeneficios'>
-                <h2>Beneficio 1</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos praesentium voluptas soluta in id! Dolore, praesentium magni ullam cupiditate ad neque illum dignissimos qui tempore ex recusandae iusto, officiis accusamus!</p>
+                <p>Según Forrester Research, el 50% de las ventas se pierden porque los usuarios no encuentran la información que están buscando para poder tomar una decisión de compra.</p>
             </div>
 
             <div className='cardBeneficios'>
-                <h2>Beneficio 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium facere consequatur exercitationem ratione nobis dolores temporibus minus incidunt, dolorem quo harum id sunt accusamus eius dolore quaerat libero provident labore.</p>      
+                <p> Más del 15% de la población mundial vive con discapacidades. Mejorar la accesibilidad y usabilidad general disminuye la necesidad de soporte técnico y mejora considerablemente la experiencia del potencial cliente.</p>      
             </div>
 
             <div className='cardBeneficios'>
-                <h2>Beneficio 3</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et laudantium rerum adipisci blanditiis iste ad ipsam maiores fugit neque architecto dolores excepturi, commodi libero ipsa doloremque quod cum, quam velit.</p>
+                <p>El 57% de los usuarios no recomendarían una empresa con un sitio mal diseñado para móviles. Una buena interfaz aumenta la probabilidad de que los visitantes se conviertan en clientes.</p>
             </div>
         </section>
     </div>
