@@ -8,11 +8,11 @@ const Noti = ({ className= "noti" }) => {
             {`¡Da el primer paso! Y solicita tu primera sesión estratégica gratuita `}
               <a href= "#cuestionario" className="aqui"> aquí.</a>
         </div>
-          <button
-            className="arrowleft-icon"
-            alt=""
-            src="/arrowleft.svg"
-          />
+        <div  className="close-container">
+          <button className="arrowleft-icon">
+            <img src="/arrowleft.svg" alt="close"></img>
+          </button>
+        </div>
     </div>
     )
 };
