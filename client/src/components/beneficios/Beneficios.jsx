@@ -5,7 +5,7 @@ const Beneficios = () => {
 
 
   return (
-    <main className="beneficiosContainer">
+    <div className="beneficiosContainer">
         <h2>Beneficios</h2>
         <section className="cardContainer">
             <div className='cardBeneficios'>
@@ -23,7 +23,7 @@ const Beneficios = () => {
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et laudantium rerum adipisci blanditiis iste ad ipsam maiores fugit neque architecto dolores excepturi, commodi libero ipsa doloremque quod cum, quam velit.</p>
             </div>
         </section>
-    </main>
+    </div>
   );
 }
 

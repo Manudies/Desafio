@@ -48,7 +48,7 @@ const Main = () => {
   };
 
   return (
-    <main className="main-content-pack ">
+    <div className="content-pack ">
       <div className='question-header-pack '>
         <ActionButton label="← Atras" onClick={handlePrev} disabled={index === 0} className="button-anterior" />
         <BarraProgreso className="progress-bar-pack " currentQuestion={index + 1} totalQuestions={questions.length} />
@@ -77,7 +77,7 @@ const Main = () => {
       <div>
         <button onClick={handleAnswerRemove}>Borrar respuestas</button>
       </div>
-    </main>
+    </div>
   );
 }
 
