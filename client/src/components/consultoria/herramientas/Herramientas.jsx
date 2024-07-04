@@ -9,7 +9,7 @@ const Herramientas = () => {
         <section className="herramientaContainer">
             <div className='herramienta'>
                 <div className='imgHerramienta'>
-                <img src="./seniority_logoblanco_sinfondo_uso_en_fondo_oscuro.png" alt="logo" />
+                <img src="./" alt="logo" />
                 </div>
 
                 <div className='herramientaText'>
@@ -19,7 +19,7 @@ const Herramientas = () => {
 
             <div className='herramienta'>
                 <div className='imgHerramienta'>
-                <img src="./seniority_logoblanco_sinfondo_uso_en_fondo_oscuro.png" alt="logo" />
+                <img src="./" alt="logo" />
                 </div>
 
                 <div className='herramientaText'>
@@ -29,7 +29,7 @@ const Herramientas = () => {
 
             <div className='herramienta'>
                 <div className='imgHerramienta'>
-                <img src="./seniority_logoblanco_sinfondo_uso_en_fondo_oscuro.png" alt="logo" />
+                <img src="./" alt="logo" />
                 </div>
 
                 <div className='herramientaText'>
