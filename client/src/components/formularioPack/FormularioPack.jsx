@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
-import questions from './preguntasPack.js';
-import './formularioPack.css';
-import ActionButton from '../../components/actionButton/actionButton';
-import BarraProgreso from '../../components/barraProgreso/BarraProgreso';
-import '../../components/barraProgreso/BarraProgreso.css';
+import React, { useState } from "react";
+import questions from "./preguntasPack.js";
+import "./formularioPack.css";
+import ActionButton from "../../components/actionButton/actionButton";
+import Tooltip from "../tooltip/Tooltip.jsx";
+import BarraProgreso from "../../components/barraProgreso/BarraProgreso";
+import "../../components/barraProgreso/BarraProgreso.css";
 
 const Main = () => {
   const [index, setIndex] = useState(0);
@@ -39,7 +40,7 @@ const Main = () => {
 
   // Función para manejar el envío del formulario
   const handleSubmit = () => {
-    console.log('Respuestas enviadas:', answers);
+    console.log("Respuestas enviadas:", answers);
     // Aquí puedes agregar lógica para enviar las respuestas, por ejemplo, a una API
   };
 
@@ -48,18 +49,30 @@ const Main = () => {
   };
 
   return (
-    <div className="content-pack ">
-      <div className='question-header-pack '>
-        <ActionButton label="← Atras" onClick={handlePrev} disabled={index === 0} className="button-anterior" />
-        <BarraProgreso className="progress-bar-pack " currentQuestion={index + 1} totalQuestions={questions.length} />
+    <div className="main-content-pack ">
+      <div className="question-header-pack ">
+        <ActionButton
+          label="← Atras"
+          onClick={handlePrev}
+          disabled={index === 0}
+          className="button-anterior"
+        />
+        <BarraProgreso
+          className="progress-bar-pack "
+          currentQuestion={index + 1}
+          totalQuestions={questions.length}
+        />
       </div>
 
       <section className="section-form-pack ">
-        <div className='questionForm-pack '>{formulario.question}</div>
-        {showWarning && <div className="warning">Por favor, responde todas las preguntas</div>}
-        <div className='answers-container-pack '>
+        <Tooltip text="¿¿Eres tan tonto que no entiendes la pregunta??. Te diré algo estás chocheando" />
+        <div className="questionForm-pack ">{formulario.question}</div>
+        {showWarning && (
+          <div className="warning">Por favor, responde todas las preguntas</div>
+        )}
+        <div className="answers-container-pack ">
           {Object.entries(formulario.answers).map(([key, value]) => (
-            <div className='answers-pack ' key={key}>
+            <div className="answers-pack " key={key}>
               <button onClick={() => handleAnswer(key)}>{value}</button>
             </div>
           ))}
@@ -68,17 +81,26 @@ const Main = () => {
 
       <div>
         {index === questions.length - 1 ? (
-                <ActionButton label="Enviar" onClick={handleSubmit} className="button" />
-              ) : (
-                <ActionButton label="Siguiente" onClick={handleNext} className="button-siguiente" disabled={answers[index] === undefined} />
-              )}
+          <ActionButton
+            label="Enviar"
+            onClick={handleSubmit}
+            className="button"
+          />
+        ) : (
+          <ActionButton
+            label="Siguiente"
+            onClick={handleNext}
+            className="button-siguiente"
+            disabled={answers[index] === undefined}
+          />
+        )}
       </div>
-      
+
       <div>
         <button onClick={handleAnswerRemove}>Borrar respuestas</button>
       </div>
     </div>
   );
-}
+};
 
 export default Main;
