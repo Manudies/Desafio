@@ -26,10 +26,10 @@ const Navbar = () => {
         {/* Navbar Menu */}
         <ul className={`navbar-menu ${menuOpen ? 'active' : ''}`}>
           <li className="navbar-item">
-            <a href="#consultoria" className="navbar-link">Consultoría</a>
+            <a href="/consultoria" className="navbar-link">Consultoría</a>
           </li>
           <li className="navbar-item">
-            <a href="#formacion" className="navbar-link">Formación</a>
+            <a href="/formacion" className="navbar-link">Formación</a>
           </li>
           <li className="navbar-item">
             <a href="#reservas" className="navbar-link">Plataformas de reservas</a>
@@ -38,7 +38,7 @@ const Navbar = () => {
             <a href="#sobre" className="navbar-link">Sobre Seniority</a>
           </li>
           <li className="navbar-item">
-            <a href="#contacto" className="navbar-link">Contacto</a>
+            <a href="/contacto" className="navbar-link">Contacto</a>
           </li>
           <li className="navbar-item">
             <button className='accede-button'>Accede</button>
