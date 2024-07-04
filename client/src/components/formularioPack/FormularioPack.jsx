@@ -49,7 +49,7 @@ const Main = () => {
   };
 
   return (
-    <main className="main-content-pack ">
+    <div className="main-content-pack ">
       <div className="question-header-pack ">
         <ActionButton
           label="← Atras"

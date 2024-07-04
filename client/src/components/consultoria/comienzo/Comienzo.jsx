@@ -1,4 +1,4 @@
-import ActionButton from '../actionButton/actionButton';
+import ActionButton from '../../actionButton/actionButton';
 import './Comienzo.css';
 
 
