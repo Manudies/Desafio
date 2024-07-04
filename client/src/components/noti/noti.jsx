@@ -15,7 +15,7 @@ const Noti = ({ className = "noti" }) => {
         <div className={`noti-container ${className}`}>
             <div className="da-el-primer-container">
                 {`¡Da el primer paso! Y solicita tu primera sesión estratégica gratuita `}
-                <a href= "#cuestionario" className="aqui"> aquí.</a>
+                <a href= "./contacto" className="aqui"> aquí.</a>
             </div>
             <div className="close-container">
                 <button className="arrowleft-icon" onClick={handleClose}>
