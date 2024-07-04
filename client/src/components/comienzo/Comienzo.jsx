@@ -6,7 +6,7 @@ const Comienzo = () => {
 
 
   return (
-    <main className="comienzoContainer">
+    <div className="comienzoContainer">
         <div className='comienzotexto'>
             <h2>Optimiza tu camino al éxito</h2>
             <h3>¡Descubre tu solución ideal!</h3>
@@ -14,7 +14,7 @@ const Comienzo = () => {
         <div className='botonComienzo'>
             <ActionButton label="Descúbrelo Ahora" className={"comienzoButton"}/>
         </div>
-    </main>
+    </div>
   );
 }
 

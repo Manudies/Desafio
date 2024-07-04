@@ -5,7 +5,7 @@ const Herramientas = () => {
 
 
   return (
-    <main className="herramientasContainer">
+    <div className="herramientasContainer">
         <section className="herramientaContainer">
             <div className='herramienta'>
                 <div className='imgHerramienta'>
@@ -37,7 +37,7 @@ const Herramientas = () => {
                 </div>
             </div>
         </section>
-    </main>
+    </div>
   );
 }
 
