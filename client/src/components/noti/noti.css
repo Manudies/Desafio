@@ -13,12 +13,9 @@
   }
 
 .da-el-primer-container {
-  display: flex;
+  font-size: 20px;
   top: 15px;
-  left: -310px;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+  left: -265px;
   height: 25px;
   position: relative;
   line-height: 160%;
@@ -46,10 +43,9 @@
 }
 
 .close-container {
-  top: 15px;
-  align-items: center;
-  justify-content: center;
   position: relative;
+  top: 15px;
+  right: -280px;
 }
 
 .arrowleft-icon {
