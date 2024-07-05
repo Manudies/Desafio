@@ -79,3 +79,19 @@
   cursor: pointer;
   width: 50%;
 }
+
+.pack1 img {
+  width: 93px;
+  height: 112px;
+  background-color: #1E2A78;
+}
+
+.pack1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}

@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="navbar-container">
         <div className="logo-wrapper">
           <img src="./seniority_logoblanco_sinfondo_uso_en_fondo_oscuro.png" className="logo-image" alt="logo" />
-          <a href="#" className="navbar-logo">
+          <a href="/" className="navbar-logo">
             <div className="logo-overlay"></div>
           </a>
         </div>
