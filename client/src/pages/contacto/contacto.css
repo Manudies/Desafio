@@ -1,17 +1,8 @@
-/* contacto.css */
-
 /* Anulando text-align: center; en #root */
 #root {
     text-align: left !important; /* Sobrescribe el text-align de #root */
 }
 
-body{
-    /* Estilo de la imagen de fondo */
-    background-image: url('../../../public/llamada.jpg');
-    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
-    background-position: center; /* Centra la imagen en el fondo */
-    background-repeat: no-repeat; /* Evita repetir la imagen */
-}
 
 .main-contacto {
     display: flex;
@@ -19,9 +10,7 @@ body{
     align-items: flex-start;
     margin-left: 0; /* Asegura que no haya margen izquierdo */
     padding-left: 15%; /* Asegura que no haya relleno izquierdo */
-    position: absolute;
-    left: 0;
-    top: 143px; /* Ajusta este valor según la posición vertical deseada */
+    padding-top: 15%;
     color:#091864;
 }
 /* Estilo general para el contenedor principal */
