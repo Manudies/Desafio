@@ -22,7 +22,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: auto; /* This pushes the footer to the bottom */
+
 }
 
 .footer-content {
