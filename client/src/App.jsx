@@ -4,6 +4,8 @@ import router from "./router";
 import UserContext from "./context/userContext";
 import {fetchUserData} from "./utils/fetch"
 import "./App.css";
+import { deleteToken } from './utils/local.js';
+
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 
