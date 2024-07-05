@@ -1,12 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import { Link } from 'react-router-dom';
+
+import UserContext from '../../context/userContext';
+import PanelUsuario from '../panelUsuario/panelUsuario';
+
+import Modal from '../modal/modal'
 import './navbar.css';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { user, logOut, handlefetchUserData } = useContext(UserContext);
+  const[isModalOpen, setIsModalOpen] = useState(false)
+
+  function openModal(){
+    if (!user) {
+      return
+    }
+    setIsModalOpen(true)
+  }
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
+
+  const handleResize = () => {
+    if (window.innerWidth > 960) {
+      setMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
 
   return (
     <nav className="navbar">
@@ -40,9 +69,30 @@ const Navbar = () => {
           <li className="navbar-item">
             <a href="/contacto" className="navbar-link">Contacto</a>
           </li>
-          <li className="navbar-item">
-            <button className='accede-button'>Accede</button>
+
+
+        {user && (
+            <li className="nav-item-sign-in">
+              <button onClick = {openModal}className="trip-card__button">{user.username}</button>
+              {isModalOpen &&
+                <Modal isOpen={true} onClose={()=> {
+                  setIsModalOpen(false)
+                  }}>
+                    <PanelUsuario user={user}></PanelUsuario>
+                </Modal>
+              }
+
+            </li>
+          )}
+          {!user && (
+          <li className="nav-item sign-in">
+            <Link to="/register" className="nav-links" onClick={toggleMenu}>
+              Accede
+            </Link>
           </li>
+            
+          )}
+
         </ul>
       </div>
     </nav>
