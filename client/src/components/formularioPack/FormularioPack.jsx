@@ -5,11 +5,13 @@ import ActionButton from "../../components/actionButton/actionButton";
 import Tooltip from "../tooltip/Tooltip.jsx";
 import BarraProgreso from "../../components/barraProgreso/BarraProgreso";
 import "../../components/barraProgreso/BarraProgreso.css";
+import { consultoria } from "../../utils/fetch.js";
 
 const Main = () => {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [showWarning, setShowWarning] = useState(false);
+  // const [consultoriaData, setConsultoriaData] = useState("");
 
   const formulario = questions[index];
 
@@ -48,6 +50,18 @@ const Main = () => {
     setAnswers([]);
   };
 
+  const handleConsultoria = async () => {
+    console.log("Respuestas enviadas:", answers);
+    const result = {};
+    for (let i = 0; i < answers.length; i++) {
+      result[`p${i + 1}`] = answers[i];
+    }
+    // let cadenaFormateada = answers.map((valor, index) => `[p${index + 1}:${valor}]`).join('');
+    // console.log(cadenaFormateada);
+    const response = await consultoria(result);
+    console.log("Respuesta API",response);
+  };
+
   return (
     <div className="main-content-pack ">
       <div className="question-header-pack ">
@@ -83,7 +97,7 @@ const Main = () => {
         {index === questions.length - 1 ? (
           <ActionButton
             label="Enviar"
-            onClick={handleSubmit}
+            onClick={handleConsultoria}
             className="button"
           />
         ) : (
