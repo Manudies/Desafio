@@ -4,6 +4,7 @@ import './formularioModulo.css';
 import ActionButton from '../../components/actionButton/actionButton';
 import BarraProgreso from '../../components/barraProgreso/BarraProgreso';
 import '../../components/barraProgreso/BarraProgreso.css';
+import { formacion } from "../../utils/fetch.js";
 
 const Main = () => {
   const [index, setIndex] = useState(0);
@@ -47,6 +48,17 @@ const Main = () => {
     setAnswers([]);
   };
 
+  const handleFormacion = async () => {
+    console.log("Respuestas enviadas:", answers);
+    const result = {};
+    for (let i = 0; i < answers.length; i++) {
+      result[`p${i + 1}`] = answers[i];
+    }
+    const response = await formacion(result);
+    console.log("Respuesta API",response);
+  };
+
+
   return (
     <div className="content-modulo">
       <div className="question-header-modulo">
@@ -69,7 +81,7 @@ const Main = () => {
         <div className="navigation-buttons">
 
           {index === questions.length - 1 ? (
-            <ActionButton label="Enviar" onClick={handleSubmit} className="button" />
+            <ActionButton label="Enviar" onClick={handleFormacion} className="button" />
           ) : (
             <ActionButton label="Siguiente" onClick={handleNext} className="button-siguiente" disabled={answers[index] === undefined} />
           )}
