@@ -10,20 +10,20 @@ const realizarTest = () => {
 
 
   return (
-    <main className="realizarTestContainer">
+    <div className="realizarTestContainer">
         <section className="realizarContainer">
             <div className='realizarTexto'>
-                <h1>Conoce nuestra sugerencia de pack mas adecuado a ti</h1>
+                <h1 className='realizarText'>Conoce nuestra sugerencia de pack mas adecuado a ti</h1>
             </div>
 
             <div className='realizarTest'>
-                <button onClick={showAll} className='button'>Realizar test</button>
+                <button onClick={showAll} className='buttonTest'>Realizar test</button>
             </div>
 
 
 
         </section>
-    </main>
+    </div>
   );
 }
 

@@ -1,7 +1,7 @@
-.body {
+/* .body {
   margin: 0;
   font-family: Arial, sans-serif;
-}
+} */
 
 .navbar {
   width: 100%;
@@ -223,5 +223,33 @@
 
   .navbar-link:hover {
     color: #07124B;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .navbar-toggle {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-toggle {
+    margin-right: 20px;
+  }
+
+  .logo-image, .logo-overlay {
+    margin-left: -100px;
+  }
+}
+
+@media screen and (max-width: 368px) {
+  .logo-image, .logo-overlay {
+    margin-left: -130px;
+  }
+}
+
+@media screen and (max-width: 334px) {
+  .logo-image, .logo-overlay {
+    margin-left: -140px;
   }
 }

@@ -1,4 +1,4 @@
-import ActionButton from '../actionButton/actionButton';
+import ActionButton from '../../actionButton/actionButton';
 import './Descubre.css';
 
 
@@ -6,7 +6,7 @@ const Descubre = () => {
 
 
   return (
-    <main className="descubrirContainer">
+    <div className="descubrirContainer">
         <section className="descubreContainer">
             <div className='descubre'>
                 <div className='descubreText'>
@@ -21,7 +21,7 @@ const Descubre = () => {
             </div>
         </section>
 
-    </main>
+    </div>
   );
 }
 
