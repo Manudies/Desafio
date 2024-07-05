@@ -1,17 +1,17 @@
 .scroll-button {
+    height: 40px;
     width: 100%;
-    left: 50%;
-    bottom: 150px;
-    height: 50px;
-    font-size: 2rem;
-    z-index: 999;
-    position: absolute;
-    transform: translateX(-50%);
-    cursor: pointer;
-    color: #050E3C;
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
-    margin-top: auto;
+    z-index: 999;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #050E3C;
+    cursor: pointer;
+    position: relative;
+    bottom: 150px;
+    left: 0;
+    top: 0;
   }

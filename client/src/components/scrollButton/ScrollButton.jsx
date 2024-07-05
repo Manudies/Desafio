@@ -11,7 +11,7 @@ const ScrollButton = () => {
 
   return (
     <div className="scroll-button" onClick={scrollToTop}>
-      Back to top
+      BACK TO TOP
     </div>
   );
 };
