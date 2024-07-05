@@ -1,0 +1,59 @@
+.noti-container { 
+  z-index: 1000;
+  position: fixed;
+  height: 60px;
+  top: 83px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: rgba(142, 149, 184, 0.7);
+  color: #091864;
+  }
+
+.da-el-primer-container {
+  font-size: 20px;
+  top: 15px;
+  left: -17.5%;
+  height: 25px;
+  position: relative;
+  line-height: 160%;
+  display: inline-block;
+
+}
+
+.aqui {
+  text-decoration: underline;
+  display: inline-block;
+  color: #091864;
+}
+
+.aqui:after{
+  content: "";
+  color: #091864;
+}
+
+.aqui:hover:after{
+  color: #091864;
+}
+
+.aqui:hover{
+  color: #091864;
+}
+
+.close-container {
+  position: relative;
+  top: 15px;
+  right: -18.5%;
+}
+
+.arrowleft-icon {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color:black;
+  height: 25px;
+  width: 25px;
+}

@@ -4,6 +4,7 @@ import './formularioModulo.css';
 import ActionButton from '../../components/actionButton/actionButton';
 import BarraProgreso from '../../components/barraProgreso/BarraProgreso';
 import '../../components/barraProgreso/BarraProgreso.css';
+import { formacion } from "../../utils/fetch.js";
 
 const Main = () => {
   const [index, setIndex] = useState(0);
@@ -47,8 +48,19 @@ const Main = () => {
     setAnswers([]);
   };
 
+  const handleFormacion = async () => {
+    console.log("Respuestas enviadas:", answers);
+    const result = {};
+    for (let i = 0; i < answers.length; i++) {
+      result[`p${i + 1}`] = answers[i];
+    }
+    const response = await formacion(result);
+    console.log("Respuesta API",response);
+  };
+
+
   return (
-    <main className="main-content-modulo">
+    <div className="content-modulo">
       <div className="question-header-modulo">
         <ActionButton label="← Atras" onClick={handlePrev} disabled={index === 0} className="button-atras" />
         <BarraProgreso className="progress-bar-modulo " currentQuestion={index + 1} totalQuestions={questions.length} />
@@ -69,7 +81,7 @@ const Main = () => {
         <div className="navigation-buttons">
 
           {index === questions.length - 1 ? (
-            <ActionButton label="Enviar" onClick={handleSubmit} className="button" />
+            <ActionButton label="Enviar" onClick={handleFormacion} className="button" />
           ) : (
             <ActionButton label="Siguiente" onClick={handleNext} className="button-siguiente" disabled={answers[index] === undefined} />
           )}
@@ -77,7 +89,7 @@ const Main = () => {
         <div>
           <button onClick={handleAnswerRemove}>Borrar respuestas</button>
         </div>
-    </main>
+    </div>
   );
 }
 
