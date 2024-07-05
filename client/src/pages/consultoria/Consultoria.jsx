@@ -18,9 +18,9 @@ const consultoria = () => {
       <Beneficios />
       <Carrusel />
       <Herramientas />
-      <h2>Otro Texto</h2>
-      <RealizarTest />
+      <h2 className="descubrePacks">Descubre nuestros servicios</h2>
       <PacksList />
+      <RealizarTest />
       <Descubre />
       <Footer />
     </div>

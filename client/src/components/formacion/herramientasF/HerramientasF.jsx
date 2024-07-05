@@ -10,7 +10,7 @@ const HerramientasF = () => {
 
             <div className='herramientaF'>
                 <div className='imgHerramientaF'>
-                <img src="./public/herramientasF/Star.png "alt="star" />
+                <img src="./herramientasF/Star.png "alt="star" />
                 </div>
 
                 <div className='herramientaFText'>
@@ -21,7 +21,7 @@ const HerramientasF = () => {
 
             <div className='herramientaF'>
                 <div className='imgHerramientaF'>
-                <img src="./public/herramientasF/Calendar_Check.png "alt="calendar" />
+                <img src="./herramientasF/Calendar_Check.png "alt="calendar" />
                 </div>
 
                 <div className='herramientaFText'>
@@ -32,7 +32,7 @@ const HerramientasF = () => {
 
             <div className='herramientaF'>
                 <div className='imgHerramientaF'>
-                <img src="./public/herramientasF/Chat_Circle_Dots.png "alt="chat" />
+                <img src="./herramientasF/Chat_Circle_Dots.png "alt="chat" />
                 </div>
 
                 <div className='herramientaFText'>
@@ -43,7 +43,7 @@ const HerramientasF = () => {
 
             <div className='herramientaF'>
                 <div className='imgHerramientaF'>
-                <img src="./public/herramientasF/Lupa.png "alt="lupa" />
+                <img src="./herramientasF/Lupa.png "alt="lupa" />
                 </div>
 
                 <div className='herramientaFText'>
@@ -54,7 +54,7 @@ const HerramientasF = () => {
 
             <div className='herramientaF'>
                 <div className='imgHerramientaF'>
-                <img src="./public/herramientasF/Vector.png "alt="grafico" />
+                <img src="./herramientasF/Vector.png "alt="grafico" />
                 </div>
 
                 <div className='herramientaFText'>
