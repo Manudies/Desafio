@@ -7,7 +7,7 @@
 
 body{
     /* Estilo de la imagen de fondo */
-    background-image: url('../../../public/llamada.jpg');
+    background-image: url('../../../public/fondo.webp');
     background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
     background-position: center; /* Centra la imagen en el fondo */
     background-repeat: no-repeat; /* Evita repetir la imagen */
