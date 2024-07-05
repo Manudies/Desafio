@@ -56,8 +56,6 @@ const Main = () => {
     for (let i = 0; i < answers.length; i++) {
       result[`p${i + 1}`] = answers[i];
     }
-    // let cadenaFormateada = answers.map((valor, index) => `[p${index + 1}:${valor}]`).join('');
-    // console.log(cadenaFormateada);
     const response = await consultoria(result);
     console.log("Respuesta API",response);
   };
