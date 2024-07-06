@@ -1,0 +1,104 @@
+.textbox-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 365px;
+    height: 116px;
+    top: 1916px;
+    left: 67px;
+    padding: 0px 0px 24px 0px;
+    gap: 8px;
+    opacity: 0px;
+  }
+  
+  .textbox-label {
+    width: 56px;
+    height: 24px;
+    gap: 8px;
+    opacity: 0px;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+  }
+  
+  .textbox {
+    font-family: Atkinson Hyperlegible;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.6px;
+    text-align: left;
+    width: 365px;
+    height: 52px;
+    top: 40px;
+    left: -0.25px;
+    padding: 8px 0px 0px 0px;
+    gap: 8px;
+    border-radius: 8px;
+    opacity: 0px;
+    background: rgba(252, 252, 252, 1);
+    border: 1px solid rgba(7, 18, 75, 1);
+    text-align: justify;
+    padding: 0px 8px;
+    color: rgba(120, 120, 120, 1);
+  }
+
+  .textbox-focus {
+    font-family: Atkinson Hyperlegible;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.6px;
+    text-align: left;
+    width: 365px;
+    height: 52px;
+    top: 40px;
+    left: -0.25px;
+    padding: 8px 0px 0px 0px;
+    gap: 8px;
+    border-radius: 8px;
+    opacity: 0px;
+    background: rgba(252, 252, 252, 1);
+    border: 2px solid rgba(7, 18, 75, 1);
+    text-align: justify;
+    padding: 0px 8px;
+    color: rgba(120, 120, 120, 1);
+  }
+  
+  .textbox-error {
+    border-color: rgba(176, 55, 55, 1);
+    color: rgba(0, 0, 0, 1);
+    font-family: Atkinson Hyperlegible;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.6px;
+    text-align: left;
+    width: 365px;
+    height: 52px;
+    top: 40px;
+    left: -0.25px;
+    padding: 8px 0px 0px 0px;
+    gap: 8px;
+    border-radius: 8px;
+    opacity: 0px;
+    background: rgba(252, 252, 252, 1);
+    text-align: justify;
+    padding: 0px 8px;
+  }
+  
+  .textbox-error-message {
+    color: rgba(176, 55, 55, 1);
+    font-family: Atkinson Hyperlegible;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.6px;
+    text-align: left;
+    width: 349px;
+    height: 36px;
+    top: 92px;
+    left: 8px;
+    gap: 0px;
+    opacity: 0px;
+  }
+  

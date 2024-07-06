@@ -131,5 +131,7 @@ dist
 
 .vscode
 
-#viajes
-/mongo_viajes
+#desafio
+/mongo_desafio
+
+__pycache__

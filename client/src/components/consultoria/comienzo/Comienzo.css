@@ -1,0 +1,55 @@
+/* Estilos para el contenedor principal */
+.comienzoContainer {
+    height: 705px;
+    width: 100%;
+    background-image: url('./consultoria/consultoria.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; /* No repetir la imagen */
+    margin-top: 80px;
+
+}
+
+/* Estilos para el contenedor de texto */
+.comienzotexto {
+    max-width: 500px;
+    height: 500px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 100px;
+    
+}
+
+.comienzotexto h2 {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: justify; 
+    margin:300px 0 0 0;
+  
+}
+
+.comienzotexto h3 {
+    font-size: 35px;
+    font-weight: normal;
+    margin: 0;
+    text-align: justify;
+
+
+}
+
+.comienzoButton {
+    background-color: #001f3f;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 27px;
+    font-weight: bold;
+    width: 100%;
+    padding: 20px;
+    margin-top: 50px;
+}
+

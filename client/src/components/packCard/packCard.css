@@ -1,0 +1,56 @@
+.pack-card {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.pack-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pack-card-image {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.pack-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.pack-card-content {
+  flex-grow: 1;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.pack1 {
+  background-color: #f0f9ff;
+}
+
+.pack2 {
+  background-color: #e0ffe0;
+}
+
+.pack3 {
+  background-color: #fff9e6;
+}
+
+.pack4 {
+  background-color: #fff0f0;
+}

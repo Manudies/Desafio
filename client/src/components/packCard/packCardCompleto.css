@@ -1,0 +1,93 @@
+.packCompleto {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1800px;
+    height: 600px;
+ 
+}
+
+.pack-card-header {
+    border-bottom: 1px solid;
+    margin-bottom: 20px;
+    display: flex;
+    border-bottom-style: dashed;
+    border-bottom-color: #0056b3;
+
+}
+.card-body{
+    display: flex;
+}
+.pack-card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 10px 10px 10px;
+    gap: 20px;
+}
+.pack-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.pack-subtitle {
+    font-size: 16px;
+    color: #777;
+}
+
+.pack-card-body p {
+    margin: 20px 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #555;
+    line-height: 1.5;
+    text-align: left;
+    width: 100%;
+
+}
+
+.contratar{
+    background-color: #001f3f;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    width: 80%;
+    padding: 10px;
+    margin-top: 50px;
+    height: 40px;
+
+}
+
+.contratar:hover {
+    background-color: #fff;
+    color: #091864;
+}
+
+.pack-includes h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.pack-includes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pack-includes ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.pack-includes ul li::before {
+    content: '>';
+    margin-right: 5px;
+    color: #007bff;
+}
