@@ -6,6 +6,7 @@ const Herramientas = () => {
 
   return (
     <div className="herramientasContainer">
+        <h2>¿Cómo te beneficia tener un diseño accesible?</h2>
         <section className="herramientaContainer">
             <div className='herramienta'>
                 <div className='imgHerramienta'>
@@ -13,7 +14,7 @@ const Herramientas = () => {
                 </div>
 
                 <div className='herramientaText'>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos praesentium voluptas soluta in id! Dolore, praesentium magni ullam cupiditate ad neque illum dignissimos qui tempore ex recusandae iusto, officiis accusamus!</p>
+                <p>De las llamadas de soporte de McAfee fueron reducidas como resultado de invertir en diseño UX/UI</p>
                 </div>
             </div>
 
@@ -23,7 +24,7 @@ const Herramientas = () => {
                 </div>
 
                 <div className='herramientaText'>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos praesentium voluptas soluta in id! Dolore, praesentium magni ullam cupiditate ad neque illum dignissimos qui tempore ex recusandae iusto, officiis accusamus!</p>
+                <p>Airbnb atribuye al diseño UX como factor clave para pasar de ser casi un fracaso a ser valorado en</p>      
                 </div>
             </div>
 
@@ -33,7 +34,7 @@ const Herramientas = () => {
                 </div>
 
                 <div className='herramientaText'>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos praesentium voluptas soluta in id! Dolore, praesentium magni ullam cupiditate ad neque illum dignissimos qui tempore ex recusandae iusto, officiis accusamus!</p>
+                <p>Aumentaron los ingresos de ESPN tras implementar un UX/UI adecuado.</p>
                 </div>
             </div>
         </section>

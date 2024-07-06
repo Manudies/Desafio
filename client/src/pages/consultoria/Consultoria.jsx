@@ -15,9 +15,9 @@ const consultoria = () => {
       <Navbar />
       <Noti />
       <Comienzo />
-      <Beneficios />
-      <Carrusel />
       <Herramientas />
+      <Carrusel />
+      <Beneficios />
       <h2 className="descubrePacks">Descubre nuestros servicios</h2>
       <PacksList />
       <RealizarTest />
