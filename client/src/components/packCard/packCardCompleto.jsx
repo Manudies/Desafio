@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router';
 import Modal from '../modal/modal';
 
 import ActionButton from '../actionButton/actionButton';
-import { addPack, removePack } from '../../utils/fetch';
+import { addPack, removePack, sendMail } from '../../utils/fetch';
 
 const TarjetaPack = ({ pack }) => {
     const { user, handlefetchUserData } = useContext(UserContext);
@@ -20,28 +20,55 @@ const TarjetaPack = ({ pack }) => {
     //     setIsContratar(userHadPack());
     // }, [pack, user]);
 
-    function openModal() {
-        setIsModalOpen(true);
-    }
+    // function openModal() {
+    //     setIsModalOpen(true);
+    // }
 
-    const handleContratar = async () => {
+    // const handleContratar = async () => {
+    //     if (user) {
+    //         console.log ("pack", pack._id);
+    //         const newContratar = await addPack(user._id, pack._id);
+    //         if (isContratar) {
+    //             await handledeleteContratar(packData);
+    //             setIsContratar(!isContratar);
+    //             handlefetchUserData();
+    //         }
+    //     } else {
+    //         alert("Debes iniciar sesión")
+    //         navigate("/register");
+    //     };
+    // };
+
+  
+    
+      const handleBuyPack = async (pack) => {
         if (user) {
-            const newContratar = await addPack(pack._id, user._id);
-            if (isContratar) {
-                await handledeleteContratar(packData);
-                setIsContratar(!isContratar);
-                handlefetchUserData();
-            }
+          try {
+             await addPack(user._id, pack._id);
+             await sendMail( {
+              to: user.email,
+              subject: 'Confirmación de compra',
+              text: `Hola ${user.username},\n\nGracias por comprar el viaje a ${pack.packName}. Disfruta de tu aventura!\n\nSaludos,\nEl equipo de Horizontes Lejanos`
+            });
+            alert(`Correo de confirmación enviado a ${user.email}!`);
+            await handledeleteContratar(pack);
+          } catch (error) {
+            console.error("Error enviando el correo de confirmación", error);
+            alert("Hubo un error al enviar el correo de confirmación.");
+          }
         } else {
-            alert("Debes iniciar sesión")
-            navigate("/register");
-        };
-    };
-
-    const handledeleteContratar = async (pack) => {
-        if (user) {
-            const deleteContratar = await removePack(pack._id, user._id);
+          alert("Debes iniciar sesión");
+          navigate("/register");
         }
+      };
+
+        const handledeleteContratar = async (pack) => {
+        if (user) {
+            const deleteContratar = await removePack(user._id, pack._id);
+        }else {
+            alert("Debes iniciar sesión");
+            navigate("/register");
+          }
     };
 
     // const userHadPack = () => {
@@ -54,7 +81,6 @@ const TarjetaPack = ({ pack }) => {
 
     return (
         <div className="packCompleto">
-            {/* <img src={packData.image} alt={packData.packName} className="pack-card-image" /> */}
             <div className="pack-card-content">
                 <h2 className="card-title">{pack.packName}</h2>
                 <div className='card-body'>
@@ -66,7 +92,7 @@ const TarjetaPack = ({ pack }) => {
                             <li key={index}>{item}</li>
                         ))}
                         </ul>
-                        <ActionButton label="Contratar" className={"contratar"} />
+                        <ActionButton label={isContratar ? "Cancelar" : "Solicitar más información"} className={"contratar"} onClick={()=>handleBuyPack(pack)} />
 
                     </div>
                     {/* <div className="card-deliverables">
@@ -79,7 +105,6 @@ const TarjetaPack = ({ pack }) => {
                     </div> */}
                 </div>
             </div>
-            {/* <Actiondiv label={isContratar ? "Cancelar" : "Solicitar más información"} onClick={handleContratar} className="pack-card-button" /> */}
         </div>
     );
 };
