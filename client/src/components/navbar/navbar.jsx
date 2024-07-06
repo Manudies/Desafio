@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 import UserContext from '../../context/userContext';
-import PanelUsuario from '../panelUsuario/panelUsuario';
+import PanelUsuario from '../panelUsuario/PanelUsuario';
 
 import Modal from '../modal/modal'
 import './navbar.css';
@@ -73,12 +73,12 @@ const Navbar = () => {
 
         {user && (
             <li className="nav-item-sign-in">
-              <button onClick = {openModal}className="trip-card__button">{user.username}</button>
+              <button onClick = {openModal}className="pack-card__button">{user.username}</button>
               {isModalOpen &&
                 <Modal isOpen={true} onClose={()=> {
                   setIsModalOpen(false)
                   }}>
-                    <PanelUsuario user={user}></PanelUsuario>
+                    <PanelUsuario user={user} ></PanelUsuario>
                 </Modal>
               }
 

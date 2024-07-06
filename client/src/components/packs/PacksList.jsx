@@ -31,7 +31,7 @@ const packList = () => {
                     ))}
             </section>
             <section className="packs_info">
-            {selectedPack && <PackCardCompleto pack={selectedPack}  />}
+            {selectedPack && <PackCardCompleto pack={selectedPack} key={packs._id}  />}
             </section>
 
         </div>
