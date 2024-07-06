@@ -100,4 +100,7 @@ background-color: #e0e0e0;
   margin-bottom: 10px;
 }
 
-
+.answers-pack button.selected {
+  background-color: #e0e0e0;
+  border: 3px solid #000000;
+}

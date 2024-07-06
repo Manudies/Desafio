@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import questions from './preguntasModulo.js';
-import './formularioModulo.css';
-import ActionButton from '../../components/actionButton/actionButton';
-import BarraProgreso from '../../components/barraProgreso/BarraProgreso';
-import '../../components/barraProgreso/BarraProgreso.css';
+import React, { useState } from "react";
+import questions from "./preguntasModulo.js";
+import "./formularioModulo.css";
+import ActionButton from "../../components/actionButton/actionButton";
+import BarraProgreso from "../../components/barraProgreso/BarraProgreso";
+import "../../components/barraProgreso/BarraProgreso.css";
 import { formacion } from "../../utils/fetch.js";
 
 const Main = () => {
@@ -18,7 +18,7 @@ const Main = () => {
     if (index < questions.length - 1 && answers[index] !== undefined) {
       setIndex(index + 1);
       setShowWarning(false);
-    }else{
+    } else {
       setShowWarning(true);
     }
   };
@@ -38,59 +38,87 @@ const Main = () => {
     setShowWarning(false);
   };
 
-  // Función para manejar el envío del formulario
-  const handleSubmit = () => {
-    console.log('Respuestas enviadas:', answers);
-    // Aquí puedes agregar lógica para enviar las respuestas, por ejemplo, a una API
-  };
+  // // Función para manejar el envío del formulario
+  // const handleSubmit = () => {
+  //   console.log("Respuestas enviadas:", answers);
+  //   // Aquí puedes agregar lógica para enviar las respuestas, por ejemplo, a una API
+  // };
 
   const handleAnswerRemove = () => {
     setAnswers([]);
   };
 
   const handleFormacion = async () => {
-    console.log("Respuestas enviadas:", answers);
-    const result = {};
-    for (let i = 0; i < answers.length; i++) {
-      result[`p${i + 1}`] = answers[i];
+    if (answers.length === questions.length && !answers.includes(undefined)) {
+      console.log("Respuestas enviadas:", answers);
+      const result = {};
+      for (let i = 0; i < answers.length; i++) {
+        result[`p${i + 1}`] = answers[i];
+      }
+      const response = await formacion(result);
+      handleAnswerRemove();
+      console.log("Respuesta API", response);
+    } else {
+      setShowWarning(true);
     }
-    const response = await formacion(result);
-    console.log("Respuesta API",response);
   };
-
 
   return (
     <div className="content-modulo">
       <div className="question-header-modulo">
-        <ActionButton label="← Atras" onClick={handlePrev} disabled={index === 0} className="button-atras" />
-        <BarraProgreso className="progress-bar-modulo " currentQuestion={index + 1} totalQuestions={questions.length} />
+        <ActionButton
+          label="← Atras"
+          onClick={handlePrev}
+          disabled={index === 0}
+          className="button-atras"
+        />
+        <BarraProgreso
+          className="progress-bar-modulo "
+          currentQuestion={index + 1}
+          totalQuestions={questions.length}
+        />
       </div>
-      
+
       <section className="section-form-modulo">
-          <div className='questionForm-modulo'>{formulario.question}</div>
-          {showWarning && <div className="warning">Por favor, responde todas las preguntas</div>}
-          <div className='answers-container-modulo'>
-            {Object.entries(formulario.answers).map(([key, value]) => (
-              <div className='answers-modulo' key={key}>
-                <button onClick={() => handleAnswer(key)}> {value}</button>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <div className="navigation-buttons">
-
-          {index === questions.length - 1 ? (
-            <ActionButton label="Enviar" onClick={handleFormacion} className="button" />
-          ) : (
-            <ActionButton label="Siguiente" onClick={handleNext} className="button-siguiente" disabled={answers[index] === undefined} />
-          )}
+        <div className="questionForm-modulo">{formulario.question}</div>
+        {showWarning && (
+          <div className="warning">Por favor, responde todas las preguntas</div>
+        )}
+        <div className="answers-container-modulo">
+          {Object.entries(formulario.answers).map(([key, value]) => (
+            <div className="answers-modulo" key={key}>
+              <button
+                onClick={() => handleAnswer(key)}
+                className={answers[index] === key ? "selected" : ""}
+              >
+                {value}
+              </button>
+            </div>
+          ))}
         </div>
-        <div>
-          <button onClick={handleAnswerRemove}>Borrar respuestas</button>
-        </div>
+      </section>
+
+      <div className="navigation-buttons">
+        {index === questions.length - 1 ? (
+          <ActionButton
+            label="Enviar"
+            onClick={handleFormacion}
+            className="button"
+            disabled={answers[questions.length - 1] === undefined}
+          />
+        ) : (
+          <ActionButton
+            label="Siguiente"
+            onClick={handleNext}
+            className="button-siguiente"
+          />
+        )}
+      </div>
+      <div>
+        <button onClick={handleAnswerRemove}>Borrar respuestas</button>
+      </div>
     </div>
   );
-}
+};
 
 export default Main;
