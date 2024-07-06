@@ -133,3 +133,5 @@ dist
 
 #desafio
 /mongo_desafio
+
+__pycache__
