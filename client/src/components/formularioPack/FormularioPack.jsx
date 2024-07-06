@@ -11,11 +11,9 @@ const Main = () => {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [showWarning, setShowWarning] = useState(false);
-  // const [consultoriaData, setConsultoriaData] = useState("");
 
   const formulario = questions[index];
 
-  // Función para avanzar a la siguiente pregunta
   const handleNext = () => {
     if (index < questions.length - 1 && answers[index] !== undefined) {
       setIndex(index + 1);
@@ -25,14 +23,12 @@ const Main = () => {
     }
   };
 
-  // Función para retroceder a la pregunta anterior
   const handlePrev = () => {
     if (index > 0) {
       setIndex(index - 1);
     }
   };
 
-  // Función para guardar las respuestas del formulario
   const handleAnswer = (key) => {
     const newAnswers = [...answers];
     newAnswers[index] = key;
@@ -40,29 +36,28 @@ const Main = () => {
     setShowWarning(false);
   };
 
-  // Función para manejar el envío del formulario
-  const handleSubmit = () => {
-    console.log("Respuestas enviadas:", answers);
-    // Aquí puedes agregar lógica para enviar las respuestas, por ejemplo, a una API
-  };
-
   const handleAnswerRemove = () => {
     setAnswers([]);
   };
 
   const handleConsultoria = async () => {
-    console.log("Respuestas enviadas:", answers);
-    const result = {};
-    for (let i = 0; i < answers.length; i++) {
-      result[`p${i + 1}`] = answers[i];
+    if (answers.length === questions.length && !answers.includes(undefined)) {
+      console.log("Respuestas enviadas:", answers);
+      const result = {};
+      for (let i = 0; i < answers.length; i++) {
+        result[`p${i + 1}`] = answers[i];
+      }
+      const response = await consultoria(result);
+      handleAnswerRemove();
+      console.log("Respuesta API", response);
+    } else {
+      setShowWarning(true);
     }
-    const response = await consultoria(result);
-    console.log("Respuesta API",response);
   };
 
   return (
-    <div className="main-content-pack ">
-      <div className="question-header-pack ">
+    <div className="main-content-pack">
+      <div className="question-header-pack">
         <ActionButton
           label="← Atras"
           onClick={handlePrev}
@@ -70,22 +65,27 @@ const Main = () => {
           className="button-anterior"
         />
         <BarraProgreso
-          className="progress-bar-pack "
+          className="progress-bar-pack"
           currentQuestion={index + 1}
           totalQuestions={questions.length}
         />
       </div>
 
-      <section className="section-form-pack ">
+      <section className="section-form-pack">
         <Tooltip text="¿¿Eres tan tonto que no entiendes la pregunta??. Te diré algo estás chocheando" />
-        <div className="questionForm-pack ">{formulario.question}</div>
+        <div className="questionForm-pack">{formulario.question}</div>
         {showWarning && (
           <div className="warning">Por favor, responde todas las preguntas</div>
         )}
-        <div className="answers-container-pack ">
+        <div className="answers-container-pack">
           {Object.entries(formulario.answers).map(([key, value]) => (
-            <div className="answers-pack " key={key}>
-              <button onClick={() => handleAnswer(key)}>{value}</button>
+            <div className="answers-pack" key={key}>
+              <button 
+                onClick={() => handleAnswer(key)}
+                className={answers[index] === key ? 'selected' : ''}
+              >
+                {value}
+              </button>
             </div>
           ))}
         </div>
@@ -97,6 +97,7 @@ const Main = () => {
             label="Enviar"
             onClick={handleConsultoria}
             className="button"
+            disabled={answers[questions.length - 1] === undefined}
           />
         ) : (
           <ActionButton
