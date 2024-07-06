@@ -41,7 +41,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="logo-wrapper">
-          <img src="./seniority_logoblanco_sinfondo_uso_en_fondo_oscuro.png" className="logo-image" alt="logo" />
+          <img src="./seniority_logoblanco_sinfondo_uso_en_fondo_oscuro2.png" className="logo-image" alt="logo" />
           <a href="/" className="navbar-logo">
             <div className="logo-overlay"></div>
           </a>
