@@ -17,7 +17,7 @@ const Descubre = () => {
             </div>
 
             <div className='descubreImg'>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1dX6q2MfKutTNiyNUQlZ9sgBWnYfbwR5pUg&s" alt="señora" />
+                <img src="/consultoria/descubre.webp" alt="señora" />
             </div>
         </section>
 
