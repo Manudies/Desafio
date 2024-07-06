@@ -1,27 +1,26 @@
 const questions = [
       {
-        "question": "1.¿Cuál es el principal objetivo de tu proyecto?",
+        "question": "¿Cuál es el principal objetivo de tu proyecto?",
         "answers": 
             {
-              "1": "a. Entender mejor a mis usuarios",
-              "2": "b. Diseñar una interfaz atractiva y accesible",
-              "3": "c. Lanzar un proyecto impecable y asegurar mejoras continuas",
-              "4": "d. Mejorar la accesibilidad y usabilidad de un proyecto existente"
+              "1": "Entender mejor a mis usuarios",
+              "2": "Diseñar una interfaz atractiva y accesible",
+              "3": "Lanzar un proyecto impecable y asegurar mejoras continuas",
+              "4": "Mejorar la accesibilidad y usabilidad de un proyecto existente"
             }
 
       },
       {
-        "question": "2.¿Cuál es el perfil principal de tus usuarios?",
+        "question": "¿Cuál es el perfil principal de tus usuarios?",
         "answers": 
             {
-            "1": "a. Usuarios senior",
-            "2": "b. Usuarios con necesidades específicas de accesibilidad",
-            "3": "c. Usuarios variados sin necesidades específicas",
-            "4": "d. No tengo datos"
+            "1": "Usuarios senior",
+            "2": "Usuarios con necesidades específicas de accesibilidad",
+            "3": "Usuarios variados sin necesidades específicas"
             }
       },
       {
-        "question": "3.¿En qué etapa se encuentra tu proyecto?",
+        "question": "¿En qué etapa se encuentra tu proyecto?",
         "answers": 
             {
             "1": "Inicio/Descubrimiento",
@@ -31,17 +30,16 @@ const questions = [
             }
       },
       {
-        "question": "4.¿Cuál es tu presupuesto aproximado para este proyecto?",
+        "question": "¿Cuál es tu presupuesto aproximado para este proyecto?",
         "answers": 
             {
             "1": "Bajo",
             "2": "Medio",
             "3": "Alto",
-            "4": "Muy alto"
             }
       },
       {
-        "question": "5.¿Qué tipo de entregables te interesan más?",
+        "question": "¿Qué tipo de entregables te interesan más?",
         "answers": 
             {
             "1": "Informes detallados y estrategias",
@@ -51,7 +49,7 @@ const questions = [
             }
       },
       {
-        "question": "6.¿Qué tan importante es para ti la accesibilidad en tu proyecto?",
+        "question": "¿Qué tan importante es para ti la accesibilidad en tu proyecto?",
         "answers": 
             {
             "1": "Muy importante",
@@ -71,17 +69,16 @@ const questions = [
             }
       },
       {
-        "question": "8.¿Cuál es el tamaño de tu equipo de desarrollo?",
+        "question": "¿Cuál es el tamaño de tu equipo de desarrollo?",
         "answers": 
             {
             "1": "Pequeño (1-5 personas)",
             "2": "Mediano (6-15 personas)",
-            "3": "Grande (15-50 personas)",
-            "4": "Muy grande (más de 50 personas)"
+            "3": "Grande (más de 15personas)",
             }
       },
       {
-        "question": "9.¿Tienes experiencia previa trabajando con principios de UX?",
+        "question": "¿Tienes experiencia previa trabajando con principios de UX?",
         "answers": 
             {
             "1": "Sí, amplia experiencia",
