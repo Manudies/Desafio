@@ -7,7 +7,7 @@
     top:0;
     background-color: rgba(0,0,0,0.6);
     display: flex;
-    z-index: 5;
+    z-index: 1000;
 }
 .absolute_right_top {
     background-color: #ddd;

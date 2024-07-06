@@ -11,13 +11,14 @@ import UserContext from "../context/userContext";
 const Root = () => {
 
     return (
-        <>
+        <div>
             
+            <nav>
                 {/* <Navbar /> */}
-
+            </nav>
             <Outlet />
             {/* <Footer/> */}
-        </>
+        </div>
     )
 };
 

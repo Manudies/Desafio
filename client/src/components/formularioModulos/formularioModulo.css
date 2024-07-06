@@ -1,4 +1,4 @@
-.content-modulo {
+.main-content-modulo {
   width: 90%;
   padding: 1rem;
   margin: 3rem 1rem 1rem 1rem;
@@ -82,13 +82,13 @@
 
 .answers-modulo  button:hover {
   background-color: #e0e0e0;
-  border-color: #000000;
+  border-color: #000080;
   color: #000080;
 }
 
 .selected {
-border-color: #000000;
-color: #000000;
+border-color: #000080;
+color: #000080;
 background-color: #e0e0e0;
 }
 
@@ -99,8 +99,4 @@ background-color: #e0e0e0;
   margin-bottom: 10px;
 }
 
-.answers-modulo button.selected {
 
-  background-color: #e0e0e0;
-  border: 3px solid #000000;
-}

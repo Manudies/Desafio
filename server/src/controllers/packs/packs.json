@@ -3,26 +3,11 @@
     "packName": "Pack 1: Descubrimiento y Estrategia",
     "description": "Este es tu pack si buscas entender profundamente a tus usuarios senior y diseñar productos digitales accesibles y efectivos.",
     "include": [
-      {
-        "nombre": "Investigación de usuarios",
-        "definition": "Entrevistas, encuestas, grupos focales específicamente con usuarios senior para entender sus necesidades reales, comportamientos y modelos mentales."
-      },
-      {
-        "nombre": "Evaluación de accesibilidad",
-        "definition": "Auditoría de accesibilidad de productos existentes para identificar problemas de accesibilidad y optimizar el proyecto para todas las personas usuarias."
-      },
-      {
-        "nombre": "Personas y escenarios",
-        "definition": "Creación de perfiles y situaciones de uso que representan a los usuarios mayores, basándonos en datos reales y en cómo se comportan realmente."
-      },
-      {
-        "nombre": "Mapas de experiencia",
-        "definition": "Desarrollo de mapas de experiencia para visualizar las interacciones de los usuarios con el proyecto."
-      },
-      {
-        "nombre": "Objetivos de negocio",
-        "definition": "Alineación de los objetivos de aplicación con las necesidades de las personas usuarias para asegurar que las estrategias de UX se ejecuten de manera exitosa."
-      }
+      "Investigación de usuarios: Entrevistas, encuestas, grupos focales específicamente con usuarios senior para entender sus necesidades reales, comportamientos y modelos mentales.",
+      "Evaluación de accesibilidad: Auditoría de accesibilidad de productos existentes para identificar áreas de mejora, ayudar a cumplir la normativa y optimizar el producto digital para todas las personas usuarias.",
+      "Personas y escenarios: Creación de perfiles y situaciones de uso que representan a los usuarios mayores, basándonos en datos reales y en cómo se comportan realmente.",
+      "Mapas de experiencia: Desarrollo de mapas de experiencia para visualizar las interacciones de los usuarios con el producto.",
+      "Objetivos de negocio: Alineación de los objetivos de negocio con las necesidades de las personas usuarias para asegurar que las estrategias de UX también contribuyan al éxito comercial del producto."
     ],
     "deliverables": [
       "Informe de la investigación",
@@ -30,28 +15,16 @@
       "Mapa de empatía de las personas senior",
       "Mapa de flujo de la experiencia con el producto",
       "Plan de acción estratégico"
-    ]
-  },
+      ]
+  }, 
   {
     "packName": "Pack 2: Diseño y Prototipado",
     "description": "Este es tu pack si quieres diseñar productos digitales irresistibles y accesibles, perfeccionados con feedback real de usuarios senior.",
     "include": [
-      {
-        "nombre": "Diseño de arquitectura de la información e interacción accesibles",
-        "definition": "Desarrollo de la estructura de información comprensible y definición de patrones de interacción intuitivos para todas las personas."
-      },
-      {
-        "nombre": "Prototipos de alta fidelidad",
-        "definition": "Desarrollo de versiones finales del diseño incorporando las consideraciones de accesibilidad según la normativa vigente para validar la usabilidad con personas senior."
-      },
-      {
-        "nombre": "Pruebas de usabilidad con el prototipo de alta fidelidad",
-        "definition": "Realización de pruebas de usabilidad en las que personas mayores interactúan con el diseño para evaluar su facilidad de uso y comprensión."
-      },
-      {
-        "nombre": "Iteraciones de diseño",
-        "definition": "Ajustes y mejoras en los prototipos basados en el feedback de las pruebas de usabilidad."
-      }
+      "Diseño de la arquitectura de la información e interacción accesibles: Desarrollo de la estructura de información comprensible y definición de patrones de interacción intuitivos para todas las personas.",
+      "Prototipos de alta fidelidad: Desarrollo de versiones finales del diseño incorporando las consideraciones de accesibilidad según la normativa vigente para validar la usabilidad con personas senior.",
+      "Pruebas de usabilidad con el prototipo de alta fidelidad: Realización de pruebas de usabilidad en las que personas mayores interactúan con el diseño para evaluar su facilidad de uso y comprensión.",
+      "Iteraciones de diseño: Ajustes y mejoras en los prototipos basados en el feedback de las pruebas de usabilidad."
     ],
     "deliverables": [
       "Prototipo de baja fidelidad",
@@ -65,31 +38,23 @@
     "packName": "Pack 3: Lanzamiento y Optimización continua",
     "description": "Este es tu pack si deseas un lanzamiento impecable y mejoras continuas basadas en feedback real de tus usuarios senior.",
     "include": [
-      {
-        "nombre": "Lanzamiento",
-        "definition": "Despliegue del producto con soporte inicial para resolver cualquier problema que pueda surgir."
-      },
-      {
-        "nombre": "Revisiones de accesibilidad del desarrollo",
-        "definition": "Verificación continua durante el desarrollo para asegurar que se mantengan las consideraciones de accesibilidad."
-      },
-      {
-        "nombre": "Monitorización y feedback",
-        "definition": "Seguimiento del uso del proyecto y recolección de feedback continuo de usuarios senior."
-      }
-    ],
-    "deliverables": [
+      "Lanzamiento: Despliegue del producto con soporte inicial para resolver cualquier problema que pueda surgir.",
+      "Revisiones de accesibilidad del desarrollo: Verificación continua durante el desarrollo para asegurar que se mantengan las consideraciones de accesibilidad.",
+      "Monitorización y feedback: Seguimiento del uso del producto y recolección de feedback continuo de usuarios senior."
+       ],
+   "deliverables": [
       "Plan de lanzamiento",
       "Informe de accesibilidad para desarrollo",
       "Informes de monitorización y feedback",
       "Plan de medición y evaluación de resultados"
-    ]
-  },
-  {
+       ]
+ },
+{
     "packName": "Pack 4: Usable y accesible",
     "description": "Realizamos una auditoría de accesibilidad y usabilidad del producto para identificar áreas de mejora y ayudar a cumplir la normativa ofreciendo un soporte personalizado.",
     "deliverables": [
-      "Informe de accesibilidad y acompañamiento para mejorar el producto"
+        "Informe de accesibilidad y acompañamiento para mejorar el producto"
+        ]
+}
     ]
-  }
-]
+    

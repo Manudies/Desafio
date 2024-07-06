@@ -22,14 +22,14 @@ const userSchema  = new mongoose.Schema({
     },
     pack:[
         {
-            type: [mongoose.Schema.Types.ObjectId],
-            ref: "pack"
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "seniorFriendly"
         }
     ],
     modulo:[
         {
-            type: [mongoose.Schema.Types.ObjectId],
-            ref: "modulo"
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "silverEconomy"
         }
     ]
 })

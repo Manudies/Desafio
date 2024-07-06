@@ -1,7 +1,6 @@
 import { getToken } from "./local";
 
 const API_URL = import.meta.env.VITE_BACKEND_URL
-const FLASK_URL = import.meta.env.VITE_BACKEND_FLASK_URL
 
 const fetchData = async(route,method,inputData=null)=>{
     console.log("url",API_URL,route)
@@ -31,47 +30,6 @@ const fetchData = async(route,method,inputData=null)=>{
         console.error(error);
         return ({error:error.message})
     }
-}
-
-const fetchPredictData = async(route,method,inputData=null)=>{
-    console.log("url",FLASK_URL,route)
-    const url = new URL(FLASK_URL + route);
-    const fetchOptions = {
-        method:method,
-        headers:{
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${getToken()}`
-        }
-    }
-    if(inputData){
-        if(method === "get"){
-            Object.keys(inputData).forEach(key=>{
-                url.searchParams.append(key,inputData[key]);
-            })
-        }
-        else if(method === "post" || method === "put" || method === "patch"){
-            fetchOptions.body = JSON.stringify(inputData);
-        }
-    }
-    try {
-        const result = await fetch(url.toString(),fetchOptions);
-        const data  = await result.json();
-        return data;
-    } catch (error) {
-        console.error(error);
-        return ({error:error.message})
-    }
-}
-
-const consultoria = async(respuestas)=>{
-    console.log("respuestas",respuestas)
-    const result = await fetchPredictData("/consultoria","get", respuestas);
-    return result;
-}
-
-const formacion = async(respuestas)=>{
-    const result = await fetchPredictData("/formacion","get", respuestas);
-    return result;
 }
 
 const register = async(userData)=>{
@@ -137,18 +95,7 @@ const removePack = async(userId, packId)=>{
     const result = await fetchData("/users/"+userId+"/packs/"+packId,"delete");
     return result;
 }
-const getModulos = async()=>{
-    const result = await fetchData("/modulos","get");
-    return result;
-}
-const addModulo = async(userId, moduloId)=>{
-    const result = await fetchData("/users/"+userId+"/modulos","post",{moduloId});
-    return result;
-}
-const removeModulo = async(userId, moduloId)=>{
-    const result = await fetchData("/users/"+userId+"/modulos/"+moduloId,"delete");
-    return result;
-}   
+ 
 const sendMail = async (data) => {
     const result = await fetchData ("/send-email", "post", data);
     return result;
@@ -159,8 +106,6 @@ export {
     register,
     login,
     fetchUserData,
-    consultoria,
-    formacion,
     getPacks,
     createPack,
     remove,
@@ -172,8 +117,5 @@ export {
     updateUser,
     addPack,
     removePack,
-    getModulos,
-    addModulo,
-    removeModulo,
     sendMail
 }

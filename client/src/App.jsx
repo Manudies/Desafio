@@ -4,8 +4,6 @@ import router from "./router";
 import UserContext from "./context/userContext";
 import {fetchUserData} from "./utils/fetch"
 import "./App.css";
-import { deleteToken } from './utils/local.js';
-
 import Navbar from "./components/navbar/navbar";
 import Footer from "./components/footer/footer";
 
@@ -33,12 +31,14 @@ function App() {
 
   return (
     <>
-      {/* <Navbar/> */}
+      <Navbar/>
+      <div>
         <UserContext.Provider
           value={{ user, handlefetchUserData, logOut, loadingUser }}
         >
           <RouterProvider router={router} />
         </UserContext.Provider>
+      </div>
       {/* <Footer/> */}
     </>
   );

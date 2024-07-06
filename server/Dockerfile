@@ -1,5 +1,3 @@
-# Dockerfile para la API de Node.js
-
 FROM node:18.0
 
 WORKDIR /app
