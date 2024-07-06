@@ -1,5 +1,5 @@
 /* ActionButton.css */
-.trip-card__button {
+.pack-card__button {
   background-color: #223D3C;
   color: white;
   border: none;
@@ -11,7 +11,7 @@
   margin: 2px;
 }
 
-.trip-card__button:hover {
+.pack-card__button:hover {
   background-color: #F8F3F2;
   color: #223D3C;
 }
