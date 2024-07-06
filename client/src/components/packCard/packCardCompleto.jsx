@@ -15,32 +15,11 @@ const TarjetaPack = ({ pack }) => {
   const [isContratar, setIsContratar] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [packData, setPackData] = useState(null);
+  const [activeName, setActiveName] = useState(null);
+  const [isDeliverablesVisible, setIsDeliverablesVisible] = useState(false);
+
+
   const navigate = useNavigate();
-
-  // useEffect(() => {
-  //     setIsContratar(userHadPack());
-  // }, [pack, user]);
-
-  // function openModal() {
-  //     setIsModalOpen(true);
-  // }
-
-  // const handleContratar = async () => {
-  //     if (user) {
-  //         console.log ("pack", pack._id);
-  //         const newContratar = await addPack(user._id, pack._id);
-  //         if (isContratar) {
-  //             await handledeleteContratar(packData);
-  //             setIsContratar(!isContratar);
-  //             handlefetchUserData();
-  //         }
-  //     } else {
-  //         alert("Debes iniciar sesión")
-  //         navigate("/register");
-  //     };
-  // };
-
-
 
   const handleBuyPack = async (pack) => {
     if (user) {
@@ -95,19 +74,25 @@ const TarjetaPack = ({ pack }) => {
         <div className="card-includes">
           <p>Incluye:</p>
           <ul>
-            {pack.include?.map((item, index) => (
-              <li key={index}>{item}</li>
+            {pack.include.map((item, index) => (
+              <li className="nombreIncluye" key={index.nombre} onClick ={()=>setActiveName(activeName === index? null : index)}>
+              {item.nombre}
+              {activeName === index && <p className="definition">{item.definition}</p>}
+              </li>
             ))}
           </ul>
+          <div className="card-deliverables">
+          <p onClick={() => setIsDeliverablesVisible(!isDeliverablesVisible)}>Entregables:</p>
+          {isDeliverablesVisible && (
+            <ul>
+              {pack.deliverables?.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          )}
         </div>
-        {/* <div className="card-deliverables">
-          <p>Entregables:</p>
-          <ul>
-            {pack.deliverables?.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        </div> */}
+        </div>
+        
       </div>
     </div>
   );
