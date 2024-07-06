@@ -1,99 +1,93 @@
 const questions = [
-  {
-    "question": "¿Cuál es tu nivel de conocimiento sobre la Silver Economy?",
-    "answers": {
-      "1": "Ninguno",
-      "2": "Básico",
-      "3": "Intermedio",
-      "4": "Avanzado"
-    }
-  },
-  {
-    "question": "¿Cuál es tu objetivo principal al aprender sobre la Silver Economy?",
-    "answers": {
-      "1": "Obtener una visión general",
-      "2": "Conocer las tendencias y datos demográficos",
-      "3": "Entender las oportunidades de negocio",
-      "4": "Aprender sobre tecnologías y soluciones innovadoras",
-      "5": "Profundizar en políticas y marcos regulatorios",
-      "6": "Desarrollar estrategias de marketing y ventas",
-      "7": "Otros"
-    }
-  },
-  {
-    "question": "¿Tienes experiencia previa trabajando con población senior?",
-    "answers": {
-      "1": "Sí, amplia experiencia",
-      "2": "Sí, algo de experiencia",
-      "3": "No, poca o ninguna experiencia"
-    }
-  },
-  {
-    "question": "¿Cuál es tu rol profesional actual?",
-    "answers": {
-      "1": "Estudiante",
-      "2": "Profesional de salud",
-      "3": "Emprendedor",
-      "4": "Investigador",
-      "5": "Político o regulador",
-      "6": "Otro"
-    }
-  },
-  {
-    "question": "¿Qué tipo de contenido te interesa más?",
-    "answers": {
-      "1": "Conceptos teóricos",
-      "2": "Estudios de caso",
-      "3": "Herramientas prácticas",
-      "4": "Estrategias de implementación",
-      "5": "Innovaciones tecnológicas"
-    }
-  },
-  {
-    "question": "¿Cuál es el tamaño de tu organización o equipo?",
-    "answers": {
-      "1": "Autónomo",
-      "2": "Pequeña empresa (1-10 empleados)",
-      "3": "Mediana empresa (11-50 empleados)",
-      "4": "Gran empresa (más de 50 empleados)"
-    }
-  },
-  {
-    "question": "¿Cuál es tu experiencia previa en emprendimiento?",
-    "answers": {
-      "1": "Ninguna",
-      "2": "He iniciado un negocio",
-      "3": "He liderado varios proyectos empresariales",
-      "4": "Tengo experiencia significativa en el sector empresarial"
-    }
-  },
-  {
-    "question": "¿Qué tipo de interacción prefieres para el aprendizaje?",
-    "answers": {
-      "1": "Videos y webinars",
-      "2": "Lecturas y artículos",
-      "3": "Talleres y ejercicios prácticos",
-      "4": "Discusiones y grupos de estudio"
-    }
-  },
-  {
-    "question": "¿Cuál es tu nivel de familiaridad con herramientas digitales y tecnológicas?",
-    "answers": {
-      "1": "Muy bajo",
-      "2": "Básico",
-      "3": "Intermedio",
-      "4": "Avanzado"
-    }
-  },
-  {
-    "question": "¿Cuál es tu disponibilidad semanal para dedicarte al programa?",
-    "answers": {
-      "1": "Menos de 5 horas",
-      "2": "5-10 horas",
-      "3": "10-20 horas",
-      "4": "Más de 20 horas"
-    }
-  }
-];
+      {
+        "question": "¿Cuál es el principal objetivo de tu proyecto?",
+        "answers": 
+            {
+              "1": "Entender mejor a mis usuarios",
+              "2": "Diseñar una interfaz atractiva y accesible",
+              "3": "Lanzar un proyecto impecable y asegurar mejoras continuas",
+              "4": "Mejorar la accesibilidad y usabilidad de un proyecto existente"
+            }
 
-export default questions;
+      },
+      {
+        "question": "¿Cuál es el perfil principal de tus usuarios?",
+        "answers": 
+            {
+            "1": "Usuarios senior",
+            "2": "Usuarios con necesidades específicas de accesibilidad",
+            "3": "Usuarios variados sin necesidades específicas"
+            }
+      },
+      {
+        "question": "¿En qué etapa se encuentra tu proyecto?",
+        "answers": 
+            {
+            "1": "Inicio/Descubrimiento",
+            "2": "Diseño/Desarrollo",
+            "3": "Preparación para el lanzamiento",
+            "4": "Producto ya lanzado en uso"
+            }
+      },
+      {
+        "question": "¿Cuál es tu presupuesto aproximado para este proyecto?",
+        "answers": 
+            {
+            "1": "Bajo",
+            "2": "Medio",
+            "3": "Alto",
+            }
+      },
+      {
+        "question": "¿Qué tipo de entregables te interesan más?",
+        "answers": 
+            {
+            "1": "Informes detallados y estrategias",
+            "2": "Prototipos y documentación de diseño",
+            "3": "Planes de lanzamiento y evaluación continua",
+            "4": "Informes de auditoría y soporte personalizado"
+            }
+      },
+      {
+        "question": "¿Qué tan importante es para ti la accesibilidad en tu proyecto?",
+        "answers": 
+            {
+            "1": "Muy importante",
+            "2": "Moderadamente importante",
+            "3": "Poco importante",
+            "4": "No es una prioridad"
+            }
+      },
+      {
+        "question": "7.¿Qué nivel de soporte técnico esperas durante la implementación del proyecto?",
+        "answers": 
+            {
+            "1": "Soporte continuo y dedicado",
+            "2": "Soporte durante etapas críticas",
+            "3": "Soporte mínimo",
+            "4": "No necesito soporte"
+            }
+      },
+      {
+        "question": "¿Cuál es el tamaño de tu equipo de desarrollo?",
+        "answers": 
+            {
+            "1": "Pequeño (1-5 personas)",
+            "2": "Mediano (6-15 personas)",
+            "3": "Grande (más de 15personas)",
+            }
+      },
+      {
+        "question": "¿Tienes experiencia previa trabajando con principios de UX?",
+        "answers": 
+            {
+            "1": "Sí, amplia experiencia",
+            "2": "Sí, algo de experiencia",
+            "3": "No, poca o ninguna experiencia",
+            "4": "No tengo experiencia"
+            }
+      }
+    
+]
+
+  export default questions

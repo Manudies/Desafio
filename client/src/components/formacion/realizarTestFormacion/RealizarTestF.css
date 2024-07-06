@@ -1,0 +1,40 @@
+.realizarTestFContainer {
+    background-color: #07124B;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.realizarFContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50%;
+    width: 100%;
+    gap: 2rem;
+
+}
+.realizarFTexto{
+    width: 100%;
+    height: auto;
+}
+
+.realizarFText{
+    font-size: 30px;
+    color: #fff;
+}
+
+.buttonTest{
+    background-color: #59FFC9;
+    color: #07124B;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 414px;
+    height: 58px;
+}
+

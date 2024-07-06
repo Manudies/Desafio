@@ -9,75 +9,61 @@ import Modal from '../modal/modal';
 import ActionButton from '../actionButton/actionButton';
 import { addPack, removePack } from '../../utils/fetch';
 
-const TarjetaPack = ({ pack }) => {
+const photoPack = {
+    0: "./packs/pack1.png",
+    1: "./packs/pack2.png",
+    2: "./packs/pack3.png",
+    3: "./packs/pack4.png",
+}
+
+const className = {
+    0: "pack1",
+    1: "pack2",
+    2: "pack3",
+    3: "pack4",
+}
+
+const TarjetaPack = ({ pack, onClick, cardClassName, index }) => {
     const { user, handlefetchUserData } = useContext(UserContext);
     const [isContratar, setIsContratar] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [packData, setPackData] = useState(null);
     const navigate = useNavigate();
 
-    // useEffect(() => {
-    //     setIsContratar(userHadPack());
-    // }, [pack, user]);
+    // function openModal() {
+    //     setIsModalOpen(true);
+    // }
 
-    function openModal() {
-        setIsModalOpen(true);
-    }
-
-    const handleContratar = async () => {
-        if (user) {
-            const newContratar = await addPack(pack._id, user._id);
-            if (isContratar) {
-                await handledeleteContratar(packData);
-                setIsContratar(!isContratar);
-                handlefetchUserData();
-            }
-        } else {
-            alert("Debes iniciar sesión")
-            navigate("/register");
-        };
-    };
-
-    const handledeleteContratar = async (pack) => {
-        if (user) {
-            const deleteContratar = await removePack(pack._id, user._id);
-        }
-    };
-
-    // const userHadPack = () => {
-    //     if (!user) {
-    //         return false;
-    //     }
-    //     return user.packs.some(userPack => userPack._id === packData._id);
+    // const handleContratar = async () => {
+    //     if (user) {
+    //         const newContratar = await addPack(pack._id, user._id);
+    //         if (isContratar) {
+    //             await handledeleteContratar(packData);
+    //             setIsContratar(!isContratar);
+    //             handlefetchUserData();
+    //         }
+    //     } else {
+    //         alert("Debes iniciar sesión")
+    //         navigate("/register");
+    //     };
     // };
 
+    // const handledeleteContratar = async (pack) => {
+    //     if (user) {
+    //         const deleteContratar = await removePack(pack._id, user._id);
+    //     }
+    // };
 
     return (
-        <div className="pack-card">
-            {/* <img src={packData.image} alt={packData.packName} className="pack-card-image" /> */}
+        <button className={cardClassName} onClick={onClick}>
+            <div className="pack-card-image">
+                <img src={photoPack[index]} alt="photo" className={className[index]} />
+            </div>
             <div className="pack-card-content">
                 <h2 className="card-title">{pack.packName}</h2>
-                <p className="card-description">{pack.description}</p>
-                <div className="card-include">
-                    <p>Incluye:</p>
-                    <ul>
-                       {pack.include?.map((item, index) => (
-                           <li key={index}>{item}</li>
-                       ))}
-                    </ul>
-                </div>
-                <div className="card-deliverables">
-                    <p>Entregables:</p>
-                    <ul>
-                        {pack.deliverables?.map((item, index) => (
-                            <li key={index}>{item}</li>
-                        ))}
-                    </ul>
-                </div>
             </div>
-            <ActionButton label={isContratar ? "Cancelar" : "Solicitar más información"} onClick={handleContratar} className="pack-card-button" />
-        </div>
+        </button>
     );
-};
+}
 
 export default TarjetaPack;
