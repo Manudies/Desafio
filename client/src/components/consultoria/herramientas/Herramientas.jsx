@@ -10,17 +10,19 @@ const Herramientas = () => {
         <section className="herramientaContainer">
             <div className='herramienta'>
                 <div className='imgHerramienta'>
-                <img src="./" alt="logo" />
+                <span>90%</span>
+                {/* <img src="./" alt="logo" /> */}
                 </div>
 
                 <div className='herramientaText'>
-                <p>De las llamadas de soporte de McAfee fueron reducidas como resultado de invertir en diseño UX/UI</p>
+                    <p>De las llamadas de soporte de McAfee fueron reducidas como resultado de invertir en diseño UX/UI</p>
                 </div>
             </div>
 
             <div className='herramienta'>
                 <div className='imgHerramienta'>
-                <img src="./" alt="logo" />
+                    <span>10M</span>
+                {/* <img src="./" alt="logo" /> */}
                 </div>
 
                 <div className='herramientaText'>
@@ -30,7 +32,8 @@ const Herramientas = () => {
 
             <div className='herramienta'>
                 <div className='imgHerramienta'>
-                <img src="./" alt="logo" />
+                  <span>35%</span>         
+                {/* <img src="./" alt="logo" /> */}
                 </div>
 
                 <div className='herramientaText'>
