@@ -2,27 +2,39 @@ import "./Consultoria.css";
 import Navbar from "../../components/navbar/navbar";
 import Noti from "../../components/noti/noti";
 import Footer from "../../components/footer/footer";
-import Carrusel from "../../components/carrusel/Carrusel";
-import Beneficios from "../../components/beneficios/Beneficios";
-import Herramientas from "../../components/herramientas/Herramientas";
-import RealizarTest from "../../components/realizarTest/RealizarTest";
+import Carrusel from "../../components/consultoria/carrusel/Carrusel";
+import Beneficios from "../../components/consultoria/beneficios/Beneficios";
+import Herramientas from "../../components/consultoria/herramientas/Herramientas";
+import RealizarTest from "../../components/consultoria/realizarTest/RealizarTest";
 import PacksList from "../../components/packs/PacksList";
-import Descubre from "../../components/descubre/Descubre";
-import Comienzo from "../../components/comienzo/Comienzo";
+import Descubre from "../../components/consultoria/descubre/Descubre";
+import Comienzo from "../../components/consultoria/comienzo/Comienzo";
+import React, { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 const consultoria = () => {
+  const location = useLocation();
+  const packsMainRef = useRef(null);
+
+  useEffect(() => {
+    if (location.state && location.state.scrollTo === "packsMain") {
+      packsMainRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [location]);
   return (
-    <div>
+    <div className="consultoria">
       <Navbar />
       <Noti />
-        <Comienzo/>
-        <Beneficios/>
-        <Carrusel/>
-        {/* <Herramientas/>
-        <h2>Otro Texto</h2>
-        <RealizarTest/>
-        <PacksList/>
-        <Descubre/> */}
-      {/* <Footer /> */}
+      <Comienzo />
+      <Herramientas />
+      <Carrusel />
+      <Beneficios />
+      <h2 className="descubrePacks">Descubre nuestros servicios</h2>
+      <div ref={packsMainRef}>
+        <PacksList />
+      </div>
+      <RealizarTest />
+      <Descubre />
+      <Footer />
     </div>
   );
 };

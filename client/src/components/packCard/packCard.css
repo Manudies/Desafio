@@ -1,81 +1,56 @@
 .pack-card {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 16px;
-  width: 300px;
-  /* Ajusta el ancho según sea necesario */
   background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.pack-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pack-card-image {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.pack-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .pack-card-content {
-  text-align: center;
+  flex-grow: 1;
 }
 
 .card-title {
-  font-size: 1.2em;
+  font-size: 18px;
   font-weight: bold;
+  margin: 0;
+  color: #333;
 }
 
-.card-description {
-  font-size: 0.9em;
-  margin: 10px 0;
+.pack1 {
+  background-color: #f0f9ff;
 }
 
-.card-include,
-.card-deliverables {
-  text-align: left;
-  margin: 10px 0;
+.pack2 {
+  background-color: #e0ffe0;
 }
 
-.pack-card-button {
-  margin-top: 20px;
-  background-color: #1E2A78;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+.pack3 {
+  background-color: #fff9e6;
 }
 
-.pack-card-button:hover {
-  background-color: #1B256A;
-}
-
-.pack-card img {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 16px;
-}
-
-
-.none {
-  display: none;
-}
-
-
-.packCompleto {
-  width: 100%;
-  height: 100%;
-
-}
-
-.card-include {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.contratar {
-  color: #fabada;
-
-  cursor: pointer;
-  width: 50%;
+.pack4 {
+  background-color: #fff0f0;
 }
