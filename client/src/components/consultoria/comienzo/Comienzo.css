@@ -2,7 +2,7 @@
 .comienzoContainer {
     height: 705px;
     width: 100%;
-    background-image: url('./public/consultoria.jpg');
+    background-image: url('./consultoria/consultoria.jpg');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; /* No repetir la imagen */

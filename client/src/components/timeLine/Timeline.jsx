@@ -7,8 +7,8 @@ const timelime = () => {
   console.log("modulos", modulos);
   return (
     <div className="timeline">
-      <div class="timeline-line"></div>
-      <div class="timeline-phases">
+      <div className="timeline-line"></div>
+      <div className="timeline-phases">
         <section className="modulos_container">
           {modulos.map((modulo) => (
             <ModuloCard key={modulo._id} modulo={modulo} />

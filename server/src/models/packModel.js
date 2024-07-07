@@ -8,9 +8,7 @@ const packSchema = new mongoose.Schema({
     description: {
         type:String,
     },
-    include: [{
-        type:String,
-    }],
+    include: [Object],
     deliverables: [{type:String,}],
 })
 

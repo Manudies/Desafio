@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 import UserContext from '../../context/userContext';
-import PanelUsuario from '../panelUsuario/panelUsuario';
+import PanelUsuario from '../panelUsuario/PanelUsuario';
 
 import Modal from '../modal/modal'
 import './navbar.css';
@@ -41,7 +41,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="logo-wrapper">
-          <img src="./seniority_logoblanco_sinfondo_uso_en_fondo_oscuro.png" className="logo-image" alt="logo" />
+          <img src="./seniority_logoblanco_sinfondo_uso_en_fondo_oscuro2.png" className="logo-image" alt="logo" />
           <a href="/" className="navbar-logo">
             <div className="logo-overlay"></div>
           </a>
@@ -72,21 +72,21 @@ const Navbar = () => {
 
 
         {user && (
-            <li className="nav-item-sign-in">
-              <button onClick = {openModal}className="trip-card__button">{user.username}</button>
+            <li className="navbar-item">
+              <button onClick = {openModal}className="navbar-link">{user.username}</button>
               {isModalOpen &&
                 <Modal isOpen={true} onClose={()=> {
                   setIsModalOpen(false)
                   }}>
-                    <PanelUsuario user={user}></PanelUsuario>
+                    <PanelUsuario user={user} ></PanelUsuario>
                 </Modal>
               }
 
             </li>
           )}
           {!user && (
-          <li className="nav-item sign-in">
-            <Link to="/register" className="nav-links" onClick={toggleMenu}>
+          <li className="navbar-item">
+            <Link to="/register" className="navbar-link" onClick={toggleMenu}>
               Accede
             </Link>
           </li>

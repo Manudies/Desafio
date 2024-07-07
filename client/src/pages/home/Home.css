@@ -12,7 +12,7 @@ body, html {
     width: 100vw;
     height: 90%;
     object-fit: cover;
-    z-index: -1; /* Asegura que la imagen esté detrás de otros contenidos */
+    z-index: 0; /* Asegura que la imagen esté detrás de otros contenidos */
   }
   .fondo2 {
     position: absolute;
@@ -21,7 +21,7 @@ body, html {
     width: 100vw;
     height: 53%;
     object-fit: cover;
-    z-index: 0; /* Asegura que la imagen esté detrás de otros contenidos */
+    z-index: 1; /* Asegura que la imagen esté detrás de otros contenidos */
   }
   
   /* Media Query para dispositivos móviles */

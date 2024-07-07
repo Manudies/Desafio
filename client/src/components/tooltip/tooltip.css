@@ -17,7 +17,7 @@
     border-radius: 6px;
     padding: 5px 0;
     position: absolute;
-    z-index: 1;
+    z-index: 500;
     bottom: 125%; /* Ajusta la posición vertical del tooltip */
     left: 50%;
     margin-left: -100px; /* Usa la mitad del ancho del tooltip para centrar */

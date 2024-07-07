@@ -11,13 +11,13 @@ const Descubre = () => {
             <div className='descubre'>
                 <div className='descubreText'>
                     <h2>Da el primer paso</h2>
-                    <p>Proporciona a tus usuarios senior la mejor atención posible con tecnología amigable.</p>
+                    <p>Descubre el pack de servicios perfecto para ti..</p>
                 </div>
                 <ActionButton label="Descubre" className={"descubreButton"}/>
             </div>
 
             <div className='descubreImg'>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1dX6q2MfKutTNiyNUQlZ9sgBWnYfbwR5pUg&s" alt="señora" />
+                <img src="/consultoria/descubre.webp" alt="señora" />
             </div>
         </section>
 

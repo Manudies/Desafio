@@ -59,16 +59,14 @@
 
 /* Estilos para el botón dentro de "descubre" */
 .descubreButton {
-    background-color: #001f3f;
-    color: #fff;
+    background-color: #07124B;
+    color: white;
     padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
     font-size: 16px;
-    text-align: center;
-    height: 48px;
-    width: 414px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 284px;
+    height: 50px;
 }
 
 /* Estilos para el contenedor de la imagen */
@@ -76,10 +74,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #e0e0e0;
     flex: 1;
-    width: 499px;
-    height: 354px;
+
 }
 
 /* Estilos para la imagen */
