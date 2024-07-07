@@ -73,7 +73,7 @@ const Navbar = () => {
 
         {user && (
             <li className="navbar-item">
-              <button onClick = {openModal}className="navbar-link">{user.username}</button>
+              <button onClick = {openModal}className="navbar-button">{user.username}</button>
               {isModalOpen &&
                 <Modal isOpen={true} onClose={()=> {
                   setIsModalOpen(false)
@@ -86,7 +86,7 @@ const Navbar = () => {
           )}
           {!user && (
           <li className="navbar-item">
-            <Link to="/register" className="navbar-link" onClick={toggleMenu}>
+            <Link to="/register" className="navbar-button" onClick={toggleMenu}>
               Accede
             </Link>
           </li>
