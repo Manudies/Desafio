@@ -58,6 +58,17 @@ const TarjetaPack = ({ pack }) => {
   //     return user.packs.some(userPack => userPack._id === packData._id);
   // };
 
+  const toggleDeliverables = () => {
+    setIsDeliverablesVisible(!isDeliverablesVisible);
+    setActiveName(isDeliverablesVisible ? null : 'Entregables');
+  };
+
+  const toggleInclude = (index) => {
+    if (isDeliverablesVisible) {
+      setIsDeliverablesVisible(false);
+    }
+    setActiveName(activeName === index ? null : index);
+  };
 
   return (
     <div className="packCompleto">
@@ -72,27 +83,26 @@ const TarjetaPack = ({ pack }) => {
           <ActionButton label={isContratar ? "Cancelar" : "Solicitar presupuesto"} className={"contratar"} onClick={() => handleBuyPack(pack)} />
         </div>
         <div className="card-includes">
-          <p>Incluye:</p>
+          <p className='packIncluye'>Este pack incluye:</p>
           <ul>
             {pack.include.map((item, index) => (
-              <li className="nombreIncluye" key={index.nombre} onClick ={()=>setActiveName(activeName === index? null : index)}>
-              {item.nombre}
-              {activeName === index && <p className="definition">{item.definition}</p>}
+              <li key={index} onClick={() => toggleInclude(index)}>
+                {item.nombre}
+                {activeName === index && <p className="definition">{item.definition}</p>}
               </li>
             ))}
           </ul>
           <div className="card-deliverables">
-          <p onClick={() => setIsDeliverablesVisible(!isDeliverablesVisible)}>Entregables:</p>
-          {isDeliverablesVisible && (
-            <ul>
-              {pack.deliverables?.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          )}
+            <p onClick={toggleDeliverables}>Entregables</p>
+            {isDeliverablesVisible && (
+              <ul>
+                {pack.deliverables?.map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
+            )}
+          </div>
         </div>
-        </div>
-        
       </div>
     </div>
   );

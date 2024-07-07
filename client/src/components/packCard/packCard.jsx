@@ -23,7 +23,7 @@ const className = {
     3: "pack4",
 }
 
-const TarjetaPack = ({ pack, onClick, cardClassName, index }) => {
+const TarjetaPack = ({ pack, onClick, cardClassName, index,isSelected }) => {
     const { user, handlefetchUserData } = useContext(UserContext);
     const [isContratar, setIsContratar] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);

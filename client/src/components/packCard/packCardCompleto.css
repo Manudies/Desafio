@@ -15,18 +15,32 @@
     display: flex;
     border-bottom-style: dashed;
     border-bottom-color: #0056b3;
+    align-items: center;
+    justify-content: space-between;
 
 }
-.card-body{
-    display: flex;
+
+  .photo-pack {
+    max-width: 100px;
+    height: auto;
 }
-.pack-card-body {
+
+
+.card-body {
+    display: flex;
+    gap: 50px;
+
+  }
+  
+  .pack-card-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 50px 10px 10px 10px;
     gap: 20px;
+    width: 50%; 
+    min-width: 400px;
 }
 .pack-title {
     font-size: 24px;
@@ -60,34 +74,26 @@
     font-size: 20px;
     font-weight: bold;
     width: 80%;
+    min-width: auto;
+    min-height: auto;
     padding: 10px;
     margin-top: 50px;
     height: 40px;
-
+}
+.pack-includes {
+    width: 50%;
+    height: 100%;
 }
 
-.contratar:hover {
-    background-color: #fff;
-    color: #091864;
-}
-
-.pack-includes h3 {
+.definition {
+    text-align: justify;
+    justify-content: center;
+    width: 70%;
+    display: flex;
+} 
+.packIncluye {
+    display: flex;
+    color: #001f3f;
+    font-weight: bold;
     font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.pack-includes ul {
-    list-style: none;
-    padding: 0;
-}
-
-.pack-includes ul li {
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-.pack-includes ul li::before {
-    content: '>';
-    margin-right: 5px;
-    color: #007bff;
 }
