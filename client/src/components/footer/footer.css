@@ -80,16 +80,21 @@ body {
 }
 
 .footer-logo {
+  width: 136px;
+  height: 35px;
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
+  margin-left: 18px;
 }
 
 .footer-logo img {
   width: auto;
-  height: 200px;
-  margin-bottom: -30px;
-  margin-top: -70px;
-  margin-left: -145px;
+  height: 32px;
+
+  /* margin-top: -60px;
+  margin-left: 20px; */
+
 }
 
 .footer-text {
@@ -160,10 +165,10 @@ body {
 
   .footer-logo img {
     width: auto;
-    height: 120px;
-    margin-bottom: -30px;
-    margin-top: -70px;
-    margin-left: -80px;
+    height: 34px;
+    /* margin-bottom: -30px;
+    margin-top: -60px;
+    margin-left: 10px; */
   }
 
   .policy-text {
@@ -209,10 +214,10 @@ body {
 
   .footer-logo img {
     width: auto;
-    height: 120px;
-    margin-bottom: -30px;
+    height: 34px;
+    /* margin-bottom: -30px;
     margin-top: -50px;
-    margin-left: -80px;
+    margin-left: -80px; */
   }
 
   .policy-text {
@@ -253,10 +258,10 @@ body {
 
   .footer-logo img {
     width: auto;
-    height: 120px;
-    margin-bottom: -30px;
+    height: 32px;
+    /* margin-bottom: -30px;
     margin-top: -50px;
-    margin-left: -80px;
+    margin-left: -80px; */
   }
 
   .policy-text {
@@ -333,10 +338,6 @@ body {
       gap: 6px;
     }
 
-    .footer-logo {
-      margin-left: -8px;
-    }
-
     .policy-text {
       font-size: 8px;
     }
@@ -382,13 +383,8 @@ body {
     }
 
     .footer-logo img {
-      height: 140px;
+      height: 32px;
       width: auto;
-    }
-
-    .footer-logo {
-      margin-left: -24px;
-      margin-bottom: -55px;
     }
 
     .footer-icon {

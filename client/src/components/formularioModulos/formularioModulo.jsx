@@ -5,11 +5,13 @@ import ActionButton from "../../components/actionButton/actionButton";
 import BarraProgreso from "../../components/barraProgreso/BarraProgreso";
 import "../../components/barraProgreso/BarraProgreso.css";
 import { formacion } from "../../utils/fetch.js";
+import { useNavigate } from "react-router-dom";
 
 const Main = () => {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [showWarning, setShowWarning] = useState(false);
+  const navigate = useNavigate();
 
   const formulario = questions[index];
 
@@ -58,6 +60,7 @@ const Main = () => {
       const response = await formacion(result);
       handleAnswerRemove();
       console.log("Respuesta API", response);
+      navigate("/formacion", { state: { scrollTo: "moduloMainRef" } });
     } else {
       setShowWarning(true);
     }

@@ -6,11 +6,13 @@ import Tooltip from "../tooltip/Tooltip.jsx";
 import BarraProgreso from "../../components/barraProgreso/BarraProgreso";
 import "../../components/barraProgreso/BarraProgreso.css";
 import { consultoria } from "../../utils/fetch.js";
+import { useNavigate } from "react-router-dom";
 
 const Main = () => {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [showWarning, setShowWarning] = useState(false);
+  const navigate = useNavigate(); 
 
   const formulario = questions[index];
 
@@ -50,6 +52,7 @@ const Main = () => {
       const response = await consultoria(result);
       handleAnswerRemove();
       console.log("Respuesta API", response);
+      navigate("/consultoria", { state: { scrollTo: "packsMain" } });
     } else {
       setShowWarning(true);
     }
