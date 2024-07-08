@@ -68,9 +68,9 @@ const login = async (data) => {
             const users = await getByProperty("username", username, true);
             user = users[0];
         }
-        console.log("usurio", user);
+        console.log("usuario", user);
         if (!user) {
-            return { error: "No existe el usurio", status: 400 };
+            return { error: "No existe el usuario", status: 400 };
         }
         console.log("contraseña", password, user.password);
         const isPasswordCorrect = await bcrypt.compare(password, user.password);
@@ -125,7 +125,7 @@ const updateUser = async (id, data) => {
     try {
         const oldUser = await userModel.findByIdAndUpdate(id, data);
         const user = await userModel.findById(id, userRows);
-        console.log("usurio", user);
+        console.log("usuario", user);
         return user;
     } catch (error) {
         console.error(error);

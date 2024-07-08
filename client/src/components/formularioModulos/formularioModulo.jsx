@@ -30,6 +30,9 @@ const Main = () => {
     if (index > 0) {
       setIndex(index - 1);
     }
+    if (index === 0) {
+      navigate("/formacion");
+    }
   };
 
   // Función para guardar las respuestas del formulario
@@ -66,11 +69,17 @@ const Main = () => {
     }
   };
 
+    const flecha = () => {
+      return (
+        <p><span className="flecha-atras">←</span>Atrás</p>
+      )
+    }
+
   return (
     <div className="content-modulo">
       <div className="question-header-modulo">
         <ActionButton
-          label="← Atras"
+          label={flecha()}
           onClick={handlePrev}
           disabled={index === 0}
           className="button-atras"

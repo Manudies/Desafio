@@ -1,5 +1,6 @@
 import { useState, useEffect, useContext } from 'react';
 import './packCardCompleto.css';
+import "./packCard.jsx";
 
 import UserContext from '../../context/userContext';
 import { useNavigate } from 'react-router';
