@@ -6,6 +6,10 @@ const HerramientasF = () => {
 
   return (
     <div className="herramientasFContainer">
+        <div className="formacionHerramientas">
+            <h1 className="formacionHerramientasTitle">¿Por qué es un programa especial?</h1>
+        </div>
+
         <section className="herramientaFContainer">
 
             <div className='herramientaF'>

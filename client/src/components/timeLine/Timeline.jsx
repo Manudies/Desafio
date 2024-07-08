@@ -7,6 +7,9 @@ const timelime = () => {
   console.log("modulos", modulos);
   return (
     <div className="timeline">
+      <div className="timeline-titulo">
+        <h2 className="timeline-tituloh2">Descubre nuestra metodología:</h2>
+      </div>
       <div className="timeline-line"></div>
       <div className="timeline-phases">
         <section className="modulos_container">
