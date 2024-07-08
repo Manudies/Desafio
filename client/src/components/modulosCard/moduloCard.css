@@ -63,6 +63,7 @@
     margin: 0 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     height: 150px;
+    text-align: center;
 }
 
 .detail-item-duration {
@@ -74,6 +75,7 @@
     border-radius: 10px;
     margin: 0 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .detail-title {
@@ -95,6 +97,7 @@
     color: #003366;
     font-weight: bold;
     margin: 0;
+    text-align: center;
     max-height: 150px; /* Ajusta el valor según sea necesario */
     overflow: hidden;
     text-overflow:ellipsis;
