@@ -6,11 +6,16 @@ import BarraProgreso from "../../components/barraProgreso/BarraProgreso";
 import "../../components/barraProgreso/BarraProgreso.css";
 import { formacion } from "../../utils/fetch.js";
 import { useNavigate } from "react-router-dom";
+import Modal from "../modal/modal.jsx";
+
 
 const Main = () => {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [showWarning, setShowWarning] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+
   const navigate = useNavigate();
 
   const formulario = questions[index];
@@ -63,10 +68,15 @@ const Main = () => {
       const response = await formacion(result);
       handleAnswerRemove();
       console.log("Respuesta API", response);
-      navigate("/formacion", { state: { scrollTo: "moduloMainRef" } });
+      setIsModalOpen(true); // Abre el modal en lugar de navegar directamente
     } else {
       setShowWarning(true);
     }
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+    navigate("/formacion", { state: { scrollTo: "moduloMainRef" } });
   };
 
     const flecha = () => {
@@ -129,6 +139,21 @@ const Main = () => {
       <div>
         <button onClick={handleAnswerRemove}>Borrar respuestas</button>
       </div>
+      {isModalOpen && (
+        <Modal onClose={handleCloseModal}>
+          <div id="modalNombre">
+            <div id="divModalNombre">
+              <h2>Según la información que nos has proporcionado tu paquete seria:</h2>
+              <p>Aquí puedes añadir la información que quieres mostrar antes de navegar.</p>
+            </div>
+            <div id='modalInferior'>
+              <div id="divModalIMG">
+                <img src="/path-to-your-image.jpg" alt="Imagen informativa" />
+              </div>
+            </div>
+          </div>
+        </Modal>
+      )}
     </div>
   );
 };
