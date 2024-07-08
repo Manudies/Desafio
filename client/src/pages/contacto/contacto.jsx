@@ -3,6 +3,7 @@ import Noti from "../../components/noti/noti";
 import Footer from "../../components/footer/footer";
 import "./contacto.css";
 import tuImagen from "../../../public/llamada.jpg";
+import ScrollButton from "../../components/scrollButton/ScrollButton";
 
 const contacto = () => {
     const backgroundImage ={
@@ -38,6 +39,7 @@ const contacto = () => {
                     </div>
                 </div>
             </div>
+            <ScrollButton />
             <Footer />
         </div>
     );

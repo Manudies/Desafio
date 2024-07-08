@@ -1,46 +1,102 @@
-/* Anulando text-align: center; en #root */
+/* Estilos generales (escritorio) */
 #root {
-    text-align: left !important; /* Sobrescribe el text-align de #root */
+    text-align: left !important;
 }
 
 .main-contacto {
     display: flex;
     width: 35%;
     align-items: flex-start;
-    margin-left: 0; /* Asegura que no haya margen izquierdo */
-    padding-left: 15%; /* Asegura que no haya relleno izquierdo */
-    padding-top: 15%;
-    color:#091864;
+    margin-left: 0;
+    padding-left: 15%;
+    padding-top: 10%;
+    color: #091864;
 }
-/* Estilo general para el contenedor principal */
+
 .contacto-container { 
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinea los elementos a la izquierda */
-    padding: 20px; /* Espaciado interior */
+    align-items: flex-start;
+    padding: 20px;
 }
 
-/* Estilo para el encabezado "Contáctanos" */
 .contactanos {
-    margin-bottom: 20px; /* Espacio inferior */
+    margin-bottom: 20px;
 }
 
-/* Estilo para las secciones de contacto y redes sociales */
 .contactos, .redes-sociales {
-    margin-bottom: 20px; /* Espacio inferior */
+    margin-bottom: 20px;
 }
 
-/* Estilo para los encabezados de las secciones */
 .contactos h2, .redes-sociales h2 {
-    margin-bottom: 10px; /* Espacio inferior */
+    margin-bottom: 10px;
 }
 
-/* Estilo para los enlaces de redes sociales */
 .redes-sociales a {
-/* Color de texto para los enlaces */
-    text-decoration: none; /* Sin subrayado */
-    display: block; /* Mostrar como bloques */
-    margin-bottom: 5px; /* Espacio inferior entre enlaces */
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
 }
 
-/* Estilos adicionales según sea necesario */
+/* Media queries para móviles */
+@media (max-width: 768px) {
+    .main-contacto {
+        width: 80%;
+        padding-left: 5%;
+        padding-top: 5%;
+    }
+
+    .contacto-container {
+        padding: 15px;
+    }
+
+    .contactanos {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .contactos, .redes-sociales {
+        margin-bottom: 15px;
+    }
+
+    .contactos h2, .redes-sociales h2 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .redes-sociales a {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-contacto {
+        width: 100%;
+        padding-left: 2%;
+        padding-top: 3%;
+    }
+
+    .contacto-container {
+        padding: 10px;
+    }
+
+    .contactanos {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .contactos, .redes-sociales {
+        margin-bottom: 10px;
+    }
+
+    .contactos h2, .redes-sociales h2 {
+        font-size: 14px;
+        margin-bottom: 6px;
+    }
+
+    .redes-sociales a {
+        font-size: 12px;
+        margin-bottom: 3px;
+    }
+}

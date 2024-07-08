@@ -5,8 +5,9 @@
     padding: 20px;
     width: 100%;
     max-width: 1800px;
-    height: 600px;
- 
+    min-height: 500px;
+    height: fit-content;
+
 }
 
 .pack-card-header {
@@ -20,7 +21,7 @@
 
 }
 
-  .photo-pack {
+.photo-pack {
     max-width: 100px;
     height: auto;
 }
@@ -29,19 +30,21 @@
 .card-body {
     display: flex;
     gap: 50px;
+    margin-top: 30px;
 
-  }
-  
-  .pack-card-body {
+}
+
+.pack-card-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 50px 10px 10px 10px;
     gap: 20px;
-    width: 50%; 
+    width: 50%;
     min-width: 400px;
 }
+
 .pack-title {
     font-size: 24px;
     font-weight: bold;
@@ -65,7 +68,7 @@
 
 }
 
-.contratar{
+.contratar {
     background-color: #001f3f;
     color: #fff;
     border-radius: 5px;
@@ -80,6 +83,15 @@
     margin-top: 50px;
     height: 40px;
 }
+
+.card-includes {
+    border-radius: 17px;
+    border-left: 2px solid #e0e0e0;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+}
+
 .pack-includes {
     width: 50%;
     height: 100%;
@@ -90,10 +102,20 @@
     justify-content: center;
     width: 70%;
     display: flex;
-} 
+}
+
 .packIncluye {
     display: flex;
     color: #001f3f;
     font-weight: bold;
     font-size: 20px;
+}
+
+.pack2Completo {
+    width: 90px;
+    height: 90px;
+    background-image: url(../../../public/packs/pack2.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
 }
