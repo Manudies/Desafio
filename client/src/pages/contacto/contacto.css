@@ -1,7 +1,4 @@
 /* Estilos generales (escritorio) */
-#root {
-    text-align: left !important;
-}
 
 .main-contacto {
     display: flex;
@@ -11,6 +8,7 @@
     padding-left: 15%;
     padding-top: 10%;
     color: #091864;
+    text-align: left;
 }
 
 .contacto-container { 
