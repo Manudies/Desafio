@@ -13,7 +13,7 @@ const className = {
     3: "pack4",
 }
 
-const packList = () => {
+const packList = ({ index }) => {
     const packs = useLoaderData();
     const [selectedPack, setSelectedPack] = useState(packs[0]);
 
@@ -27,11 +27,11 @@ const packList = () => {
         <div className="packsMain">
             <section className="packs_container">
                 {packs.map((pack, index) => (
-                    <PackCard key={pack._id} pack={pack} onClick={() => handlePackClick(pack)} cardClassName={className[index]} index={index}/>
+                    <PackCard key={pack._id} pack={pack} id= {selectedPack} onClick={() => handlePackClick(pack)} cardClassName={className[index]} index={index} />
                     ))}
             </section>
             <section className="packs_info">
-            {selectedPack && <PackCardCompleto pack={selectedPack} key={packs._id}  />}
+            {selectedPack && <PackCardCompleto pack={selectedPack} key={packs._id} index={index} />}
             </section>
 
         </div>
