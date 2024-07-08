@@ -33,11 +33,7 @@
   }
   
   .imgHerramienta {
-    width: 80px;
-    height: 80px;
-    min-height: 20px;
-    background-color: #ddd;
-    border-radius: 50%;
+    width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,8 +49,6 @@
   .herramientaText {
     font-size: 1em;
     color: #000000;
-    height: 50%;
-
   }
 
 .herramienta:first-child .imgHerramienta {
