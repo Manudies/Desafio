@@ -82,31 +82,16 @@ Desafio/
 
 ## Uso
 
-### Desarrollo
+### Producción y desarrollo
 
-Para ejecutar el servidor en modo de desarrollo:
-
-```bash
-cd server
-npm run dev
-```
-Para ejecutar el cliente en modo de desarrollo:
-
-```bash
-cd client
-npm start
-```
-
-### Producción
-
-Para construir y ejecutar el servidor en producción:
+Para construir y ejecutar el servidor:
 
 ```bash
 cd server
 docker compose ip --build
 ```
 
-Para construir y servir el cliente en producción:
+Para construir y servir el cliente:
 
 ```bash
 cd client
