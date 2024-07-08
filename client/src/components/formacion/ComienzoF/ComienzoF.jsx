@@ -4,21 +4,23 @@ import { useNavigate } from 'react-router-dom';
 import './ComienzoF.css';
 
 
-const ComienzoF = () => {
+const Fcomienzo = () => {
   const navigate = useNavigate();
   const showAll = () => {
-    navigate('/formularioModulos');
+    navigate('/formularioModulo');
 }
 
+
   return (
-    <div className="comienzoFContainer">
-        <div className='comienzoFTexto'>
+    <div className="FcomienzoContainer">
+        <div className='Fcomienzotexto'>
             <h2>Programa de formación en Silver Economy</h2>
             <h3>Te asesoramos en la búsqueda del mejor módulo de formación para ti.</h3>
+            <ActionButton label="Haz el test" className={"FcomienzoButton" } onClick={showAll} />
         </div>
-            <ActionButton label="Haz el test" className="comienzoButtonF"/>
+
     </div>
   );
 }
 
-export default ComienzoF;
+export default Fcomienzo;
