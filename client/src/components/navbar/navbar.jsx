@@ -61,10 +61,10 @@ const Navbar = () => {
             <a href="/formacion" className="navbar-link">Formación</a>
           </li>
           <li className="navbar-item">
-            <a href="#reservas" className="navbar-link">Plataformas de reservas</a>
+            <a href="#" className="navbar-link">Plataformas de reservas</a>
           </li>
           <li className="navbar-item">
-            <a href="#sobre" className="navbar-link">Sobre Seniority</a>
+            <a href="#" className="navbar-link">Sobre Seniority</a>
           </li>
           <li className="navbar-item">
             <a href="/contacto" className="navbar-link">Contacto</a>
