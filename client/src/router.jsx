@@ -86,6 +86,7 @@ const router = createBrowserRouter([
       {
         path: "/formularioModulo",
         element: <FormularioModulo />,
+        loader: () => fetchModulos(),
       },
       {
         path: "/packs",

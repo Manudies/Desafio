@@ -7,14 +7,16 @@ import "../../components/barraProgreso/BarraProgreso.css";
 import { formacion } from "../../utils/fetch.js";
 import { useNavigate } from "react-router-dom";
 import Modal from "../modal/modal.jsx";
-
+import { useLoaderData } from "react-router-dom";
 
 const Main = () => {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [showWarning, setShowWarning] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const [modulo, setModulo] = useState(null);
+  const modulos = useLoaderData();
+  console.log("modulos", modulos);
 
   const navigate = useNavigate();
 
@@ -67,7 +69,8 @@ const Main = () => {
       }
       const response = await formacion(result);
       handleAnswerRemove();
-      console.log("Respuesta API", response);
+      console.log("La RESPUESTA DE DATA ES:", response.prediction);
+      setModulo(response.prediction);
       setIsModalOpen(true); // Abre el modal en lugar de navegar directamente
     } else {
       setShowWarning(true);
@@ -79,11 +82,19 @@ const Main = () => {
     navigate("/formacion", { state: { scrollTo: "moduloMainRef" } });
   };
 
-    const flecha = () => {
-      return (
-        <p><span className="flecha-atras">←</span>Atrás</p>
-      )
-    }
+  const flecha = () => {
+    return (
+      <p>
+        <span className="flecha-atras">←</span>Atrás
+      </p>
+    );
+  };
+  const getPhaseName = (phaseName) => {
+    let parts = phaseName.split(":");
+    console.log(parts);
+    parts = parts[1].split(" ");
+    return parts.length > 1 ? parts[1] : phaseName;
+  };
 
   return (
     <div className="content-modulo">
@@ -143,13 +154,21 @@ const Main = () => {
         <Modal onClose={handleCloseModal}>
           <div id="modalNombre">
             <div id="divModalNombre">
-              <h2>Según la información que nos has proporcionado tu paquete seria:</h2>
-              <p>Aquí puedes añadir la información que quieres mostrar antes de navegar.</p>
-            </div>
-            <div id='modalInferior'>
-              <div id="divModalIMG">
-                <img src="/path-to-your-image.jpg" alt="Imagen informativa" />
+              <h2 className="modal-phase-h2">¡Gracias por rellenar el test!</h2>
+              <div className="modal-phase-primero">
+                <div className="basandonos">
+                <h2>Basándonos en tus respuestas, te recomendamos</h2>
+                </div>
+                <p className="modal-phase-name">{getPhaseName(modulos[modulo].phaseName)}</p>
               </div>
+              <p className="modal-description">
+                Descripción: {modulos[modulo].description}
+              </p>
+            </div>
+            <div id="modalInferior">
+              {/* <div id="divModalIMG">
+                <img src="/path-to-your-image.jpg" alt="Imagen informativa" />
+              </div> */}
             </div>
           </div>
         </Modal>

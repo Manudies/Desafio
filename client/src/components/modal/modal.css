@@ -9,6 +9,19 @@
     display: flex;
     z-index: 5;
 }
+
+.modal-modulo-test {
+    position: fixed;
+    margin:0;
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    z-index: 5;
+}
+
 .absolute_right_top {
     background-color: #ddd;
     position: absolute;
@@ -18,7 +31,7 @@
 
 .modal-body {
     background-color: rgba(255, 253, 253, 0.9);
-    width:50%;
+    width:70%;
     margin: auto;
     min-height:50%;
     border-radius:15px;
