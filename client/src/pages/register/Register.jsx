@@ -48,11 +48,22 @@ const Register = ({}) => {
       /[!@#$%^&*]/.test(password)
     );
   };
+  //maximo numero de caracteres 18, y no se aceptán caracteres especiales
+  const validateUserName = (username) => {
+    if (username.length > 18 || /\W/.test(username)) {
+      setError("El usuario debe tener menos de 18 caracteres y no aceptar caracteres especiales");
+      return false;
+    }
+    return true;
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (isRegister) {
+      if (!validateUserName(userData.username)) {
+        return;
+      }
       if (!validateEmail(userData.email)) {
         setError("El formato de mail no es válido");
         return;
@@ -168,10 +179,19 @@ const Register = ({}) => {
     </ul>
   </div>
   <div className="terms-checkbox">
-    <input type="checkbox" id="terms" required />
+    {/* Si es login no hay que aceptar las condiciones generales */}
+    {isRegister && (
+      <div>
+        <input type="checkbox" id="terms" required />
+        <label htmlFor="terms">
+          Aceptar las Condiciones Generales, la Política de Privacidad y recibir novedades y promociones.
+        </label>
+      </div>
+    )}
+    {/* <input type="checkbox" id="terms" required />
     <label htmlFor="terms">
       Aceptar las Condiciones Generales, la Política de Privacidad y recibir novedades y promociones.
-    </label>
+    </label> */}
   </div>
           <ActionButton label={isRegister ? "Crear cuenta" : "Entrar"} className={"final-button"} />
         </form>

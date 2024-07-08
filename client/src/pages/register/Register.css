@@ -104,6 +104,9 @@
   text-align: center;
   color: #07124B;
   margin-top: 5px;
+  border: 1px solid #791d1d;
+  padding: 10px 5px;
+  border-radius: 8px;
 }
 
 .aquí-button{
