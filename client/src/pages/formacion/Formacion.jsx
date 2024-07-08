@@ -3,7 +3,7 @@ import Navbar from "../../components/navbar/navbar";
 import Noti from "../../components/noti/noti";
 import Footer from "../../components/footer/footer";
 import Timeline from "../../components/timeLine/Timeline";
-import ComienzoF from "../../components/formacion/ComienzoF/ComienzoF";
+import Fcomienzo from "../../components/formacion/ComienzoF/ComienzoF";
 import Programas from "../../components/formacion/Programas/Programas";
 import HerramientasF from "../../components/formacion/herramientasF/HerramientasF";
 import RealizarTestF from "../../components/formacion/realizarTestFormacion/RealizarTestF";
@@ -27,13 +27,13 @@ const consultoria = () => {
     <div className="formacion">
       <Navbar />
       <Noti />
-      <ComienzoF />
+      <Fcomienzo />
       <Programas/>
       <div className="formacionImagen">
-        <img src="./public/logos.png" alt="logos" />
+        <img src="./public/logos.png" alt="logos" className="logosFormacion"/>
       </div>
       <HerramientasF />
-      <div ref={moduloMainRef}>
+      <div ref={moduloMainRef} className="timelineContainer">
         <Timeline />
       </div>
       <RealizarTestF />

@@ -1,5 +1,5 @@
 /* Estilos para el contenedor principal */
-.comienzoFContainer {
+.FcomienzoContainer {
     height: 705px;
     width: 100%;
     background-image: url('./formacion/inicio.webp');
@@ -7,10 +7,11 @@
     background-position: center; 
     background-repeat: no-repeat; /* No repetir la imagen */
     margin-top: 80px;
+
 }
 
 /* Estilos para el contenedor de texto */
-.comienzoFTexto {
+.Fcomienzotexto {
     max-width: 500px;
     height: 500px;
     margin-bottom: 20px;
@@ -19,20 +20,21 @@
     align-items: flex-start;
     justify-content: center;
     margin-left: 100px;
+    color: black;
     
 }
 
-.comienzoFTexto h2 {
-    font-size: 50px;
+.Fcomienzotexto h2 {
+    font-size: 40px;
     font-weight: bold;
     text-align: justify; 
-    margin:150px 0 0 0;
-    padding-top: 150px;
+    margin:300px 0 0 0;
+    color: black;
   
 }
 
-.comienzoFTexto h3 {
-    font-size: 35px;
+.Fcomienzotexto h3 {
+    font-size: 25px;
     font-weight: normal;
     margin: 0;
     text-align: justify;
@@ -40,9 +42,7 @@
 
 }
 
-
-
-.comienzoButtonF {
+.FcomienzoButton {
     background-color: #001f3f;
     color: #fff;
     border-radius: 5px;

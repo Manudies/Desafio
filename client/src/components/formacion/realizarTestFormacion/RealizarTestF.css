@@ -1,5 +1,9 @@
 .realizarTestFContainer {
     background-color: #07124B;
+    background-image: url('../../../../public/formacion/realizarTestF/fondoTest.webp');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; /* No repetir la imagen */
     height: 450px;
     display: flex;
     justify-content: center;
@@ -18,12 +22,13 @@
 
 }
 .realizarFTexto{
-    width: 100%;
+    width: 50%;
     height: auto;
+    display: flex;
 }
 
 .realizarFText{
-    font-size: 30px;
+    font-size: 25px;
     color: #fff;
 }
 

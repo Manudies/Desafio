@@ -5,18 +5,19 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
   }
   
   .herramientaFContainer {
     display: flex;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1550px;
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
+    border: 2px solid #ccc;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     gap: 20px;
 
@@ -54,3 +55,23 @@
     height: 120px;
   }
   
+
+
+.formacionHerramientas {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Para centrar el título */
+  margin: 0 auto; /* Para centrar el contenedor */
+}
+
+.formacionHerramientasTitle {
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  margin: 50px;  
+}
