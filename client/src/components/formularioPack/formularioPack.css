@@ -65,6 +65,7 @@
 }
 
 .answers-pack  button {
+  color:#091864;
   background-color: #ffffff;
   border: 2px solid #cccccc;
   border-radius: 10px;
@@ -100,4 +101,7 @@ background-color: #e0e0e0;
   margin-bottom: 10px;
 }
 
-
+.answers-pack button.selected {
+  background-color: #e0e0e0;
+  border: 3px solid #000000;
+}

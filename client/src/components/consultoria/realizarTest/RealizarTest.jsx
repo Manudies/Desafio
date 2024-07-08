@@ -17,7 +17,7 @@ const realizarTest = () => {
             </div>
 
             <div className='realizarTest'>
-                <button onClick={showAll} className='buttonTest'>Realizar test</button>
+                <button onClick={showAll} className='RealizarbuttonTest'>Realizar test</button>
             </div>
 
 
