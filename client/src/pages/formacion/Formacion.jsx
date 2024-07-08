@@ -7,6 +7,7 @@ import ComienzoF from "../../components/formacion/ComienzoF/ComienzoF";
 import HerramientasF from "../../components/formacion/herramientasF/HerramientasF";
 import RealizarTestF from "../../components/formacion/realizarTestFormacion/RealizarTestF";
 import Contactanos from "../../components/formacion/Contactanos/Contactanos";
+import ScrollButton from "../../components/scrollButton/ScrollButton";
 import { useLocation } from "react-router-dom";
 import { useRef, useEffect } from "react";
 
@@ -88,6 +89,7 @@ const consultoria = () => {
         </h1>
       </div>
       <Contactanos />
+      <ScrollButton />
       <Footer />
       {/* <Footer /> */}
     </div>

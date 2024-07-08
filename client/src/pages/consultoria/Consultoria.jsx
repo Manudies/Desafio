@@ -9,6 +9,7 @@ import RealizarTest from "../../components/consultoria/realizarTest/RealizarTest
 import PacksList from "../../components/packs/PacksList";
 import Descubre from "../../components/consultoria/descubre/Descubre";
 import Comienzo from "../../components/consultoria/comienzo/Comienzo";
+import ScrollButton from "../../components/scrollButton/ScrollButton";
 import React, { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 const consultoria = () => {
@@ -34,6 +35,7 @@ const consultoria = () => {
       </div>
       <RealizarTest />
       <Descubre />
+      <ScrollButton />
       <Footer />
     </div>
   );
