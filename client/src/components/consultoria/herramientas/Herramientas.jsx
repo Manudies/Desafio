@@ -10,8 +10,8 @@ const Herramientas = () => {
         <section className="herramientaContainer">
             <div className='herramienta'>
                 <div className='imgHerramienta'>
-                <span>90%</span>
-                {/* <img src="./" alt="logo" /> */}
+                {/* <span>90%</span> */}
+                <img src="consultoria/herramientas/herramientas1.jpg" alt="logo" />
                 </div>
 
                 <div className='herramientaText'>
@@ -21,8 +21,8 @@ const Herramientas = () => {
 
             <div className='herramienta'>
                 <div className='imgHerramienta'>
-                    <span>10M</span>
-                {/* <img src="./" alt="logo" /> */}
+                    {/* <span>10M</span> */}
+                <img src="consultoria/herramientas/herramientas2.png" alt="logo" />
                 </div>
 
                 <div className='herramientaText'>
@@ -32,8 +32,8 @@ const Herramientas = () => {
 
             <div className='herramienta'>
                 <div className='imgHerramienta'>
-                  <span>35%</span>         
-                {/* <img src="./" alt="logo" /> */}
+                  {/* <span>35%</span>          */}
+                <img src="consultoria/herramientas/herramientas3.png" alt="logo" />
                 </div>
 
                 <div className='herramientaText'>
