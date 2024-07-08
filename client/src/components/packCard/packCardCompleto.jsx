@@ -24,8 +24,8 @@ const TarjetaPack = ({ pack }) => {
   const handleBuyPack = async (pack) => {
     if (user) {
       try {
-        await addPack(user._id, pack._id);
-        await sendMail({
+        const response = await sendMail( {
+
           to: user.email,
           subject: 'Confirmación de compra',
           text: `Hola ${user.username},\n\nGracias por comprar el viaje a ${pack.packName}. Disfruta de tu aventura!\n\nSaludos,\nEl equipo de Horizontes Lejanos`
@@ -42,14 +42,16 @@ const TarjetaPack = ({ pack }) => {
     }
   };
 
-  const handledeleteContratar = async (pack) => {
-    if (user) {
-      const deleteContratar = await removePack(user._id, pack._id);
-    } else {
-      alert("Debes iniciar sesión");
-      navigate("/register");
-    }
-  };
+  // const handledeleteContratar = async (pack) => {
+  //   if (user) {
+  //     // await removePack(user._id, pack._id);
+  //     await handlefetchUserData();
+  //     const deleteContratar = await removePack(user._id, pack._id);
+  //   } else {
+  //     alert("Debes iniciar sesión");
+  //     navigate("/register");
+  //   }
+  // };
 
   // const userHadPack = () => {
   //     if (!user) {

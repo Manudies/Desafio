@@ -1,19 +1,22 @@
 import ActionButton from '../../actionButton/actionButton';
+import { useNavigate } from 'react-router-dom';
 import './Descubre.css';
 
 
 const Descubre = () => {
-
+    const navigate = useNavigate();
+    const showAll = () => {
+      navigate('/formularioPack');
+  }
 
   return (
     <div className="descubrirContainer">
         <section className="descubreContainer">
             <div className='descubre'>
                 <div className='descubreText'>
-                    <h2>Da el primer paso</h2>
-                    <p>Descubre el pack de servicios perfecto para ti..</p>
+                    <h2>Solicita tu primera sesión estratégica gratuita.</h2>
                 </div>
-                <ActionButton label="Descubre" className={"descubreButton"}/>
+                <ActionButton label="¡Da el primer paso!" className={"descubreButton"} onClick={showAll}/>
             </div>
 
             <div className='descubreImg'>

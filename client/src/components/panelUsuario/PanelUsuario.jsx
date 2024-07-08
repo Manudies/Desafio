@@ -2,11 +2,21 @@ import { useContext } from "react";
 import "./panelUsuario.css";
 import UserContext from "../../context/userContext";
 import { useNavigate } from "react-router-dom";
-// import { removePack, sendMail } from "../../utils/fetch";
+import { removePack, sendMail } from "../../utils/fetch";
 
 const panelUsuario = () => {
-  const { user, logOut } = useContext(UserContext);
-  // const navigate = useNavigate();
+  const { user, logOut, handlefetchUserData } = useContext(UserContext);
+  const navigate = useNavigate();
+
+  const handledeleteContratar = async (pack) => {
+    if (user) {
+      const deleteContratar = await removePack(user._id, pack._id);
+      handlefetchUserData();
+    } else {
+      alert("Debes iniciar sesión");
+      navigate("/register");
+    }
+  };
 
   return (
     <div className="panel_usuario">
@@ -17,18 +27,25 @@ const panelUsuario = () => {
         </button>
       </div>
       <h1>Packs Contratados</h1>
-      {user.pack}
-
-
-            {/* {user.packs && user.packs.length > 0 ? (
-                <ul>
-                    {user.packs.map((pack, index) => (
-                        <li key={index}>{pack.packName}</li>
-                    ))}
-                </ul>
-            ) : (
-                <p>No has contratado ningún pack</p>
-            )} */}
+      {user.pack && user.pack.length > 0 ? (
+        <ul>
+          {user.pack.map((pack, index) => (
+            <li key={index}>
+              {pack.packName}      <div className="favoritos__buttons">
+                <button className="button_packs" onClick={() => handleBuyPack(pack)}>Comprar</button>
+                <button
+                  className="button_packs"
+                  onClick={() => handledeleteContratar(pack)}
+                >
+                  Eliminar
+                </button>
+              </div>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No tienes packs contratados</p>
+      )}
         </div>
   );
 };

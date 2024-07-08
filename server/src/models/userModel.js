@@ -20,18 +20,21 @@ const userSchema  = new mongoose.Schema({
         enum : ["user","admin"],
         default: "user"
     },
-    pack:[
+    pack:
         {
             type: [mongoose.Schema.Types.ObjectId],
-            ref: "pack"
+            ref: "packs",
+            default: []
         }
-    ],
-    modulo:[
+    ,
+    modulo:
         {
             type: [mongoose.Schema.Types.ObjectId],
-            ref: "modulo"
+            ref: "modulo",
+            default: []
+
         }
-    ]
+    
 })
 
 const userModel = mongoose.model("users",userSchema);

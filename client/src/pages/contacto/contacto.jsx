@@ -17,7 +17,6 @@ const contacto = () => {
     return (
         <div style={backgroundImage}>
             <Navbar />
-            <Noti />
             <div className="main-contacto">
                 <div className="contacto-container">
                     <div className="contactanos">
