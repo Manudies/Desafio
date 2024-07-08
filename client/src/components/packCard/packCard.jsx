@@ -23,7 +23,7 @@ const className = {
     3: "pack4",
 }
 
-const TarjetaPack = ({ pack, onClick, cardClassName, index,isSelected }) => {
+const TarjetaPack = ({ pack, onClick, cardClassName, index, id }) => {
     const { user, handlefetchUserData } = useContext(UserContext);
     const [isContratar, setIsContratar] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -55,12 +55,12 @@ const TarjetaPack = ({ pack, onClick, cardClassName, index,isSelected }) => {
     // };
 
     return (
-        <button className={cardClassName} onClick={onClick}>
+        <button className={cardClassName} onClick={onClick} id={id} >
             <div className="pack-card-image">
-                <img src={photoPack[index]} alt="photo" className={className[index]} />
+                <img src={photoPack[index]} alt="photo" className={className[index]}  />
             </div>
             <div className="pack-card-content">
-                <h2 className="card-title">{pack.packName}</h2>
+                <h2 className="card-titlePack">{pack.packName}</h2>
             </div>
         </button>
     );
