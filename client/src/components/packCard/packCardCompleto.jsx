@@ -9,8 +9,14 @@ import Modal from '../modal/modal';
 import ActionButton from '../actionButton/actionButton';
 import { addPack, removePack, sendMail } from '../../utils/fetch';
 
+const classNameCompleto = {
+  0: "pack1Completo",
+  1: "pack2Completo",
+  2: "pack3Completo",
+  3: "pack4Completo",
+}
 
-const TarjetaPack = ({ pack }) => {
+const TarjetaPack = ({ pack, index }) => {
   const { user, handlefetchUserData } = useContext(UserContext);
   const [isContratar, setIsContratar] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -76,7 +82,9 @@ const TarjetaPack = ({ pack }) => {
     <div className="packCompleto">
       <div className="pack-card-header">
         <h2 className="card-title">{pack.packName}</h2>
-        <img src="./packs/pack1.png" alt="photo" className="photo-pack" />
+        <div alt="photo" className={classNameCompleto[1]} />
+
+        {/* <img src="./packs/pack1.png" alt="photo" className="photo-pack" /> */}
       </div>
 
       <div className='card-body'>

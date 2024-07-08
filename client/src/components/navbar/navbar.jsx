@@ -61,10 +61,10 @@ const Navbar = () => {
             <a href="/formacion" className="navbar-link">Formación</a>
           </li>
           <li className="navbar-item">
-            <a href="#reservas" className="navbar-link">Plataformas de reservas</a>
+            <a href="#" className="navbar-link">Plataformas de reservas</a>
           </li>
           <li className="navbar-item">
-            <a href="#sobre" className="navbar-link">Sobre Seniority</a>
+            <a href="#" className="navbar-link">Sobre Seniority</a>
           </li>
           <li className="navbar-item">
             <a href="/contacto" className="navbar-link">Contacto</a>
@@ -73,7 +73,7 @@ const Navbar = () => {
 
         {user && (
             <li className="navbar-item">
-              <button onClick = {openModal}className="navbar-link">{user.username}</button>
+              <button onClick = {openModal}className="navbar-button">{user.username}</button>
               {isModalOpen &&
                 <Modal isOpen={true} onClose={()=> {
                   setIsModalOpen(false)
@@ -86,7 +86,7 @@ const Navbar = () => {
           )}
           {!user && (
           <li className="navbar-item">
-            <Link to="/register" className="navbar-link" onClick={toggleMenu}>
+            <Link to="/register" className="navbar-button" onClick={toggleMenu}>
               Accede
             </Link>
           </li>
