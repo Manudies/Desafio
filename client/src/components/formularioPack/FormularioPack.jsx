@@ -9,7 +9,7 @@ import { consultoria } from "../../utils/fetch.js";
 import { useNavigate } from "react-router-dom";
 import Modal from "../modal/modal.jsx";
 import { useLoaderData } from "react-router-dom";
-
+import recomendaciones from "./recomendacionPacks.js";
 
 const Main = () => {
   const [index, setIndex] = useState(0);
@@ -18,10 +18,11 @@ const Main = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [pack, setpack] = useState(null);
   const packs = useLoaderData();
-  console.log("packs del loader",packs)
-  const navigate = useNavigate(); 
+  console.log("packs del loader", packs);
+  const navigate = useNavigate();
 
   const formulario = questions[index];
+  const recomendacion = recomendaciones;
 
   const handleNext = () => {
     if (index < questions.length - 1 && answers[index] !== undefined) {
@@ -60,7 +61,7 @@ const Main = () => {
       }
       const response = await consultoria(result);
       handleAnswerRemove();
-      console.log("Respuesta API",response.prediction);
+      console.log("Respuesta API", response.prediction);
       setpack(response.prediction);
       setIsModalOpen(true);
     } else {
@@ -85,7 +86,6 @@ const Main = () => {
     parts = parts[1].split(" ");
     return parts.length > 1 ? parts[1] : phaseName;
   };
-
 
   return (
     <div className="main-content-pack">
@@ -112,9 +112,9 @@ const Main = () => {
         <div className="answers-container-pack">
           {Object.entries(formulario.answers).map(([key, value]) => (
             <div className="answers-pack" key={key}>
-              <button 
+              <button
                 onClick={() => handleAnswer(key)}
-                className={answers[index] === key ? 'selected' : ''}
+                className={answers[index] === key ? "selected" : ""}
               >
                 {value}
               </button>
@@ -151,22 +151,25 @@ const Main = () => {
               <h2 className="modal-phase-h2">¡Gracias por rellenar el test!</h2>
               <div className="modal-phase-primero">
                 <div className="basandonos">
-                <h2>Basándonos en tus respuestas, te recomendamos</h2>
+                  <h2>Basándonos en tus respuestas, te recomendamos</h2>
                 </div>
                 <p className="modal-phase-name">{packs[pack].packName}</p>
               </div>
               <div className="modal-phase-primero">
                 <div className="basandonos">
-                <h2>Por qué te lo recomendamos</h2>
+                  <h2>Por qué te lo recomendamos</h2>
                 </div>
-                <p className="modal-phase-name">{recomendacion[pack]}</p>
+                <p className="modal-description">{recomendacion[pack].recomendacion}</p>
               </div>
-              <p className="modal-description">
-                Descripción: {packs[pack].description}
-              </p>
             </div>
-            <div id="modalInferior">
-            </div>
+            <ActionButton 
+            label="Repetir test"
+            onClick={handleConsultoria}
+            className="button"/>
+            <ActionButton 
+            label="Continuar"
+            onClick={handleConsultoria}
+            className="button"/>
           </div>
         </Modal>
       )}
