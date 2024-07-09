@@ -10,6 +10,7 @@ import PacksList from "../../components/packs/PacksList";
 import Descubre from "../../components/consultoria/descubre/Descubre";
 import Comienzo from "../../components/consultoria/comienzo/Comienzo";
 import ScrollButton from "../../components/scrollButton/ScrollButton";
+import Punto from "../../components/puntoAcesibilidad/Punto";
 import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 const consultoria = () => {
@@ -37,6 +38,7 @@ const consultoria = () => {
       <Descubre />
       <ScrollButton />
       <Footer />
+      <Punto />
     </div>
   );
 };

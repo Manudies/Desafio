@@ -3,6 +3,7 @@ import Footer from "../../components/footer/footer";
 import "./contacto.css";
 import tuImagen from "../../../public/llamada.jpg";
 import ScrollButton from "../../components/scrollButton/ScrollButton";
+import Punto from "../../components/puntoAcesibilidad/Punto";
 
 const contacto = () => {
     const backgroundImage ={
@@ -39,6 +40,7 @@ const contacto = () => {
                 </div>
             </div>
             <ScrollButton />
+            <Punto />
             <Footer />
         </div>
     );
