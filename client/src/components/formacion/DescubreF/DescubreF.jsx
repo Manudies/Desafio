@@ -6,7 +6,7 @@ import './DescubreF.css';
 const Descubre = () => {
     const navigate = useNavigate();
     const showAll = () => {
-      navigate('/formularioModulo');
+      navigate('/contacto');
   }
 
   return (
