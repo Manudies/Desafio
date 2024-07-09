@@ -1,7 +1,46 @@
 # Proyecto Desafío
 
-Este proyecto es una implementación de un sistema basado en Node.js. A continuación, se describen los detalles sobre la estructura del proyecto, los pasos para la instalación, y cómo utilizarlo.
+Este proyecto es un reto propuesto por la empresa Seniority.IA, que tiene dos objetivos: diseñar un Sistema de Selección para el Programa Playbook Silver Economy que facilite a las personas interesadas en nuestra formación determinar el bloque del programa Playbook Silver Economy más adecuado para ellos. Y por otro lado, desarrollar una solución integral que ofrezca asistencia técnica especializada en UX (experiencia de usuario) adaptada a las necesidades de las personas mayores, proporcionando a las empresas y emprendedores las herramientas necesarias para seleccionar formación en UX Senior-Friendly y también permitirles contratar servicios de asistencia técnica para proyectos enfocados en la Silver Economy.
 
+El proyecto consta de un backend construido con Express y un frontend desarrollado con React.
+
+## Formularios
+
+- **Sección Consultoría**: Los usuarios podrán saber qué pack es el más recomendado para ellos y del cual pueden solicitar más información. Les llegará un correo al correo con el que se hayan registrado, informándoles que nos pondremos en contacto con ellos.
+- **Sección Formación**: Los usuarios sabrán en qué fase se encuentran y qué medidas tienen que implementar.
+
+## Backend
+
+Este archivo configura y establece el servidor backend utilizando Express. Se encarga de manejar las conexiones de los clientes, gestionar los usuarios conectados y manejar los paquetes y los módulos recomendados, para que los clientes puedan solicitar más información para contratarlos.
+
+El archivo comienza con la configuración del servidor Express, donde se importan los módulos necesarios, se crea una instancia de la aplicación Express, se configura el middleware CORS y se crea un servidor HTTP utilizando la instancia de Express.
+
+A continuación, se define un objeto `users` para almacenar los usuarios conectados. Cuando un cliente se conecta, puede ver desde su panel de usuario de qué packs o módulos ha solicitado información anteriormente.
+
+## Frontend
+
+El frontend se encarga de proporcionar la interfaz de usuario para que pueda informarse, realizar los tests, y averiguar cuál se adapta mejor para él. A continuación, se describen los componentes principales del frontend.
+
+### App.jsx
+
+Este componente es el punto de entrada de la aplicación React. Se encarga de gestionar el estado del nombre de usuario y renderizar condicionalmente la interfaz del panel de usuario o el componente de login.
+
+El componente comienza importando los módulos y componentes necesarios. Luego, se define un estado para almacenar el nombre de usuario utilizando el hook `useState`.
+
+Se utiliza el hook `useEffect` para emitir el pack o módulo de login al servidor cuando se establece el nombre de usuario. Esto permite asociar el nombre de usuario con el pack o módulo correspondiente en el backend.
+
+Finalmente, se renderiza condicionalmente la interfaz del componente de login según si hay un nombre de usuario establecido. Si hay un nombre de usuario, se muestra su nombre y puede ver de qué packs y módulos ha solicitado información. Si no hay un nombre de usuario, no puede realizar el formulario.
+
+## Beneficios
+
+Los beneficios que se buscan con este proyecto para la empresa Seniority.IA:
+
+1. **Orientación Personalizada**: Los usuarios recibirán recomendaciones de formación adaptadas a sus necesidades individuales, mejorando su experiencia de aprendizaje.
+2. **Eficiencia en el Proceso de Selección**: Un sistema automatizado que ahorra tiempo y esfuerzo tanto para los usuarios como para el equipo administrativo.
+3. **Mejora en la Calidad de la Formación**: Al asegurar que cada persona ingrese al bloque formativo adecuado, aumentará la efectividad de la formación y el éxito de los participantes.
+4. **Formación Especializada**: Proveer a las empresas y emprendedores de conocimientos y habilidades en UX Senior-Friendly, mejorando la calidad y accesibilidad de sus productos y servicios.
+5. **Apoyo Técnico Personalizado**: Ofrecer asistencia técnica adaptada a las necesidades específicas de cada proyecto, garantizando que los productos desarrollados sean realmente útiles y usables para las personas mayores.
+6. **Mejora de Productos y Servicios**: Asegurar que los productos y servicios enfocados en la Silver Economy cumplan con altos estándares de usabilidad y accesibilidad, aumentando su aceptación y éxito en el mercado.
 ## Estructura del Proyecto
 
 La estructura principal del proyecto es la siguiente:
