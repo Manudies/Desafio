@@ -61,6 +61,7 @@ const removeUser = async(req,res)=>{
 }
 
 const addPack = async(req,res)=>{
+    
     const userId = req.params.id;
     const packId = req.body.packId;
     const loggedUser = req.user;

@@ -144,6 +144,7 @@ const removeUser = async (id) => {
 }
 //REVISAR CON DANEL
 const addPack = async (userId, packId) => {
+    console.log("Paso por aqui")
     try {
         console.log("add pack", userId)
         const user = await getById(userId);

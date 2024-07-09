@@ -37,7 +37,9 @@ const TarjetaPack = ({ pack, index }) => {
           text: `Hola ${user.username},\n\nGracias por comprar el viaje a ${pack.packName}. Disfruta de tu aventura!\n\nSaludos,\nEl equipo de Horizontes Lejanos`
         });
         alert(`Correo de confirmación enviado a ${user.email}!`);
-        await handledeleteContratar(pack);
+        console.log("pack id", pack._id);
+        addPack(user._id, pack._id);
+        // await handledeleteContratar(pack);
       } catch (error) {
         console.error("Error enviando el correo de confirmación", error);
         alert("Hubo un error al enviar el correo de confirmación.");
@@ -50,7 +52,7 @@ const TarjetaPack = ({ pack, index }) => {
 
   // const handledeleteContratar = async (pack) => {
   //   if (user) {
-  //     // await removePack(user._id, pack._id);
+  //     await removePack(user._id, pack._id);
   //     await handlefetchUserData();
   //     const deleteContratar = await removePack(user._id, pack._id);
   //   } else {
