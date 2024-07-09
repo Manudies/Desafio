@@ -6,9 +6,10 @@
     align-items: flex-start;
     margin-left: 0;
     padding-left: 15%;
-    padding-top: 10%;
+    margin-top: 79px;
     color: #091864;
     text-align: left;
+    height: 100%;
 }
 
 .contacto-container { 
