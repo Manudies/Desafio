@@ -41,4 +41,10 @@
   .accessibility-options button:hover {
     background-color: #f0f0f0;
   }
+
+  .large-pointer {
+    cursor: url('./cursor.png') 20 20, auto;
+  }
+
+  
   
