@@ -89,7 +89,7 @@ const Main = () => {
 
 
   return (
-    <div className="main-content-pack">
+    <div className="content-pack">
       <div className="question-header-pack">
         <ActionButton
           label={flecha()}
