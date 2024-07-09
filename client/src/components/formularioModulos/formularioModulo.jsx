@@ -134,6 +134,7 @@ const Main = () => {
             label="Siguiente"
             onClick={handleNext}
             className="button-siguiente"
+            disabled={answers[index] === undefined}
           />
         )}
       </div>
