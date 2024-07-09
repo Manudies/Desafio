@@ -1,3 +1,12 @@
+#divModalNombre{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+}
+
 .content-pack {
   width: 90%;
   padding: 1rem;
@@ -104,4 +113,47 @@ background-color: #e0e0e0;
 .answers-pack button.selected {
   background-color: #e0e0e0;
   border: 3px solid #000000;
+}
+
+.basandonos{
+  width: 100%;
+  background-color: #07124B;
+  border: 2px solid #07124B;
+  border-radius: 15px 15px 0 0;
+}
+
+.modal-phase-h2{
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 90%;
+  color: #07124B;
+  padding: 2rem 0;
+  border-bottom: 3px dashed #07124B;
+
+  width: 100%;
+  text-align: center;
+}
+
+.modal-phase-name {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 90%;
+  color: #07124B;
+  margin: 1rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+.modal-description{
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 90%;
+  color: #07124B;
+  margin: 2rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+.modal-phase-primero {
+  margin-bottom: 2rem; ;
 }

@@ -37,13 +37,13 @@
     border-radius:15px;
     padding:2rem;
     position: relative;
-    height: 80%;
+    height: 65%;
     overflow-y: auto;
 
 }
 
 @media screen and (max-width: 720px) {
     .modal-body {
-        width: 80%;
+        width: 65%;
     }
 }
