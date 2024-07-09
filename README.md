@@ -18,7 +18,7 @@ Desafio/
 │   │   ├── controllers/
 │   │   ├── models/
 │   │   ├── routes/
-│   │   └── app.ts
+│   │   └── index.js
 │   ├── package.json
 │
 ├── client/
@@ -26,7 +26,7 @@ Desafio/
 │   ├── src/
 │   │   ├── components/
 │   │   ├── pages/
-│   │   └── App.js
+│   │   └── App.jsx
 │   ├── package.json
 │
 └── README.md
