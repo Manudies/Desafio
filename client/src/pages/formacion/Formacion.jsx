@@ -8,9 +8,10 @@ import Programas from "../../components/formacion/Programas/Programas";
 import HerramientasF from "../../components/formacion/herramientasF/HerramientasF";
 import RealizarTestF from "../../components/formacion/realizarTestFormacion/RealizarTestF";
 import DescubreF from "../../components/formacion/DescubreF/DescubreF";
+import Punto from "../../components/puntoAcesibilidad/Punto";
+import ScrollButton from "../../components/scrollButton/ScrollButton";
 
 import Contactanos from "../../components/formacion/Contactanos/Contactanos";
-import ScrollButton from "../../components/scrollButton/ScrollButton";
 import { useLocation } from "react-router-dom";
 import { useRef, useEffect } from "react";
 
@@ -47,6 +48,7 @@ const consultoria = () => {
       </div>
       <DescubreF/>
       <ScrollButton />
+      <Punto />
       <Footer />
     </div>
   );
