@@ -6,6 +6,7 @@ Este proyecto es una implementación de un sistema basado en Node.js. A continua
 
 La estructura principal del proyecto es la siguiente:
 
+```
 Desafio/
 │
 ├── server/
@@ -29,6 +30,7 @@ Desafio/
 │   ├── package.json
 │
 └── README.md
+```
 
 
 ### Directorios y Archivos Principales
@@ -164,7 +166,8 @@ npm run dev
 	•	jest: Framework de pruebas para JavaScript.
 	•	nodemon: Herramienta para reiniciar automáticamente la aplicación cuando se detectan cambios en los     archivos.
 
-	## Documentacion adicional
+## Documentacion adicional
 
-	### Swagger
-	localhost:3030/api-docs/
+### Swagger
+
+	• http://localhost:3030/api-docs/
