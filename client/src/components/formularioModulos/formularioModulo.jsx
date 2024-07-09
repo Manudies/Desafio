@@ -1,3 +1,4 @@
+import { useState } from "react";
 import questions from "./preguntasModulo.js";
 import "./formularioModulo.css";
 import ActionButton from "../../components/actionButton/actionButton";
