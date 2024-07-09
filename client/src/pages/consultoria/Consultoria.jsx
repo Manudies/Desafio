@@ -9,7 +9,19 @@ import RealizarTest from "../../components/consultoria/realizarTest/RealizarTest
 import PacksList from "../../components/packs/PacksList";
 import Descubre from "../../components/consultoria/descubre/Descubre";
 import Comienzo from "../../components/consultoria/comienzo/Comienzo";
+import ScrollButton from "../../components/scrollButton/ScrollButton";
+import Punto from "../../components/puntoAcesibilidad/Punto";
+import { useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 const consultoria = () => {
+  const location = useLocation();
+  const packsMainRef = useRef(null);
+
+  useEffect(() => {
+    if (location.state && location.state.scrollTo === "packsMain") {
+      packsMainRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, [location]);
   return (
     <div className="consultoria">
       <Navbar />
@@ -19,10 +31,14 @@ const consultoria = () => {
       <Carrusel />
       <Beneficios />
       <h2 className="descubrePacks">Descubre nuestros servicios</h2>
-      <PacksList />
+      <div ref={packsMainRef}>
+        <PacksList />
+      </div>
       <RealizarTest />
       <Descubre />
+      <ScrollButton />
       <Footer />
+      <Punto />
     </div>
   );
 };

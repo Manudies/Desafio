@@ -38,7 +38,8 @@
 }
 
 .logo-image {
-  height: 180px;
+  margin-left: 25px;
+  height: 32px;
   width: auto;
   object-fit: contain;
 }
@@ -71,10 +72,12 @@
 .navbar-link {
   color: #fff;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   display: inline-block;
   padding: 12px 16px;
 }
+
+
 
 .navbar-link:after {
   content: '';
@@ -93,7 +96,29 @@
   color: #59FFC9;
 }
 
-.accede-button {
+.navbar-button {
+  display: flex;
+  align-items: center;
+  text-justify: auto;
+  background-color: #59FFC9;
+  color: #07124B;
+  margin-right: 5px;
+  height: 40px;
+  width: auto;
+  border-radius: 4px;
+  font-size: 18px;
+  margin-right: 100px;
+  padding: 0 10px;
+}
+
+.navbar-button:hover {
+border: 1px solid #fff;
+background-color: #07124B;
+color: #59FFC9;
+transition: 0.3s;
+}
+
+/* .accede-button {
   background-color: #59FFC9;
   color: #07124B;
   margin-right: 5px;
@@ -110,7 +135,7 @@
   background-color: transparent;
   color: #fff;
   transition: 0.3s;
-}
+} */
 
 .navbar-toggle {
   display: none;
@@ -167,7 +192,7 @@
   .navbar-menu {
     display: none;
     position: absolute;
-    top: 70%;
+    top: 74px;
     left: 0;
     background-color: #fff;
     width: 100%;

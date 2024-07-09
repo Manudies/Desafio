@@ -1,7 +1,7 @@
 import userModel from "../../models/userModel.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-const userRows = { _id: 1, username: 1, email: 1, role: 1, packs: 1 };
+const userRows = { _id: 1, username: 1, email: 1, role: 1, pack: 1 };
 const getAll = async (query = null) => {
     try {
         const filter = {};
@@ -26,12 +26,13 @@ function getUserData(user) {
         email: user.email,
         username: user.username,
         role: user.role,
-        projects: user.projects
+        pack: user.pack,
+        modulo: user.modulo
     }
 }
 const getById = async (id) => {
     try {
-        const user = await userModel.findById(id, userRows);
+        const user = await userModel.findById(id).populate("pack").exec();
         return user
     } catch (error) {
         console.error(error);
@@ -67,9 +68,9 @@ const login = async (data) => {
             const users = await getByProperty("username", username, true);
             user = users[0];
         }
-        console.log("usurio", user);
+        console.log("usuario", user);
         if (!user) {
-            return { error: "No existe el usurio", status: 400 };
+            return { error: "No existe el usuario", status: 400 };
         }
         console.log("contraseña", password, user.password);
         const isPasswordCorrect = await bcrypt.compare(password, user.password);
@@ -124,7 +125,7 @@ const updateUser = async (id, data) => {
     try {
         const oldUser = await userModel.findByIdAndUpdate(id, data);
         const user = await userModel.findById(id, userRows);
-        console.log("usurio", user);
+        console.log("usuario", user);
         return user;
     } catch (error) {
         console.error(error);
@@ -143,6 +144,7 @@ const removeUser = async (id) => {
 }
 //REVISAR CON DANEL
 const addPack = async (userId, packId) => {
+    console.log("Paso por aqui")
     try {
         console.log("add pack", userId)
         const user = await getById(userId);
@@ -168,6 +170,9 @@ const removePack = async (userId, packId) => {
     }
     try {
         const user = await getById(userId);
+        if (!user.pack) {
+            user.pack = [];
+        }
         if (user.pack.some(pack => pack.toString() === packId.toString())) {
             user.pack = user.pack.filter(pack => pack.toString() !== packId.toString());
             await user.save();

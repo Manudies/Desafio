@@ -27,21 +27,26 @@
   transition: all 0.3s
 }
 
+.flecha-atras {
+  font-size: 3rem;
+}
 
-/* Es el boton de anterior por si nos dicen de ponerlo, por ahora lo muestro, para ocultarlo descomentar la linea */
-/* .button-siguiente  {
-  margin-left: 10px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #000080;
-  transition: all 0.3s;
-  display: none;
+.modal-phase-primero{
+  display: flex;
+  width: 85%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #07124B;
+  border-radius: 15px;
+}
 
-} */
-
+.basandonos{
+  width: 100%;
+  background-color: #07124B;
+  border: 2px solid #07124B;
+  border-radius: 15px 15px 0 0;
+}
 
 .questionForm-modulo  {
   font-size: 75px;
@@ -64,6 +69,7 @@
 }
 
 .answers-modulo  button {
+  color:#091864;
   background-color: #ffffff;
   border: 2px solid #cccccc;
   border-radius: 10px;
@@ -82,13 +88,13 @@
 
 .answers-modulo  button:hover {
   background-color: #e0e0e0;
-  border-color: #000000;
+  border-color: #000080;
   color: #000080;
 }
 
 .selected {
-border-color: #000000;
-color: #000000;
+border-color: #000080;
+color: #000080;
 background-color: #e0e0e0;
 }
 
@@ -100,7 +106,14 @@ background-color: #e0e0e0;
 }
 
 .answers-modulo button.selected {
-
   background-color: #e0e0e0;
   border: 3px solid #000000;
+}
+
+
+.button-siguiente  {
+  background-color: #07124b;
+  color: #cccccc;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
 }

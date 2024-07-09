@@ -1,5 +1,5 @@
 .noti-container { 
-  z-index: 3;
+  z-index: 1;
   position: fixed;
   height: 60px;
   top: 83px;
@@ -56,4 +56,43 @@
   color:black;
   height: 25px;
   width: 25px;
+}
+
+/* Media queries para móviles */
+@media (max-width: 768px) {
+  .noti-container {
+    height: 50px;
+    top: 70px;
+    align-items: center;
+  }
+
+  .da-el-primer-container {
+    font-size: 16px;
+    top: 10px;
+    left: 0;
+    text-align: center;
+    width: 80%;
+  }
+
+  .close-container {
+    top: 10px;
+    right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .noti-container {
+    height: 45px;
+    top: 60px;
+  }
+
+  .da-el-primer-container {
+    font-size: 14px;
+    top: 5px;
+    width: 70%;
+  }
+
+  .close-container {
+    top: 5px;
+  }
 }

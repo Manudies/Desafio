@@ -1,0 +1,41 @@
+.scroll-button {
+    height: 40px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #050E3C;
+    cursor: pointer;
+    position: relative;
+    bottom: 150px;
+    left: 0;
+    top: 0;
+  }
+
+  @media screen and (max-width: 800px) {
+    .scroll-button {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 957px) {
+    .scroll-button {
+      margin-top: -10px;
+    }
+  }
+
+  @media screen and (max-width: 914px) {
+    .scroll-button {
+      margin-top: -12px;
+    }
+  }
+
+  @media screen and (max-width: 823px) {
+    .scroll-button {
+      margin-top: -25px;
+    }
+  }

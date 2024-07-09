@@ -1,4 +1,3 @@
-import React from 'react';
 import './BarraProgreso.css';
 
 const BarraProgreso = ({ currentQuestion, totalQuestions }) => {

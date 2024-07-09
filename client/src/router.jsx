@@ -82,10 +82,13 @@ const router = createBrowserRouter([
       {
         path: "/formularioPack",
         element: <FormularioPack />,
+        loader: () => fetchPacks(),
+
       },
       {
         path: "/formularioModulo",
         element: <FormularioModulo />,
+        loader: () => fetchModulos(),
       },
       {
         path: "/packs",
@@ -96,14 +99,6 @@ const router = createBrowserRouter([
         path: "/packs/:packName",
         element: <PacksList />,
         loader: ({ params }) => fetchPacksByProperty(params.packName),
-      },
-      {
-        path: "/formularioPack",
-        element: <FormularioPack />,
-      },
-      {
-        path: "/formularioModulo",
-        element: <FormularioModulo />,
       },
       {
         path: "/formacion",

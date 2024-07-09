@@ -1,0 +1,230 @@
+basePath: /
+definitions: {}
+host: localhost:3030
+info:
+  description: API Documentation
+  title: API
+  version: 1.0.0
+paths:
+  /:
+    get:
+      description: GET /
+      operationId: get_
+      parameters: []
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            type: object
+        '400':
+          description: Bad request
+        '404':
+          description: Not found
+      summary: GET /
+      tags:
+      - Packs
+    post:
+      description: POST /
+      operationId: post_
+      parameters: []
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            type: object
+        '400':
+          description: Bad request
+        '404':
+          description: Not found
+      summary: POST /
+      tags:
+      - Packs
+  /:id:
+    delete:
+      description: DELETE /:id
+      operationId: delete_:id
+      parameters: []
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            type: object
+        '400':
+          description: Bad request
+        '404':
+          description: Not found
+      summary: DELETE /:id
+      tags:
+      - Packs
+    get:
+      description: GET /:id
+      operationId: get_:id
+      parameters: []
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            type: object
+        '400':
+          description: Bad request
+        '404':
+          description: Not found
+      summary: GET /:id
+      tags:
+      - Packs
+    put:
+      description: PUT /:id
+      operationId: put_:id
+      parameters: []
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            type: object
+        '400':
+          description: Bad request
+        '404':
+          description: Not found
+      summary: PUT /:id
+      tags:
+      - Packs
+  /:id/packs:
+    post:
+      description: POST /:id/packs
+      operationId: post_:id_packs
+      parameters: []
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            type: object
+        '400':
+          description: Bad request
+        '404':
+          description: Not found
+      summary: POST /:id/packs
+      tags:
+      - User
+  /:id/packs/:packId:
+    delete:
+      description: DELETE /:id/packs/:packId
+      operationId: delete_:id_packs_:packId
+      parameters: []
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            type: object
+        '400':
+          description: Bad request
+        '404':
+          description: Not found
+      summary: DELETE /:id/packs/:packId
+      tags:
+      - User
+  /byproperty:
+    get:
+      description: GET /byproperty
+      operationId: get_byproperty
+      parameters: []
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            type: object
+        '400':
+          description: Bad request
+        '404':
+          description: Not found
+      summary: GET /byproperty
+      tags:
+      - Packs
+  /bytoken:
+    get:
+      description: GET /bytoken
+      operationId: get_bytoken
+      parameters: []
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            type: object
+        '400':
+          description: Bad request
+        '404':
+          description: Not found
+      summary: GET /bytoken
+      tags:
+      - User
+  /login:
+    post:
+      description: POST /login
+      operationId: post_login
+      parameters: []
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            type: object
+        '400':
+          description: Bad request
+        '404':
+          description: Not found
+      summary: POST /login
+      tags:
+      - Auth
+  /register:
+    post:
+      description: POST /register
+      operationId: post_register
+      parameters: []
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: Successful operation
+          schema:
+            type: object
+        '400':
+          description: Bad request
+        '404':
+          description: Not found
+      summary: POST /register
+      tags:
+      - Auth
+schemes:
+- http
+swagger: '2.0'
+tags:
+- description: Auth operations
+  name: Auth
+- description: User operations
+  name: User
+- description: General operations
+  name: General
+- description: Modules operations
+  name: Modules
+- description: Contratar operations
+  name: Contratar
+- description: Packs operations
+  name: Packs

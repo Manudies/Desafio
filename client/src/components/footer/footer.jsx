@@ -1,4 +1,3 @@
-import React from 'react';
 import './footer.css';
 import { FiYoutube } from "react-icons/fi";
 import { AiOutlineFacebook } from "react-icons/ai";
@@ -15,7 +14,7 @@ const Footer = () => {
         
         <div className="footer-left">
           <div className="footer-logo">
-            <img src="./seniority_logoblanco_sinfondo_uso_en_fondo_oscuro.png" alt="logo" />
+            <img src="./seniority_logoblanco_sinfondo_uso_en_fondo_oscuro2.png" alt="logo" />
           </div>
           <div className="policy-text">
             <p className="footer-text">© Seniority 2024</p>

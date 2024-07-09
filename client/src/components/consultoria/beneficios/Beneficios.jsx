@@ -12,11 +12,9 @@ const Beneficios = () => {
             <div className='cardBeneficios'>
                 <div className='encabezadoCard'>
                     <div className='imgEncabezado'>
-                        <img src="./" alt="logo" />
+                        <img src="consultoria/beneficios/beneficios1.png" alt="logo" />
                     </div>
-                    <div className='textoEncabezado'>
-                        <p>El 50% de las ventas </p>
-                    </div>
+
                 </div>
                 <div className='textoCard'>
                     <p>se pierden porque los usuarios no encuentran la información que están buscando para poder tomar una decisión de compra, Según Forrester Research.</p>
@@ -26,11 +24,9 @@ const Beneficios = () => {
             <div className='cardBeneficios'>
                 <div className='encabezadoCard'>
                         <div className='imgEncabezado'>
-                            <img src="./" alt="logo" />
+                        <img src="consultoria/beneficios/beneficios2.png" alt="logo" />
                         </div>
-                        <div className='textoEncabezado'>
-                            <p>El 50% de las ventas </p>
-                        </div>
+
                     </div>
                 <div className='textoCard'>
                     <p>mundial vive con discapacidades según un informe de la ONU. Mejorar la usabilidad general disminuye la necesidad de soporte técnico.</p>      
@@ -40,11 +36,9 @@ const Beneficios = () => {
             <div className='cardBeneficios'>
                 <div className='encabezadoCard'>
                         <div className='imgEncabezado'>
-                            <img src="./" alt="logo" />
+                        <img src="consultoria/beneficios/beneficios3.png" alt="logo" />
                         </div>
-                        <div className='textoEncabezado'>
-                            <p>El 50% de las ventas </p>
-                        </div>
+
                     </div>
             <div className='textoCard'>
                 <p>tienen una destacable mejor opinión de las empresas que ofrecen una buena experiencia móvil, según un estudio de Google.</p>

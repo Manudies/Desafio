@@ -6,7 +6,7 @@ import favoriteRouter from "./contratarRouter.js";
 import moduloRouter from "./modulosRouter.js";
 
 import authRouter from "./authRouter.js";
-// import emailRouter from "./emailRouter.js";
+import emailRouter from "./emailRouter.js";
 
 
 import { isAuthenticated,isAdmin } from "../middlewares/authMiddleware.js";
@@ -23,7 +23,7 @@ router.use("/favorites",favoriteRouter);
 router.use("/modulos",moduloRouter);
 
 router.use("/",authRouter);
-// router.use('/', emailRouter); // Usa la nueva ruta
+router.use('/', emailRouter); // Usa la nueva ruta
 
 
 export default router;

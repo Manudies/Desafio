@@ -14,7 +14,7 @@ const getById = async (req,res) =>{
 const getByToken = async (req,res) =>{
     const id = req.user._id;
     const user = await userController.getById(id);
-    //await user.populate("packs");
+    // await user.populate("packs").execPopulate();
     res.json({data:user});
 }
 
@@ -61,6 +61,7 @@ const removeUser = async(req,res)=>{
 }
 
 const addPack = async(req,res)=>{
+    
     const userId = req.params.id;
     const packId = req.body.packId;
     const loggedUser = req.user;

@@ -1,8 +1,9 @@
 import Navbar from "../../components/navbar/navbar";
-import Noti from "../../components/noti/noti";
 import Footer from "../../components/footer/footer";
 import "./contacto.css";
 import tuImagen from "../../../public/llamada.jpg";
+import ScrollButton from "../../components/scrollButton/ScrollButton";
+import Punto from "../../components/puntoAcesibilidad/Punto";
 
 const contacto = () => {
     const backgroundImage ={
@@ -17,7 +18,6 @@ const contacto = () => {
     return (
         <div style={backgroundImage}>
             <Navbar />
-            <Noti />
             <div className="main-contacto">
                 <div className="contacto-container">
                     <div className="contactanos">
@@ -39,6 +39,8 @@ const contacto = () => {
                     </div>
                 </div>
             </div>
+            <ScrollButton />
+            <Punto />
             <Footer />
         </div>
     );

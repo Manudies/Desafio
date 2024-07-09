@@ -6,11 +6,15 @@ const HerramientasF = () => {
 
   return (
     <div className="herramientasFContainer">
+        <div className="formacionHerramientas">
+            <h1 className="formacionHerramientasTitle">¿Por qué es un programa especial?</h1>
+        </div>
+
         <section className="herramientaFContainer">
 
             <div className='herramientaF'>
                 <div className='imgHerramientaF'>
-                <img src="./herramientasF/Star.png "alt="star" />
+                <img src="formacion/herramientasF/Star.png "alt="star" />
                 </div>
 
                 <div className='herramientaFText'>
@@ -21,7 +25,7 @@ const HerramientasF = () => {
 
             <div className='herramientaF'>
                 <div className='imgHerramientaF'>
-                <img src="./herramientasF/Calendar_Check.png "alt="calendar" />
+                <img src="./formacion/herramientasF/Calendar_Check.png "alt="calendar" />
                 </div>
 
                 <div className='herramientaFText'>
@@ -32,7 +36,7 @@ const HerramientasF = () => {
 
             <div className='herramientaF'>
                 <div className='imgHerramientaF'>
-                <img src="./herramientasF/Chat_Circle_Dots.png "alt="chat" />
+                <img src="./formacion/herramientasF/Chat_Circle_Dots.png "alt="chat" />
                 </div>
 
                 <div className='herramientaFText'>
@@ -43,7 +47,7 @@ const HerramientasF = () => {
 
             <div className='herramientaF'>
                 <div className='imgHerramientaF'>
-                <img src="./herramientasF/Lupa.png "alt="lupa" />
+                <img src="./formacion/herramientasF/Lupa.png "alt="lupa" />
                 </div>
 
                 <div className='herramientaFText'>
@@ -54,7 +58,7 @@ const HerramientasF = () => {
 
             <div className='herramientaF'>
                 <div className='imgHerramientaF'>
-                <img src="./herramientasF/Vector.png "alt="grafico" />
+                <img src="./formacion/herramientasF/Vector.png "alt="grafico" />
                 </div>
 
                 <div className='herramientaFText'>

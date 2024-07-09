@@ -2,46 +2,69 @@
   padding: 20px;
   text-align: center;
   font-size: 20px;
-  border-width: 2px; /* Solo arriba y abajo */
-  border-color: #223D3C; /* Color del borde */
+  border-width: 2px; 
+  border-color: #223D3C; 
   margin-bottom: 2rem;
   }
   
-  .herramientaContainer {    display: flex;
+  .herramientaContainer {    
+    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: 80%;
+    max-width: 1500px;
+    min-width: 300px;
     margin: 0 auto;
-    /* padding: 20px; */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
   }
-  
   .herramienta {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    width: 30%;
+    max-width: 400px;
+    min-width: auto;
+    width: 100%;
+    height: 200px;
+    flex: 1;
+
   }
   
   .imgHerramienta {
-    width: 100px;
-    height: 100px;
-    background-color: #ddd;
-    border-radius: 50%;
+    width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin: 0 auto 10px;
   }
-  
+
   .imgHerramienta img {
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
   }
+
   
   .herramientaText {
-    text-align: center;
     font-size: 1em;
-    color: #333;
+    color: #000000;
   }
-  
+
+.herramienta:first-child .imgHerramienta {
+  background-color: #001B71;
+  color: #fff;
+  font-size: 24px;
+}
+
+.herramienta:nth-child(2) .imgHerramienta {
+  background-color: #17A589;
+  color: #fff;
+  font-size: 24px;
+}
+
+.herramienta:last-child .imgHerramienta {
+  background-color: #F39C12;
+  color: #fff;
+  font-size: 24px;
+}

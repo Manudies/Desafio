@@ -5,8 +5,9 @@
     padding: 20px;
     width: 100%;
     max-width: 1800px;
-    height: 600px;
- 
+    min-height: 500px;
+    height: fit-content;
+
 }
 
 .pack-card-header {
@@ -15,11 +16,24 @@
     display: flex;
     border-bottom-style: dashed;
     border-bottom-color: #0056b3;
+    align-items: center;
+    justify-content: space-between;
 
 }
-.card-body{
-    display: flex;
+
+.photo-pack {
+    max-width: 100px;
+    height: auto;
 }
+
+
+.card-body {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+
+}
+
 .pack-card-body {
     display: flex;
     flex-direction: column;
@@ -27,7 +41,10 @@
     align-items: center;
     margin: 50px 10px 10px 10px;
     gap: 20px;
+    width: 50%;
+    min-width: 400px;
 }
+
 .pack-title {
     font-size: 24px;
     font-weight: bold;
@@ -51,7 +68,7 @@
 
 }
 
-.contratar{
+.contratar {
     background-color: #001f3f;
     color: #fff;
     border-radius: 5px;
@@ -60,34 +77,45 @@
     font-size: 20px;
     font-weight: bold;
     width: 80%;
+    min-width: auto;
+    min-height: auto;
     padding: 10px;
     margin-top: 50px;
     height: 40px;
-
 }
 
-.contratar:hover {
-    background-color: #fff;
-    color: #091864;
+.card-includes {
+    border-radius: 17px;
+    border-left: 2px solid #e0e0e0;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin-top: 20px;
 }
 
-.pack-includes h3 {
+.pack-includes {
+    width: 50%;
+    height: 100%;
+}
+
+.definition {
+    text-align: justify;
+    justify-content: center;
+    width: 70%;
+    display: flex;
+}
+
+.packIncluye {
+    display: flex;
+    color: #001f3f;
+    font-weight: bold;
     font-size: 20px;
-    margin-bottom: 10px;
 }
 
-.pack-includes ul {
-    list-style: none;
-    padding: 0;
-}
-
-.pack-includes ul li {
-    margin-bottom: 10px;
-    font-size: 16px;
-}
-
-.pack-includes ul li::before {
-    content: '>';
-    margin-right: 5px;
-    color: #007bff;
+.pack2Completo {
+    width: 90px;
+    height: 90px;
+    background-image: url(../../../public/packs/pack2.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
 }

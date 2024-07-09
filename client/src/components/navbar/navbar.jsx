@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 
 import UserContext from '../../context/userContext';
@@ -41,7 +41,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="logo-wrapper">
-          <img src="./seniority_logoblanco_sinfondo_uso_en_fondo_oscuro.png" className="logo-image" alt="logo" />
+          <img src="./seniority_logoblanco_sinfondo_uso_en_fondo_oscuro2.png" className="logo-image" alt="logo" />
           <a href="/" className="navbar-logo">
             <div className="logo-overlay"></div>
           </a>
@@ -61,10 +61,10 @@ const Navbar = () => {
             <a href="/formacion" className="navbar-link">Formación</a>
           </li>
           <li className="navbar-item">
-            <a href="#reservas" className="navbar-link">Plataformas de reservas</a>
+            <a href="#" className="navbar-link">Plataformas de reservas</a>
           </li>
           <li className="navbar-item">
-            <a href="#sobre" className="navbar-link">Sobre Seniority</a>
+            <a href="#" className="navbar-link">Sobre Seniority</a>
           </li>
           <li className="navbar-item">
             <a href="/contacto" className="navbar-link">Contacto</a>
@@ -73,11 +73,10 @@ const Navbar = () => {
 
         {user && (
             <li className="navbar-item">
-              <button onClick = {openModal}className="navbar-link">{user.username}</button>
+              <button onClick = {openModal}className="navbar-button">{user.username}</button>
               {isModalOpen &&
                 <Modal isOpen={true} onClose={()=> {
-                  setIsModalOpen(false)
-                  }}>
+                  setIsModalOpen(false)}} className='modal-panel-usuario'>
                     <PanelUsuario user={user} ></PanelUsuario>
                 </Modal>
               }
@@ -86,7 +85,7 @@ const Navbar = () => {
           )}
           {!user && (
           <li className="navbar-item">
-            <Link to="/register" className="navbar-link" onClick={toggleMenu}>
+            <Link to="/register" className="navbar-button" onClick={toggleMenu}>
               Accede
             </Link>
           </li>

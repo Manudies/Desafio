@@ -1,0 +1,50 @@
+.accessibility-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 5;
+  }
+  
+  .accessibility-toggle {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .accessibility-icon {
+    width: 80px; /* Ajusta el tamaño según tus necesidades */
+    height: 80px; /* Ajusta el tamaño según tus necesidades */
+  }
+  
+  .accessibility-options {
+    position: fixed;
+    bottom: 11%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    padding: 10px;
+  }
+  
+  .accessibility-options button {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 0;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .accessibility-options button:hover {
+    background-color: #f0f0f0;
+  }
+
+  .large-pointer {
+    cursor: url('./cursor.png') 20 20, auto;
+  }
+
+  
+  
