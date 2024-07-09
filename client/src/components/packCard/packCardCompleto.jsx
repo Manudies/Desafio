@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router';
 import ActionButton from '../actionButton/actionButton';
 import { addPack, sendMail } from '../../utils/fetch';
 
+
 const classNameCompleto = {
   0: "pack1Completo",
   1: "pack2Completo",
@@ -30,7 +31,8 @@ const TarjetaPack = ({ pack, index }) => {
 
           to: user.email,
           subject: 'Confirmación de compra',
-          text: `Hola ${user.username},\n\nGracias por comprar el viaje a ${pack.packName}. Disfruta de tu aventura!\n\nSaludos,\nEl equipo de Horizontes Lejanos`
+          text: "holaaaaaa"
+          // text: `Hola ${user.username},\n\nGracias por comprar el viaje a ${pack.packName}. Disfruta de tu aventura!\n\nSaludos,\nEl equipo de Horizontes Lejanos`
         });
         alert(`Correo de confirmación enviado a ${user.email}!`);
         console.log("pack id", pack._id);
