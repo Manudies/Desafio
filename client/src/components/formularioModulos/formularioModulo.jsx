@@ -16,13 +16,10 @@ const Main = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modulo, setModulo] = useState(null);
   const modulos = useLoaderData();
-  console.log("modulos", modulos);
-
   const navigate = useNavigate();
 
   const formulario = questions[index];
 
-  // Función para avanzar a la siguiente pregunta
   const handleNext = () => {
     if (index < questions.length - 1 && answers[index] !== undefined) {
       setIndex(index + 1);
@@ -32,7 +29,6 @@ const Main = () => {
     }
   };
 
-  // Función para retroceder a la pregunta anterior
   const handlePrev = () => {
     if (index > 0) {
       setIndex(index - 1);
@@ -42,7 +38,6 @@ const Main = () => {
     }
   };
 
-  // Función para guardar las respuestas del formulario
   const handleAnswer = (key) => {
     const newAnswers = [...answers];
     newAnswers[index] = key;
@@ -50,26 +45,18 @@ const Main = () => {
     setShowWarning(false);
   };
 
-  // // Función para manejar el envío del formulario
-  // const handleSubmit = () => {
-  //   console.log("Respuestas enviadas:", answers);
-  //   // Aquí puedes agregar lógica para enviar las respuestas, por ejemplo, a una API
-  // };
-
   const handleAnswerRemove = () => {
     setAnswers([]);
   };
 
   const handleFormacion = async () => {
     if (answers.length === questions.length && !answers.includes(undefined)) {
-      console.log("Respuestas enviadas:", answers);
       const result = {};
       for (let i = 0; i < answers.length; i++) {
         result[`p${i + 1}`] = answers[i];
       }
       const response = await formacion(result);
       handleAnswerRemove();
-      console.log("La RESPUESTA DE DATA ES:", response.prediction);
       setModulo(response.prediction);
       setIsModalOpen(true); // Abre el modal en lugar de navegar directamente
     } else {
@@ -166,9 +153,6 @@ const Main = () => {
               </p>
             </div>
             <div id="modalInferior">
-              {/* <div id="divModalIMG">
-                <img src="/path-to-your-image.jpg" alt="Imagen informativa" />
-              </div> */}
             </div>
           </div>
         </Modal>
