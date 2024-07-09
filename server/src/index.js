@@ -2,8 +2,11 @@ import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/mongo.js";
 import router from "./routes/router.js";
-import swaggerUi from "swagger-ui-express";
-import YAML from "yamljs";
+
+
+// import swaggerUi from "swagger-ui-express";
+// import swaggerDocument from "../swagger.json" assert { type: 'json' };
+
 import path from "path";
 import { fileURLToPath } from 'url';
 import cors from "cors";
@@ -21,11 +24,8 @@ app.use(express.json()); // api
 //app.use(express.urlencoded({extended:true})); // vistas
 connectDB();
 
-// Load Swagger document
-const swaggerDocument = YAML.load(path.join(__dirname, '/docs/swagger.yaml'));
+// app.use("/api-docs",swaggerUi.serve,swaggerUi.setup(swaggerDocument));
 
-// Setup Swagger UI
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.get("/", (req, res) => {
     res.json({ message: "Hello World" });
