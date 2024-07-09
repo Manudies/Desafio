@@ -64,7 +64,7 @@ const Navbar = () => {
             <a href="#" className="navbar-link">Plataformas de reservas</a>
           </li>
           <li className="navbar-item">
-            <a href="#" className="navbar-link">Sobre Seniority</a>
+            <a href="https://www.seniorityai.com/sobre-seniority-startup-impacto-social/" className="navbar-link">Sobre Seniority</a>
           </li>
           <li className="navbar-item">
             <a href="/contacto" className="navbar-link">Contacto</a>

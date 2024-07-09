@@ -163,3 +163,8 @@ npm run dev
 
 	•	jest: Framework de pruebas para JavaScript.
 	•	nodemon: Herramienta para reiniciar automáticamente la aplicación cuando se detectan cambios en los     archivos.
+
+	## Documentacion adicional
+
+	### Swagger
+	localhost:3030/api-docs/
