@@ -122,15 +122,17 @@
 }
 
 .register-login-form .final-button{
-  width: 80%;
+  width: 75%;
+  height: 45px;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #07124B;
   color: #F8F3F2;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  margin: 10px auto 0px;
+  margin: 20px auto 0px;
 }
 
 @media (max-width: 900px) {

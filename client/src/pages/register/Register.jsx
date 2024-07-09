@@ -51,7 +51,9 @@ const Register = ({}) => {
   //maximo numero de caracteres 18, y no se aceptán caracteres especiales
   const validateUserName = (username) => {
     if (username.length > 18 || /\W/.test(username)) {
-      setError("El usuario debe tener menos de 18 caracteres y no aceptar caracteres especiales");
+      setError(
+        "El usuario debe tener menos de 18 caracteres y no aceptar caracteres especiales"
+      );
       return false;
     }
     return true;
@@ -167,33 +169,31 @@ const Register = ({}) => {
                 onChange={handleUserData}
                 required
               />
+          <div className="password-requirements">
+            La contraseña debe contener:
+            <ul>
+              <li>8 letras</li>
+              <li>1 mayúscula</li>
+              <li>1 número</li>
+              <li>1 caracter especial</li>
+            </ul>
+          </div>
+          <div className="terms-checkbox">
+              <div>
+                <input type="checkbox" id="terms" required />
+                <label htmlFor="terms">
+                  Aceptar las Condiciones Generales, la Política de Privacidad y
+                  recibir novedades y promociones.
+                </label>
+              </div>
+
+          </div>
             </div>
           )}
-          <div className="password-requirements">
-    La contraseña debe contener:
-    <ul>
-      <li>8 letras</li>
-      <li>1 mayúscula</li>
-      <li>1 número</li>
-      <li>1 caracter especial</li>
-    </ul>
-  </div>
-  <div className="terms-checkbox">
-    {/* Si es login no hay que aceptar las condiciones generales */}
-    {isRegister && (
-      <div>
-        <input type="checkbox" id="terms" required />
-        <label htmlFor="terms">
-          Aceptar las Condiciones Generales, la Política de Privacidad y recibir novedades y promociones.
-        </label>
-      </div>
-    )}
-    {/* <input type="checkbox" id="terms" required />
-    <label htmlFor="terms">
-      Aceptar las Condiciones Generales, la Política de Privacidad y recibir novedades y promociones.
-    </label> */}
-  </div>
-          <ActionButton label={isRegister ? "Crear cuenta" : "Entrar"} className={"final-button"} />
+          <ActionButton
+            label={isRegister ? "Crear cuenta" : "Entrar"}
+            className={"final-button"}
+          />
         </form>
         <div className="existing-user"></div>
       </section>

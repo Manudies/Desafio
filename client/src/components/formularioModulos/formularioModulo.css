@@ -145,18 +145,17 @@
 
 .answers-modulo  button:hover {
   background-color: #e0e0e0;
-  border-color: #000000;
+  border-color: #000080;
   color: #000080;
 }
 
 .selected {
-border-color: #000000;
-color: #000000;
+border-color: #000080;
+color: #000080;
 background-color: #e0e0e0;
 }
 
 .warning {
-  text-align: center;
   color: red; 
   font-weight: bold;
   margin-top: 10px;
@@ -164,7 +163,6 @@ background-color: #e0e0e0;
 }
 
 .answers-modulo button.selected {
-
   background-color: #e0e0e0;
   border: 3px solid #000000;
 }
