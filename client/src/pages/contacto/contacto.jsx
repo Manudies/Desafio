@@ -1,5 +1,4 @@
 import Navbar from "../../components/navbar/navbar";
-import Noti from "../../components/noti/noti";
 import Footer from "../../components/footer/footer";
 import "./contacto.css";
 import tuImagen from "../../../public/llamada.jpg";

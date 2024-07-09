@@ -1,4 +1,3 @@
-import React from 'react';
 import './footer.css';
 import { FiYoutube } from "react-icons/fi";
 import { AiOutlineFacebook } from "react-icons/ai";
