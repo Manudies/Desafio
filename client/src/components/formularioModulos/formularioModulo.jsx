@@ -138,9 +138,9 @@ const Main = () => {
           />
         )}
       </div>
-      <div>
+      {/* <div>
         <button onClick={handleAnswerRemove}>Borrar respuestas</button>
-      </div>
+      </div> */}
       {isModalOpen && (
         <Modal onClose={handleCloseModal}>
           <div id="modalNombre">
@@ -158,9 +158,6 @@ const Main = () => {
                 </div>
                 <p className="modal-phase-name">{recomendacion[modulo].recomendacion}</p>
               </div>
-              {/* <p className="modal-description">
-                Descripción: {modulos[modulo].description}
-              </p> */}
             </div>
             <div id="modalInferior">
             </div>
