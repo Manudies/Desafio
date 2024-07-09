@@ -1,13 +1,11 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useContext } from 'react';
 import './packCardCompleto.css';
 
 import UserContext from '../../context/userContext';
 import { useNavigate } from 'react-router';
 
-import Modal from '../modal/modal';
-
 import ActionButton from '../actionButton/actionButton';
-import { addPack, removePack, sendMail } from '../../utils/fetch';
+import { addPack, sendMail } from '../../utils/fetch';
 
 const classNameCompleto = {
   0: "pack1Completo",
@@ -19,8 +17,6 @@ const classNameCompleto = {
 const TarjetaPack = ({ pack, index }) => {
   const { user, handlefetchUserData } = useContext(UserContext);
   const [isContratar, setIsContratar] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [packData, setPackData] = useState(null);
   const [activeName, setActiveName] = useState(null);
   const [isDeliverablesVisible, setIsDeliverablesVisible] = useState(false);
 
@@ -38,7 +34,8 @@ const TarjetaPack = ({ pack, index }) => {
         });
         alert(`Correo de confirmación enviado a ${user.email}!`);
         console.log("pack id", pack._id);
-        addPack(user._id, pack._id);
+        await addPack(user._id, pack._id);
+        await handlefetchUserData();
         // await handledeleteContratar(pack);
       } catch (error) {
         console.error("Error enviando el correo de confirmación", error);
