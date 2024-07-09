@@ -79,12 +79,13 @@ const Main = () => {
     );
   };
 
-  const getPhaseName = (phaseName) => {
-    let parts = phaseName.split(":");
-    console.log(parts);
-    parts = parts[1].split(" ");
-    return parts.length > 1 ? parts[1] : phaseName;
-  };
+  const handleRepetirTest = () => {
+    //Cerrar modal
+    setIsModalOpen(false);
+    navigate("/formularioPack");
+    setIndex(0);
+  }
+
 
   return (
     <div className="main-content-pack">
@@ -140,9 +141,9 @@ const Main = () => {
         )}
       </div>
 
-      <div>
+      {/* <div>
         <button onClick={handleAnswerRemove}>Borrar respuestas</button>
-      </div>
+      </div> */}
       {isModalOpen && (
         <Modal onClose={handleCloseModal}>
           <div id="modalNombre">
@@ -163,11 +164,11 @@ const Main = () => {
             </div>
             <ActionButton 
             label="Repetir test"
-            onClick={handleConsultoria}
+            onClick={handleRepetirTest}
             className="button"/>
             <ActionButton 
             label="Continuar"
-            onClick={handleConsultoria}
+            onClick={handleCloseModal}
             className="button"/>
           </div>
         </Modal>
