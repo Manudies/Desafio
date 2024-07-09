@@ -2,12 +2,12 @@
 
 Este proyecto es un reto propuesto por la empresa Seniority.IA, que tiene dos objetivos: diseñar un Sistema de Selección para el Programa Playbook Silver Economy que facilite a las personas interesadas en nuestra formación determinar el bloque del programa Playbook Silver Economy más adecuado para ellos. Y por otro lado, desarrollar una solución integral que ofrezca asistencia técnica especializada en UX (experiencia de usuario) adaptada a las necesidades de las personas mayores, proporcionando a las empresas y emprendedores las herramientas necesarias para seleccionar formación en UX Senior-Friendly y también permitirles contratar servicios de asistencia técnica para proyectos enfocados en la Silver Economy.
 
-El proyecto consta de un backend construido con Express y un frontend desarrollado con React.
+El proyecto consta de un backend construido con Express y Flask. Y un frontend desarrollado con React.
 
 ## Formularios
 
 - **Sección Consultoría**: Los usuarios podrán saber qué pack es el más recomendado para ellos y del cual pueden solicitar más información. Les llegará un correo al correo con el que se hayan registrado, informándoles que nos pondremos en contacto con ellos.
-- **Sección Formación**: Los usuarios sabrán en qué fase se encuentran y qué medidas tienen que implementar.
+- **Sección Formación**: Los usuarios sabrán en qué fase se encuentran y qué medidas tienen que implementar. Les llegará un correo al correo con el que se hayan registrado, informándoles que nos pondremos en contacto con ellos.
 
 ## Backend
 
