@@ -1,3 +1,12 @@
+#divModalNombre{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+  }
+
 .modal {
     position: fixed;
     margin:0;
@@ -41,6 +50,89 @@
     overflow-y: auto;
 
 }
+
+.modal-panel-usuario{
+    background-color: rgba(255, 253, 253, 0.9);
+    width:50%;
+    margin: auto;
+    min-height:50%;
+    border-radius:15px;
+    padding:2rem;
+    position: relative;
+    height: 65%;
+    overflow-y: auto;
+}
+
+.button-modal-continue {
+    background-color: #07124B;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 32%;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+
+.button-modal-repeat {
+    background-color: white;
+    color: #07124B;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    width: 32%;
+    height: 50px;
+    margin-top: 20px;
+    margin-right: 5px;
+}
+
+.basandonos h2{
+    margin: 8px 10px;
+    background-color: #07124B;
+    border: 2px solid #07124B;
+    border-radius: 15px 15px 0 0;
+  }
+
+  .modal-phase-name {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 90%;
+    color: #07124B;
+    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .modal-phase-h2{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 90%;
+    color: #07124B;
+    padding: 2rem 0;
+    border-bottom: 3px dashed #07124B;
+    width: 100%;
+    text-align: center;
+  }
+
+  .modal-phase-primero h2{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    height: 100%;
+    color: #ffffff;
+  }
+
+  .modal-description{
+    font-size: 20px;
+    color: #5B5B5B;
+    width: 100%;
+    text-align: center;
+  }
+  
+
 
 @media screen and (max-width: 720px) {
     .modal-body {

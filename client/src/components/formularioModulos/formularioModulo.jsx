@@ -86,6 +86,13 @@ const Main = () => {
     return parts.length > 1 ? parts[1] : phaseName;
   };
 
+  const handleRepetirTest = () => {
+    //Cerrar modal
+    setIsModalOpen(false);
+    navigate("/formularioPack");
+    setIndex(0);
+  }
+
   return (
     <div className="content-modulo">
       <div className="question-header-modulo">
@@ -156,11 +163,17 @@ const Main = () => {
                 <div className="basandonos">
                 <h2>Por qué te lo recomendamos</h2>
                 </div>
-                <p className="modal-phase-name">{recomendacion[modulo].recomendacion}</p>
+                <p className="modal-description">{recomendacion[modulo].recomendacion}</p>
               </div>
             </div>
-            <div id="modalInferior">
-            </div>
+            <ActionButton 
+            label="Repetir test"
+            onClick={handleRepetirTest}
+            className="button-modal-repeat"/>
+            <ActionButton 
+            label="Continuar"
+            onClick={handleCloseModal}
+            className="button-modal-continue"/>
           </div>
         </Modal>
       )}

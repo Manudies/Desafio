@@ -76,8 +76,7 @@ const Navbar = () => {
               <button onClick = {openModal}className="navbar-button">{user.username}</button>
               {isModalOpen &&
                 <Modal isOpen={true} onClose={()=> {
-                  setIsModalOpen(false)
-                  }}>
+                  setIsModalOpen(false)}} className='modal-panel-usuario'>
                     <PanelUsuario user={user} ></PanelUsuario>
                 </Modal>
               }
