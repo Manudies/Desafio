@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import Modal from "../modal/modal.jsx";
 import { useLoaderData } from "react-router-dom";
 
+
 const Main = () => {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
@@ -153,6 +154,12 @@ const Main = () => {
                 <h2>Basándonos en tus respuestas, te recomendamos</h2>
                 </div>
                 <p className="modal-phase-name">{packs[pack].packName}</p>
+              </div>
+              <div className="modal-phase-primero">
+                <div className="basandonos">
+                <h2>Por qué te lo recomendamos</h2>
+                </div>
+                <p className="modal-phase-name">{recomendacion[pack]}</p>
               </div>
               <p className="modal-description">
                 Descripción: {packs[pack].description}

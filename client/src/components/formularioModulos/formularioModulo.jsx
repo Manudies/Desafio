@@ -8,6 +8,7 @@ import { formacion } from "../../utils/fetch.js";
 import { useNavigate } from "react-router-dom";
 import Modal from "../modal/modal.jsx";
 import { useLoaderData } from "react-router-dom";
+import recomendaciones from "../formularioPack/recomendacion.js";
 
 const Main = () => {
   const [index, setIndex] = useState(0);
@@ -19,6 +20,8 @@ const Main = () => {
   const navigate = useNavigate();
 
   const formulario = questions[index];
+  const recomendacion = recomendaciones
+  console.log("recomendacion",recomendacion)
 
   const handleNext = () => {
     if (index < questions.length - 1 && answers[index] !== undefined) {
@@ -79,7 +82,7 @@ const Main = () => {
   const getPhaseName = (phaseName) => {
     let parts = phaseName.split(":");
     console.log(parts);
-    parts = parts[1].split(" ");
+    // parts = parts[1].split(" ");
     return parts.length > 1 ? parts[1] : phaseName;
   };
 
@@ -148,9 +151,15 @@ const Main = () => {
                 </div>
                 <p className="modal-phase-name">{getPhaseName(modulos[modulo].phaseName)}</p>
               </div>
-              <p className="modal-description">
+              <div className="modal-phase-primero">
+                <div className="basandonos">
+                <h2>Por qué te lo recomendamos</h2>
+                </div>
+                <p className="modal-phase-name">{recomendacion[modulo].recomendacion}</p>
+              </div>
+              {/* <p className="modal-description">
                 Descripción: {modulos[modulo].description}
-              </p>
+              </p> */}
             </div>
             <div id="modalInferior">
             </div>
