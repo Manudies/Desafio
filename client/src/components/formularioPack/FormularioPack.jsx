@@ -166,11 +166,11 @@ const Main = () => {
             <ActionButton 
             label="Repetir test"
             onClick={handleRepetirTest}
-            className="button"/>
+            className="button-modal-repeat"/>
             <ActionButton 
             label="Continuar"
             onClick={handleCloseModal}
-            className="button"/>
+            className="button-modal-continue"/>
           </div>
         </Modal>
       )}
