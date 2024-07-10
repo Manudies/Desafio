@@ -18,6 +18,7 @@ const TarjetaModulo = ({ modulo }) => {
   const navigate = useNavigate();
 
   const openModal = () => {
+    console.log("saberMas", saberMas,modulo)
     const faseInfo = saberMas.find(fase => fase.nombre === modulo.phaseName);
     if (faseInfo) {
       setModalContent(faseInfo);

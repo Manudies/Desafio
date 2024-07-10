@@ -12,7 +12,7 @@ const saberMas = [
         duracion: "4 semanas (6 horas / semana)"
     },
     {
-        nombre: "Fase 1: Mindset I",
+        nombre: "Fase 1: Mindset 1",
         objetivo: "Profundizar en la integración efectiva de los principios de la Silver Economy en áreas clave del proyecto, incluyendo Marketing, UI/UX, y el modelo de negocio, para alinear de manera concreta todas las acciones y estrategias con las demandas específicas del mercado sénior.",
         desarrollo: {
             0: "El poder de las relaciones y stakeholders.",
@@ -26,7 +26,7 @@ const saberMas = [
         duracion: "6 semanas (6 horas / semana)"
     },
     {
-        nombre: "Fase 2: Mindset II",
+        nombre: "Fase 2: Mindset 2",
         objetivo: "Alcanzar un problem-solution fit claro y demostrable. Esto significa validar que la solución propuesta resuelve de manera efectiva un problema identificado y que dicho problema es significativo para el mercado objetivo. Es una confirmación de que hay un deseo real y una necesidad de la solución entre los usuarios finales.",
         desarrollo: {
             0: "Liderazgo ágil.",
@@ -43,7 +43,7 @@ const saberMas = [
         duracion: "6 semanas (6 horas / semana)"
     },
     {
-        nombre: "Fase 3: Potential I",
+        nombre: "Fase 3: Potential 3",
         objetivo: "Evolucionar el problem-solution fit validado en una representación tangible y visual del MVP, preparándolo para pruebas de validación. Esto implica una transición de ideas conceptuales a soluciones prácticas, enfocándose en demostrar la deseabilidad y la factibilidad técnica y de mercado del producto.",
         desarrollo: {
             0: "Definir el tipo de Producto digital.",
@@ -63,7 +63,7 @@ const saberMas = [
         duracion: "8 semanas (6 horas / semana)"
     },
     {
-        nombre: "Fase 4: Potential II",
+        nombre: "Fase 4: Potential 4",
         objetivo: "Convertir el prototipo visual o MVP desarrollado previamente en un MVP funcional que pueda ser validado en el mercado. La finalidad es alcanzar tu product-problem fit, demostrando la capacidad del producto para tener una acogida exitosa y sostenible dentro de la Silver Economy.",
         desarrollo: {
             0: "Desarrollo de prototipo en plataformas no-code o low-code.",
@@ -75,7 +75,7 @@ const saberMas = [
         duracion: "12 semanas (6 horas / semana)"
     },
     {
-        nombre: "Fase 5: Scalability I",
+        nombre: "Fase 5: Scalability 5",
         objetivo: "Desarrollar y validar un modelo de negocio alrededor del MVP funcional, garantizando que el producto pueda generar ingresos y sostenerse económicamente en el tiempo. Esto implica identificar fuentes de ingreso, estructuras de costos, canales de distribución, y estrategias de precios que sean compatibles con las expectativas y necesidades del mercado objetivo.",
         desarrollo: {
             0: "Benchmarking: identificación de clientes y stakeholders",
@@ -88,7 +88,7 @@ const saberMas = [
         duracion: "4 semanas (6 horas / semana)"
     },
     {
-        nombre: "Fase 6: Scalability II",
+        nombre: "Fase 6: Scalability 6",
         objetivo: "Refinar y optimizar el modelo de negocio acompañando al MVP, para maximizar su potencial de éxito en el mercado. Esto implica una revisión profunda de la estructura de ingresos, los mecanismos de costes, la propuesta de valor, y las estrategias de go-to-market, basándose en una comprensión detallada de las dinámicas del mercado, el feedback de los clientes y el análisis competitivo. ",
         desarrollo: {
             0: "Análisis y optimización de la propuesta de valor.",
@@ -102,7 +102,7 @@ const saberMas = [
         duracion: "4 semanas (6 horas / semana)"
     },
     {
-        nombre: "Fase 7: Scalability III",
+        nombre: "Fase 7: Scalability 7",
         objetivo: "Desarrollar e implementar una estrategia comercial y de branding completa que refuerce la presencia del producto en el mercado y maximice su potencial de éxito comercial.. La estrategia debe ser coherente, reflejando la propuesta de valor del producto y alineándose con las necesidades y preferencias del público objetivo de la Silver Economy.",
         desarrollo: {
             0: "Creación de la identidad de marca.",
@@ -115,7 +115,7 @@ const saberMas = [
         duracion: "4 semanas (6 horas / semana)"
     },
     {
-        nombre: "Fase 8: Performance I",
+        nombre: "Fase 8: Performance 8",
         objetivo: "Ejecutar un experimento de expansión cuidadosamente planeado, diseñado para validar hipótesis críticas sobre la escalabilidad del modelo de negocio en nuevos mercados. El experimento debe proporcionar datos valiosos que faciliten la toma de decisiones estratégicas, determinando si la empresa está lista para avanzar en su transición de startup a scaleup y expandirse de manera sostenible.",
         desarrollo: {
             0: "Selección del mercado de prueba.",
@@ -128,7 +128,7 @@ const saberMas = [
         duracion: "1 semana (6 horas / semana)"
     },
     {
-        nombre: "Fase 9: Performance II",
+        nombre: "Fase 9: Performance 9",
         objetivo: "Implementar mejoras basadas en los resultados del experimento de expansión para perfeccionar aún más el modelo de negocio, las estrategias de mercado, y el producto mismo. La scaleup debe aprender a medir y entender estas métricas para asegurar decisiones informadas y estratégicas que impulsen el crecimiento continuo y la estabilidad del negocio.",
         desarrollo: {
             0: "Análisis comprensivo de datos.",
@@ -140,7 +140,7 @@ const saberMas = [
         duracion: "1 semana (6 horas / semana)"
     },
     {
-        nombre: "Fase 10: Exit I",
+        nombre: "Fase 10: Exit 10",
         objetivo: "Facilitar una transición exitosa ya sea a través de la venta de la empresa, la recaudación de fondos adicionales, o la preparación para una inversión más grande, asegurando que todas las partes involucradas, incluyendo fundadores, empleados e inversionistas, obtengan el máximo beneficio posible.",
         desarrollo: {
             0: "Preparación del Data Room.",
