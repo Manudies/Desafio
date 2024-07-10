@@ -82,6 +82,28 @@ const removePack = async(req,res)=>{
     res.json({data:user})
 }
 
+const addModulo = async(req,res)=>{
+    
+    const userId = req.params.id;
+    const packId = req.body.packId;
+    const loggedUser = req.user;
+    console.log("userId", userId)
+    console.log("usuario logueado", loggedUser._id)
+    if(loggedUser._id.equals(userId) || loggedUser.role === "admin"){
+        const user = await userController.addPack(userId,packId);
+        res.json({data:user})
+    }
+    else
+        res.json({error:"no tienes permisos para anadir packs"})
+}
+
+const removeModulo = async(req,res)=>{
+    const userId = req.params.id;
+    const packId = req.params.packId;
+    const user = await userController.removePack(userId,packId);
+    res.json({data:user})
+}
+
 export default{
     getAll,
     getById,
@@ -93,6 +115,8 @@ export default{
     updateUser,
     removeUser,
     addPack,
-    removePack
+    removePack,
+    addModulo,
+    removeModulo
 }
 

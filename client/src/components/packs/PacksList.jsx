@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom"
 import PackCard from "../packCard/packCard";
 import PackCardCompleto from "../packCard/packCardCompleto";
@@ -13,12 +13,16 @@ const className = {
     3: "pack4",
 }
 
-const packList = ({  }) => {
+const packList = ({ defaultPack=0 }) => {
     const packs = useLoaderData();
-    const [selectedPack, setSelectedPack] = useState(packs[0]);
-    const [selectedIndex, setSelectedIndex] = useState(0);
+    const [selectedPack, setSelectedPack] = useState(packs[defaultPack ]);
+    const [selectedIndex, setSelectedIndex] = useState(defaultPack);
 
-    console.log("packs",packs)
+    useEffect(() => {
+        console.log("defaultPack", defaultPack);
+        setSelectedPack(packs[defaultPack ]);
+        setSelectedIndex(defaultPack);
+    }, [defaultPack, packs]);
 
     const handlePackClick = (pack, newIndex) => {
         setSelectedPack(pack);

@@ -8,7 +8,7 @@ import { formacion } from "../../utils/fetch.js";
 import { useNavigate } from "react-router-dom";
 import Modal from "../modal/modal.jsx";
 import { useLoaderData } from "react-router-dom";
-import recomendaciones from "../formularioPack/recomendacionPacks.js";
+import recomendaciones from "./recomendacionModulos.js";
 
 const Main = () => {
   const [index, setIndex] = useState(0);
