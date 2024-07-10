@@ -29,8 +29,8 @@ const TarjetaPack = ({ pack, index }) => {
     if (user) {
       try {
         Swal.fire({
-          title: '¿Estás seguro de contratar este pack?',
-          text: 'Al hacer clic en confirmar, recibiras un correo de confirmación.',
+          title: 'Recopilando información necesaria',
+          text: 'En unos momentos, recibiras un correo de confirmación.',
           allowOutsideClick: false,
           didOpen: () => {
             Swal.showLoading();
@@ -40,7 +40,7 @@ const TarjetaPack = ({ pack, index }) => {
         const response = await sendMail( {
 
           to: user.email,
-          subject: 'Confirmación de compra',
+          subject: 'Envio de información solicitada',
           text: "holaaaaaa"
           // text: `Hola ${user.username},\n\nGracias por comprar el viaje a ${pack.packName}. Disfruta de tu aventura!\n\nSaludos,\nEl equipo de Horizontes Lejanos`
         });
@@ -49,15 +49,10 @@ const TarjetaPack = ({ pack, index }) => {
 
         Swal.fire({
           icon: 'success',
-          title: 'Contratacion exitosa',
+          title: 'Envio realizado',
           text: 'Te hemos enviado un correo de confirmación. Por favor revisa tu correo electronico.',
         });
 
-        // alert(`Correo de confirmación enviado a ${user.email}!`);
-        // console.log("pack id", pack._id);
-        // await addPack(user._id, pack._id);
-        // await handlefetchUserData();
-        // await handledeleteContratar(pack);
       } catch (error) {
         console.error("Error enviando el correo de confirmación", error);
         // alert("Hubo un error al enviar el correo de confirmación.");
@@ -72,7 +67,7 @@ const TarjetaPack = ({ pack, index }) => {
       Swal.fire({
         icon: 'warning',
         title: 'Debes iniciar sesión',
-        text: 'Para contratar un paquete, debes iniciar sesión.',
+        text: 'Para solicitar información de un paquete, debes iniciar sesión.',
       }).then (() => {
         navigate("/register");
       })

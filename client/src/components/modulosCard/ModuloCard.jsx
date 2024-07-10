@@ -39,8 +39,8 @@ const TarjetaModulo = ({ modulo }) => {
     if (user) {
       try {
         Swal.fire({
-          title: '¿Estás seguro de contratar este pack?',
-          text: 'Al hacer clic en confirmar, recibiras un correo de confirmación.',
+          title: 'Recopilando información necesaria',
+          text: 'En unos momentos, recibiras un correo de confirmación.',
           allowOutsideClick: false,
           didOpen: () => {
             Swal.showLoading();
@@ -50,7 +50,7 @@ const TarjetaModulo = ({ modulo }) => {
         const response = await sendMail( {
 
           to: user.email,
-          subject: 'Confirmación de compra',
+          subject: 'Envio de información solicitada',
           text: "holaaaaaa Modulitos!!"
 
 
@@ -61,7 +61,7 @@ const TarjetaModulo = ({ modulo }) => {
 
         Swal.fire({
           icon: 'success',
-          title: 'Contratacion exitosa',
+          title: 'Envio realizado',
           text: 'Te hemos enviado un correo de confirmación. Por favor revisa tu correo electronico.',
         });
 
@@ -77,7 +77,7 @@ const TarjetaModulo = ({ modulo }) => {
       Swal.fire({
         icon: 'warning',
         title: 'Debes iniciar sesión',
-        text: 'Para contratar un paquete, debes iniciar sesión.',
+        text: 'Para solicitar información de un modulo, debes iniciar sesión.',
       }).then (() => {
         navigate("/register");
       })
