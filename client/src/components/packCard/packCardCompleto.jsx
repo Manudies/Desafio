@@ -1,19 +1,18 @@
-import { useState, useContext } from 'react';
-import './packCardCompleto.css';
+import { useState, useContext } from "react";
+import "./packCardCompleto.css";
 
-import UserContext from '../../context/userContext';
-import { useNavigate } from 'react-router';
+import UserContext from "../../context/userContext";
+import { useNavigate } from "react-router";
 
-import ActionButton from '../actionButton/actionButton';
-import { addPack, sendMail } from '../../utils/fetch';
-
+import ActionButton from "../actionButton/actionButton";
+import { addPack, sendMail } from "../../utils/fetch";
 
 const classNameCompleto = {
   0: "pack1Completo",
   1: "pack2Completo",
   2: "pack3Completo",
   3: "pack4Completo",
-}
+};
 
 const TarjetaPack = ({ pack, index }) => {
   const { user, handlefetchUserData } = useContext(UserContext);
@@ -21,18 +20,22 @@ const TarjetaPack = ({ pack, index }) => {
   const [activeName, setActiveName] = useState(null);
   const [isDeliverablesVisible, setIsDeliverablesVisible] = useState(false);
 
-
   const navigate = useNavigate();
 
   const handleBuyPack = async (pack) => {
     if (user) {
       try {
-        const response = await sendMail( {
-
+        const response = await sendMail({
           to: user.email,
-          subject: 'Confirmación de compra',
-          text: "holaaaaaa"
-          // text: `Hola ${user.username},\n\nGracias por comprar el viaje a ${pack.packName}. Disfruta de tu aventura!\n\nSaludos,\nEl equipo de Horizontes Lejanos`
+          subject: "Confirmación de compra",
+          text: `Estimado ${user.username},
+
+          Agradecemos su interés en nuestros paquetes de Silver Economy y estamos encantados de proporcionarle la información que necesita.
+
+          En función de la información que nos ha proporcionado, creemos que el siguiente paquete podría ser el más adecuado para usted:
+          
+          ${pack.packName}.
+          ${pack.description}`,
         });
         alert(`Correo de confirmación enviado a ${user.email}!`);
         console.log("pack id", pack._id);
@@ -69,7 +72,7 @@ const TarjetaPack = ({ pack, index }) => {
 
   const toggleDeliverables = () => {
     setIsDeliverablesVisible(!isDeliverablesVisible);
-    setActiveName(isDeliverablesVisible ? null : 'Entregables');
+    setActiveName(isDeliverablesVisible ? null : "Entregables");
   };
 
   const toggleInclude = (index) => {
@@ -88,18 +91,24 @@ const TarjetaPack = ({ pack, index }) => {
         {/* <img src="./packs/pack1.png" alt="photo" className="photo-pack" /> */}
       </div>
 
-      <div className='card-body'>
+      <div className="card-body">
         <div className="pack-card-body">
-          <p >{pack.description}</p>
-          <ActionButton label={isContratar ? "Cancelar" : "Solicitar presupuesto"} className={"contratar"} onClick={() => handleBuyPack(pack)} />
+          <p>{pack.description}</p>
+          <ActionButton
+            label={isContratar ? "Cancelar" : "Solicitar presupuesto"}
+            className={"contratar"}
+            onClick={() => handleBuyPack(pack)}
+          />
         </div>
         <div className="card-includes">
-          <p className='packIncluye'>Este pack incluye:</p>
+          <p className="packIncluye">Este pack incluye:</p>
           <ul>
             {pack.include.map((item, index) => (
               <li key={index} onClick={() => toggleInclude(index)}>
                 {item.nombre}
-                {activeName === index && <p className="definition">{item.definition}</p>}
+                {activeName === index && (
+                  <p className="definition">{item.definition}</p>
+                )}
               </li>
             ))}
           </ul>

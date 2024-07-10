@@ -38,7 +38,7 @@ const Main = () => {
       setIndex(index - 1);
     }
     if (index === 0) {
-      navigate("/formacion");
+      navigate("/consultoria");
     }
   };
 
