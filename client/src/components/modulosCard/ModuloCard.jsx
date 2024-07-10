@@ -6,12 +6,14 @@ import { useNavigate } from "react-router";
 
 import Modal from "../modal/modal";
 import ActionButton from "../actionButton/actionButton";
-import { addModulo, removeModulo } from "../../utils/fetch";
+import { addModulo, removeModulo, sendMail } from "../../utils/fetch";
 import { useLoaderData } from "react-router-dom";
 import saberMas from "./SaberMas.js";
+import Swal from 'sweetalert2';
+
 
 const TarjetaModulo = ({ modulo }) => {
-  const { user } = useContext(UserContext);
+  const { user, handlefetchUserData } = useContext(UserContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalContent, setModalContent] = useState(null);
 
@@ -32,6 +34,56 @@ const TarjetaModulo = ({ modulo }) => {
     // navigate("/formacion", { state: { scrollTo: "moduloMainRef" } });
 
   };
+
+  const handleBuyPack = async (pack) => {
+    if (user) {
+      try {
+        Swal.fire({
+          title: '¿Estás seguro de contratar este pack?',
+          text: 'Al hacer clic en confirmar, recibiras un correo de confirmación.',
+          allowOutsideClick: false,
+          didOpen: () => {
+            Swal.showLoading();
+          },
+          });
+        
+        const response = await sendMail( {
+
+          to: user.email,
+          subject: 'Confirmación de compra',
+          text: "holaaaaaa Modulitos!!"
+
+
+          // text: `Hola ${user.username},\n\nGracias por comprar el viaje a ${pack.packName}. Disfruta de tu aventura!\n\nSaludos,\nEl equipo de Horizontes Lejanos`
+        });
+        await addModulo(user._id, modulo._id);
+        await handlefetchUserData();
+
+        Swal.fire({
+          icon: 'success',
+          title: 'Contratacion exitosa',
+          text: 'Te hemos enviado un correo de confirmación. Por favor revisa tu correo electronico.',
+        });
+
+      } catch (error) {
+        console.error("Error enviando el correo de confirmación", error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Hubo un error al enviar el correo de confirmación.',
+        });
+      }
+    } else {
+      Swal.fire({
+        icon: 'warning',
+        title: 'Debes iniciar sesión',
+        text: 'Para contratar un paquete, debes iniciar sesión.',
+      }).then (() => {
+        navigate("/register");
+      })
+    }
+  };
+
   useEffect(() => {
     // Este efecto se ejecutará cada vez que cambie modulo.phaseName
     setIsModalOpen(false);
@@ -92,7 +144,7 @@ const TarjetaModulo = ({ modulo }) => {
                 </div>
                 <ActionButton
                   label="Solicita más información"
-                  // onClick={handleRepetirTest}
+                  onClick={handleBuyPack}
                   className="buttonSaberMas" />
               </div>
             </div>
