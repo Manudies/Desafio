@@ -1,6 +1,6 @@
 const questions = [
   {
-    "question": "1. ¿Cuál es tu nivel de conocimiento sobre la Silver Economy?",
+    "question": "¿Cuál es tu nivel de conocimiento sobre la Silver Economy?",
     "answers": {
       "1": "Ninguno",
       "2": "Básico",
@@ -9,7 +9,7 @@ const questions = [
     }
   },
   {
-    "question": "2. ¿Cuál es tu objetivo principal al aprender sobre la Silver Economy?",
+    "question": "¿Cuál es tu objetivo principal al aprender sobre la Silver Economy?",
     "answers": {
       "1": "Obtener una visión general",
       "2": "Conocer las tendencias y datos demográficos",
@@ -21,7 +21,7 @@ const questions = [
     }
   },
   {
-    "question": "3. ¿Tienes experiencia previa trabajando con población senior?",
+    "question": "¿Tienes experiencia previa trabajando con población senior?",
     "answers": {
       "1": "Sí, amplia experiencia",
       "2": "Sí, algo de experiencia",
@@ -29,7 +29,7 @@ const questions = [
     }
   },
   {
-    "question": "4. ¿Cuál es tu rol profesional actual?",
+    "question": "¿Cuál es tu rol profesional actual?",
     "answers": {
       "1": "Estudiante",
       "2": "Profesional de salud",
@@ -40,7 +40,7 @@ const questions = [
     }
   },
   {
-    "question": "5. ¿Qué tipo de contenido te interesa más?",
+    "question": "¿Qué tipo de contenido te interesa más?",
     "answers": {
       "1": "Conceptos teóricos",
       "2": "Estudios de caso",
@@ -50,7 +50,7 @@ const questions = [
     }
   },
   {
-    "question": "6. ¿Cuál es el tamaño de tu organización o equipo?",
+    "question": "¿Cuál es el tamaño de tu organización o equipo?",
     "answers": {
       "1": "Autónomo",
       "2": "Pequeña empresa (1-10 empleados)",
@@ -59,7 +59,7 @@ const questions = [
     }
   },
   {
-    "question": "7. ¿Cuál es tu experiencia previa en emprendimiento?",
+    "question": "¿Cuál es tu experiencia previa en emprendimiento?",
     "answers": {
       "1": "Ninguna",
       "2": "He iniciado un negocio",
@@ -68,7 +68,7 @@ const questions = [
     }
   },
   {
-    "question": "8. ¿Qué tipo de interacción prefieres para el aprendizaje?",
+    "question": "¿Qué tipo de interacción prefieres para el aprendizaje?",
     "answers": {
       "1": "Videos y webinars",
       "2": "Lecturas y artículos",
@@ -77,7 +77,7 @@ const questions = [
     }
   },
   {
-    "question": "9. ¿Cuál es tu nivel de familiaridad con herramientas digitales y tecnológicas?",
+    "question": "¿Cuál es tu nivel de familiaridad con herramientas digitales y tecnológicas?",
     "answers": {
       "1": "Muy bajo",
       "2": "Básico",
@@ -86,7 +86,7 @@ const questions = [
     }
   },
   {
-    "question": "10. ¿Cuál es tu disponibilidad semanal para dedicarte al programa?",
+    "question": "¿Cuál es tu disponibilidad semanal para dedicarte al programa?",
     "answers": {
       "1": "Menos de 5 horas",
       "2": "5-10 horas",
