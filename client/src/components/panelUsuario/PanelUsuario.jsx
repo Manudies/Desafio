@@ -16,7 +16,7 @@ const panelUsuario = () => {
           Logout
         </button>
       </div>
-      <h1>Packs Contratados</h1>
+      <h1>Packs Recomendados</h1>
       {user.pack && user.pack.length > 0 ? (
         <ul>
           {user.pack.map((pack, index) => (
@@ -26,7 +26,7 @@ const panelUsuario = () => {
           ))}
         </ul>
       ) : (
-        <p>No tienes packs contratados</p>
+        <p>No tienes packs recomendados</p>
       )}
         </div>
   );
