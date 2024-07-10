@@ -70,7 +70,7 @@ const Main = () => {
   };
   const handleCloseModal = () => {
     setIsModalOpen(false);
-    navigate("/consultoria", { state: { scrollTo: "packsMain" } });
+    navigate("/consultoria", { state: { scrollTo: "packsMain", packId:pack} });
   };
   const flecha = () => {
     return (

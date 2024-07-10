@@ -14,10 +14,15 @@ import Punto from "../../components/puntoAcesibilidad/Punto";
 import { useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 const consultoria = () => {
+  const [defaultPack, setDefaultPack] = useState(1);
   const location = useLocation();
   const packsMainRef = useRef(null);
 
   useEffect(() => {
+    console.log("location.state", location.state);
+    if (location.state && location.state.pack) {
+      setDefaultPack(location.state.pack);
+    }
     if (location.state && location.state.scrollTo === "packsMain") {
       packsMainRef.current?.scrollIntoView({ behavior: 'smooth' });
     }
@@ -32,7 +37,7 @@ const consultoria = () => {
       <Beneficios />
       <h2 className="descubrePacks">Descubre nuestros servicios</h2>
       <div ref={packsMainRef}>
-        <PacksList />
+        <PacksList defaultPack={defaultPack} />
       </div>
       <RealizarTest />
       <Descubre />
