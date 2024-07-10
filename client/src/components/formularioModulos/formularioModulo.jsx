@@ -153,16 +153,16 @@ const Main = () => {
           <div id="modalNombre">
             <div id="divModalNombre">
               <h2 className="modal-phase-h2">¡Gracias por rellenar el test!</h2>
-              <div className="modal-phase-primero">
+            <div className="modal-phase-primero">
                 <div className="basandonos">
                 <h2>Basándonos en tus respuestas, te recomendamos</h2>
                 </div>
                 <p className="modal-phase-name">{getPhaseName(modulos[modulo].phaseName)}</p>
-              </div>
-              <div className="modal-phase-primero">
-                <div className="basandonos">
+            </div>
+            <div className="modal-phase-primero">
+              <div className="basandonos">
                 <h2>Por qué te lo recomendamos</h2>
-                </div>
+              </div>
                 <p className="modal-description">{recomendacion[modulo].recomendacion}</p>
               </div>
             </div>
