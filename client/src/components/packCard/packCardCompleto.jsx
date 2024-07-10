@@ -4,8 +4,11 @@ import "./packCardCompleto.css";
 import UserContext from "../../context/userContext";
 import { useNavigate } from "react-router";
 
-import ActionButton from "../actionButton/actionButton";
-import { addPack, sendMail } from "../../utils/fetch";
+import ActionButton from '../actionButton/actionButton';
+import { addPack, sendMail } from '../../utils/fetch';
+
+import Swal from 'sweetalert2';
+
 
 const classNameCompleto = {
   0: "pack1Completo",
@@ -25,30 +28,54 @@ const TarjetaPack = ({ pack, index }) => {
   const handleBuyPack = async (pack) => {
     if (user) {
       try {
-        const response = await sendMail({
+        Swal.fire({
+          title: '¿Estás seguro de contratar este pack?',
+          text: 'Al hacer clic en confirmar, recibiras un correo de confirmación.',
+          allowOutsideClick: false,
+          didOpen: () => {
+            Swal.showLoading();
+          },
+          });
+        
+        const response = await sendMail( {
+
           to: user.email,
-          subject: "Confirmación de compra",
-          text: `Estimado ${user.username},
-
-          Agradecemos su interés en nuestros paquetes de Silver Economy y estamos encantados de proporcionarle la información que necesita.
-
-          En función de la información que nos ha proporcionado, creemos que el siguiente paquete podría ser el más adecuado para usted:
-          
-          ${pack.packName}.
-          ${pack.description}`,
+          subject: 'Confirmación de compra',
+          text: "holaaaaaa"
+          // text: `Hola ${user.username},\n\nGracias por comprar el viaje a ${pack.packName}. Disfruta de tu aventura!\n\nSaludos,\nEl equipo de Horizontes Lejanos`
         });
-        alert(`Correo de confirmación enviado a ${user.email}!`);
-        console.log("pack id", pack._id);
         await addPack(user._id, pack._id);
         await handlefetchUserData();
+
+        Swal.fire({
+          icon: 'success',
+          title: 'Contratacion exitosa',
+          text: 'Te hemos enviado un correo de confirmación. Por favor revisa tu correo electronico.',
+        });
+
+        // alert(`Correo de confirmación enviado a ${user.email}!`);
+        // console.log("pack id", pack._id);
+        // await addPack(user._id, pack._id);
+        // await handlefetchUserData();
         // await handledeleteContratar(pack);
       } catch (error) {
         console.error("Error enviando el correo de confirmación", error);
-        alert("Hubo un error al enviar el correo de confirmación.");
+        // alert("Hubo un error al enviar el correo de confirmación.");
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Hubo un error al enviar el correo de confirmación.',
+        });
       }
     } else {
-      alert("Debes iniciar sesión");
-      navigate("/register");
+      // alert("Debes iniciar sesión");
+      Swal.fire({
+        icon: 'warning',
+        title: 'Debes iniciar sesión',
+        text: 'Para contratar un paquete, debes iniciar sesión.',
+      }).then (() => {
+        navigate("/register");
+      })
     }
   };
 
@@ -86,9 +113,9 @@ const TarjetaPack = ({ pack, index }) => {
     <div className="packCompleto">
       <div className="pack-card-header">
         <h2 className="card-title">{pack.packName}</h2>
-        <div alt="photo" className={classNameCompleto[1]} />
+        {/* <div alt="photo" className={classNameCompleto[1]} /> */}
 
-        {/* <img src="./packs/pack1.png" alt="photo" className="photo-pack" /> */}
+         <img src={"./packs/pack"+(index+1)+".png"} alt="photo" className="photo-pack" /> 
       </div>
 
       <div className="card-body">
