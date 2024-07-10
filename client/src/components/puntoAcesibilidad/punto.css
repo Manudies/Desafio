@@ -43,7 +43,7 @@
   }
 
   .large-pointer {
-    cursor: url('./cursor.png') 20 20, auto;
+    cursor: url('./cursor.png') 0 0, auto;
   }
 
   
