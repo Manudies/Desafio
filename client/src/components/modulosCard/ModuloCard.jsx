@@ -67,7 +67,7 @@ const TarjetaModulo = ({ modulo }) => {
         </div>
       </details>
       {isModalOpen && modalContent && (
-        <Modal onClose={closeModal}>
+        <Modal onClose={closeModal} className="modal-body-modulos">
           <div className="modalSaber-body">
             <div className="modalSaber-header">
               <h2>{modalContent.nombre}</h2>
