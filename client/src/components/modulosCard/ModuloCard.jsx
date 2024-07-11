@@ -146,7 +146,7 @@ const TarjetaModulo = ({ modulo }) => {
             </div>
             <div className="modalSaber-container">
               <div className="modalSaber-desarrollo">
-                <h3 className="desarrolloTitulo">Desarrollo:</h3>
+                <h3 className="desarrolloTitulo">Desarrollo</h3>
                 <ul className="desarrolloContent">
                   {Object.values(modalContent.desarrollo).map((item, index) => (
                     <li key={index}>{item}</li>
@@ -155,7 +155,7 @@ const TarjetaModulo = ({ modulo }) => {
               </div>
               <div className="modalSaber-izquierda">
                 <div className="modalSaber-duracion">
-                  <h3 className="duracionTitulo">Duración:</h3>
+                  <h3 className="duracionTitulo">Duración</h3>
                   <p className="duracionContent">{modalContent.duracion}</p>
                 </div>
                 <ActionButton
