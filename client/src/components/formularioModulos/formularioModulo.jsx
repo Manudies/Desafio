@@ -23,6 +23,7 @@ const Main = () => {
   const formulario = questions[index];
   const recomendacion = recomendaciones
   console.log("recomendacion",recomendacion)
+  console.log ("modulo", modulo)
 
   const handleNext = () => {
     if (index < questions.length - 1 && answers[index] !== undefined) {

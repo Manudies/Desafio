@@ -9,7 +9,7 @@ import { consultoria } from "../../utils/fetch.js";
 import { useNavigate } from "react-router-dom";
 import Modal from "../modal/modal.jsx";
 import { useLoaderData } from "react-router-dom";
-import recomendaciones from "./recomendacionPacks.js";
+import recomendaciones from "./recomendacionPack.js";
 
 const Main = () => {
   const [index, setIndex] = useState(0);
