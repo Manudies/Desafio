@@ -7,7 +7,6 @@ const panelUsuario = () => {
   const { user, logOut, handlefetchUserData } = useContext(UserContext);
   const navigate = useNavigate();
 
-
   return (
     <div className="panel_usuario">
       <div className="cabecera_panel">
@@ -20,15 +19,25 @@ const panelUsuario = () => {
       {user.pack && user.pack.length > 0 ? (
         <ul>
           {user.pack.map((pack, index) => (
-            <li key={index}>
-              {pack.packName}
-            </li>
+            <li key={index}>{pack.packName}</li>
           ))}
         </ul>
       ) : (
         <p>No tienes packs recomendados</p>
       )}
-        </div>
+      <h1>Modulos Recomendados</h1>
+      {user.modulos && user.modulos.length > 0 ? (
+        <ul>
+          {user.modulo.map((modulo, index) => (
+            <li key={index}>
+              {modulo.phaseName}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No tienes modulos recomendados</p>
+      )}
+    </div>
   );
 };
 

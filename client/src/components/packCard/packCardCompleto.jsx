@@ -140,7 +140,7 @@ const TarjetaPack = ({ pack, index }) => {
         <div className="pack-card-body">
           <p>{pack.description}</p>
           <ActionButton
-            label={isContratar ? "Cancelar" : "Solicitar presupuesto"}
+            label={isContratar ? "Cancelar" : "Más información"}
             className={"contratar"}
             onClick={() => handleBuyPack(pack)}
           />
@@ -158,11 +158,11 @@ const TarjetaPack = ({ pack, index }) => {
             ))}
           </ul>
           <div className="card-deliverables">
-            <p onClick={toggleDeliverables}>Entregables</p>
+            <p className="entregables" onClick={toggleDeliverables}>Entregables</p>
             {isDeliverablesVisible && (
               <ul>
                 {pack.deliverables?.map((item, index) => (
-                  <li key={index}>{item}</li>
+                  <li className="li" key={index}>{item} </li>
                 ))}
               </ul>
             )}

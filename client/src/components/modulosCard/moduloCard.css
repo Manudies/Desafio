@@ -1,6 +1,7 @@
 .modulo-card {
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
@@ -28,6 +29,7 @@
     font-size: 24px;
     color: #003366;
     cursor: pointer;
+    text-align: left;
 }
 
 .main-container-card {

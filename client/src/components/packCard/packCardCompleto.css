@@ -42,7 +42,7 @@
     margin: 50px 10px 10px 10px;
     gap: 20px;
     width: 50%;
-    min-width: 400px;
+    min-width: 50%;
 }
 
 .pack-title {
@@ -90,6 +90,7 @@
     padding-left: 20px;
     padding-bottom: 20px;
     margin-top: 20px;
+    text-align: start;
 }
 
 .pack-includes {
@@ -119,4 +120,12 @@
     background-size: cover;
     background-position: center;
     border-radius: 10px;
+}
+
+.card-deliverables .li::before{
+    content: "";
+}
+
+.card-deliverables .entregables::before{
+    content: ">";
 }
