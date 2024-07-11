@@ -43,26 +43,27 @@ const TarjetaPack = ({ pack, index }) => {
           subject: 'Envio de información solicitada',
           text: `Estimado/a ${user.username},
 
-            ¡Gracias por tu interés en nuestros pack ${pack.packName} de servicios! 
-            Nos complace proporcionarte la información adicional y coordinar una cita para discutir tus necesidades y objetivos en detalle.
+        ¡Gracias por tu interés en nuestros ${pack.packName} de servicios! 
+        Nos complace proporcionarte la información adicional y coordinar una cita para discutir tus necesidades y objetivos en detalle.
 
-            Adjunto a este correo encontrarás un archivo PDF con los detalles completos de nuestros servicios, diseñados para abordar diferentes aspectos del desarrollo de productos digitales accesibles y efectivos. 
-            Este documento incluye:
+        Adjunto a este correo encontrarás un archivo PDF con los detalles completos de nuestros servicios, diseñados para abordar diferentes aspectos del desarrollo de productos digitales accesibles y efectivos. 
+        Este documento incluye:
 
-            - Descripciones detalladas de cada pack
-            - Objetivos específicos de cada fase
-            - Información sobre los entregables incluidos en cada pack
+        - Descripciones detalladas de cada pack
+        - Objetivos específicos de cada fase
+        - Información sobre los entregables incluidos en cada pack
 
-            Para ofrecerte un presupuesto personalizado y responder a cualquier pregunta que puedas tener, te invitamos a agendar una cita con nuestro equipo. Durante esta reunión, podremos discutir tus requisitos específicos y cómo podemos ayudarte a alcanzar tus metas.
-            
-            Por favor, haz clic aquí para seleccionar una fecha y hora que te convenga.
+        Para ofrecerte un presupuesto personalizado y responder a cualquier pregunta que puedas tener, te invitamos a agendar una cita con nuestro equipo. 
+        Durante esta reunión, podremos discutir tus requisitos específicos y cómo podemos ayudarte a alcanzar tus metas.
+        
+        Por favor, haz clic aquí para seleccionar una fecha y hora que te convenga.
 
-            Si tienes alguna pregunta o necesitas asistencia para agendar la cita, no dudes en contactarnos.
+        Si tienes alguna pregunta o necesitas asistencia para agendar la cita, no dudes en contactarnos.
 
-            Esperamos poder colaborar contigo y ayudarte a llevar tu proyecto al siguiente nivel.
+        Esperamos poder colaborar contigo y ayudarte a llevar tu proyecto al siguiente nivel.
 
-            Saludos cordiales
-            Equipo de Seniority AI` 
+        Saludos cordiales
+        Equipo de Seniority AI` 
         });
         await addPack(user._id, pack._id);
         await handlefetchUserData();
