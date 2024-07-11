@@ -1,4 +1,6 @@
 import './Programas.css';
+import Tooltip from "../../tooltip/Tooltip.jsx";
+
 
 
 const Programas = () => {
@@ -7,9 +9,13 @@ const Programas = () => {
     <div className="programasContainer">
       <section className="programasContainer">
         <div className="formacionTexto">
-          <h1 className="formacionTitle">
-            Programa de desarrollo de empresas en la Silver Economy
-          </h1>
+          <div className="tituloFormacion">
+            <h1 className="formacionTitle">
+              Programa de desarrollo de empresas en la Silver Economy
+            </h1>
+            <Tooltip  className="interrogacionFormacion" text="Silver economy es un término utilizado para referirse a servicios y productos para adultos mayores, como tecnologías para facilitar la vida diaria o plataformas adaptadas a sus necesidades, promoviendo su bienestar e inclusión." />
+
+          </div>
 
           <p className="formacionText">
             <span className="negrita">Seniority</span>, junto a{" "}
