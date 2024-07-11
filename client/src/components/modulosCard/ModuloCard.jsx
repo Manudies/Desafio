@@ -67,7 +67,9 @@ const TarjetaModulo = ({ modulo }) => {
         
         Saludos cordiales,
         
-        Equipo de Seniority AI`
+        Equipo de Seniority AI 
+        Teléfono: 603 18 04 84
+        Email: info@seniorityai.com`
 
 
           // text: `Hola ${user.username},\n\nGracias por comprar el viaje a ${pack.packName}. Disfruta de tu aventura!\n\nSaludos,\nEl equipo de Horizontes Lejanos`

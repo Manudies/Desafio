@@ -63,7 +63,9 @@ const TarjetaPack = ({ pack, index }) => {
         Esperamos poder colaborar contigo y ayudarte a llevar tu proyecto al siguiente nivel.
 
         Saludos cordiales
-        Equipo de Seniority AI` 
+        Equipo de Seniority AI 
+        Teléfono: 603 18 04 84
+        Email: info@seniorityai.com`
         });
         await addPack(user._id, pack._id);
         await handlefetchUserData();
