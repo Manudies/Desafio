@@ -2,6 +2,7 @@ import { useState } from "react";
 import questions from "./preguntasModulo.js";
 import "./formularioModulo.css";
 import ActionButton from "../../components/actionButton/actionButton";
+import Tooltip from "../tooltip/Tooltip.jsx";
 import BarraProgreso from "../../components/barraProgreso/BarraProgreso";
 import "../../components/barraProgreso/BarraProgreso.css";
 import { formacion } from "../../utils/fetch.js";
@@ -110,10 +111,17 @@ const Main = () => {
       </div>
 
       <section className="section-form-modulo">
+        <div className="preguntaInterrogacion">
+
         <div className="questionForm-modulo">{formulario.question}</div>
+        {index === questions.length -10 && (
+          <Tooltip text ="Silver economy es un término utilizado para referirse a servicios y productos para adultos mayores, como tecnologías para facilitar la vida diaria o plataformas adaptadas a sus necesidades, promoviendo su bienestar e inclusión."/>
+        )}
+        </div>
         {showWarning && (
           <div className="warning">Por favor, responde todas las preguntas</div>
         )}
+        
         <div className="answers-container-modulo">
           {Object.entries(formulario.answers).map(([key, value]) => (
             <div className="answers-modulo" key={key}>
@@ -133,7 +141,7 @@ const Main = () => {
           <ActionButton
             label="Enviar"
             onClick={handleFormacion}
-            className="button"
+            className="button-enviar"
             disabled={answers[questions.length - 1] === undefined}
           />
         ) : (
