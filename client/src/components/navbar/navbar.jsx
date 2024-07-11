@@ -62,14 +62,14 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li className="navbar-item">
-            <NavLink to="/reservas" className="navbar-link" activeClassName="active">
+            <a to="#" className="navbar-link" activeClassName="active">
               Plataformas de reservas
-            </NavLink>
+            </a>
           </li>
           <li className="navbar-item">
-            <NavLink to="/sobre" className="navbar-link" activeClassName="active">
+            <a to="#" className="navbar-link" activeClassName="active">
               Sobre Seniority
-            </NavLink>
+            </a>
           </li>
           <li className="navbar-item">
             <NavLink to="/contacto" className="navbar-link" activeClassName="active">
