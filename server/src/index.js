@@ -2,11 +2,8 @@ import express from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/mongo.js";
 import router from "./routes/router.js";
-
-
-// import swaggerUi from "swagger-ui-express";
-// import swaggerDocument from "../swagger.json" assert { type: 'json' };
-
+import swaggerUi from "swagger-ui-express";
+import swaggerDocument from "./docs/swagger.json" assert { type: 'json' };
 import path from "path";
 import { fileURLToPath } from 'url';
 import cors from "cors";
@@ -21,10 +18,10 @@ const CONTAINER_PORT = 3000;
 const app = express();
 app.use(cors());
 app.use(express.json()); // api
-//app.use(express.urlencoded({extended:true})); // vistas
+app.use(express.urlencoded({extended:true})); // vistas
 connectDB();
 
-// app.use("/api-docs",swaggerUi.serve,swaggerUi.setup(swaggerDocument));
+app.use("/api-docs",swaggerUi.serve,swaggerUi.setup(swaggerDocument));
 
 
 app.get("/", (req, res) => {
