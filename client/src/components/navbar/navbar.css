@@ -280,3 +280,21 @@ transition: 0.3s;
     margin-left: -140px;
   }
 }
+
+
+
+/* Estilos previos... */
+
+.navbar-link.active, .navbar-link:hover {
+  color: #59FFC9;
+}
+
+.navbar-button.active, .navbar-button:hover {
+  border: 1px solid #fff;
+  background-color: #07124B;
+  color: #59FFC9;
+  transition: 0.3s;
+
+}
+
+/* Resto de los estilos... */

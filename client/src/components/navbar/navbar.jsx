@@ -1,22 +1,20 @@
 import { useState, useEffect, useContext } from 'react';
-import { Link } from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';
 import UserContext from '../../context/userContext';
 import PanelUsuario from '../panelUsuario/PanelUsuario';
-
-import Modal from '../modal/modal'
+import Modal from '../modal/modal';
 import './navbar.css';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { user, logOut, handlefetchUserData } = useContext(UserContext);
-  const[isModalOpen, setIsModalOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  function openModal(){
+  function openModal() {
     if (!user) {
-      return
+      return;
     }
-    setIsModalOpen(true)
+    setIsModalOpen(true);
   }
 
   const toggleMenu = () => {
@@ -36,7 +34,6 @@ const Navbar = () => {
     };
   }, []);
 
-
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -55,43 +52,47 @@ const Navbar = () => {
         {/* Navbar Menu */}
         <ul className={`navbar-menu ${menuOpen ? 'active' : ''}`}>
           <li className="navbar-item">
-            <a href="/consultoria" className="navbar-link">Consultoría</a>
+            <NavLink to="/consultoria" className="navbar-link" activeClassName="active">
+              Consultoría
+            </NavLink>
           </li>
           <li className="navbar-item">
-            <a href="/formacion" className="navbar-link">Formación</a>
+            <NavLink to="/formacion" className="navbar-link" activeClassName="active">
+              Formación
+            </NavLink>
           </li>
           <li className="navbar-item">
-            <a href="#" className="navbar-link">Plataformas de reservas</a>
+            <NavLink to="/reservas" className="navbar-link" activeClassName="active">
+              Plataformas de reservas
+            </NavLink>
           </li>
           <li className="navbar-item">
-            <a href="#" className="navbar-link">Sobre Seniority</a>
+            <NavLink to="/sobre" className="navbar-link" activeClassName="active">
+              Sobre Seniority
+            </NavLink>
           </li>
           <li className="navbar-item">
-            <a href="/contacto" className="navbar-link">Contacto</a>
+            <NavLink to="/contacto" className="navbar-link" activeClassName="active">
+              Contacto
+            </NavLink>
           </li>
-
-
-        {user && (
+          {user && (
             <li className="navbar-item">
-              <button onClick = {openModal}className="navbar-button">{user.username}</button>
-              {isModalOpen &&
-                <Modal isOpen={true} onClose={()=> {
-                  setIsModalOpen(false)}} className='modal-panel-usuario'>
-                    <PanelUsuario user={user} ></PanelUsuario>
+              <button onClick={openModal} className="navbar-button">{user.username}</button>
+              {isModalOpen && (
+                <Modal isOpen={true} onClose={() => setIsModalOpen(false)} className='modal-panel-usuario'>
+                  <PanelUsuario user={user} />
                 </Modal>
-              }
-
+              )}
             </li>
           )}
           {!user && (
-          <li className="navbar-item">
-            <Link to="/register" className="navbar-button" onClick={toggleMenu}>
-              Accede
-            </Link>
-          </li>
-            
+            <li className="navbar-item">
+              <NavLink to="/register" className="navbar-button" onClick={toggleMenu}>
+                Accede
+              </NavLink>
+            </li>
           )}
-
         </ul>
       </div>
     </nav>

@@ -149,7 +149,7 @@ const saberMas = [
             3: "Negociación y formalización de acuerdos."
 
         },
-        duracion: " N/A"
+        duracion: "1 semana (6 horas / semana)"
     }
 ]
 
