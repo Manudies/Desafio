@@ -37,7 +37,7 @@ const Main = () => {
       setIndex(index - 1);
     }
     if (index === 0) {
-      navigate("/formacion");
+      navigate("/formacion", { state: { scrollTo: "moduloMainRef" } });
     }
   };
 
