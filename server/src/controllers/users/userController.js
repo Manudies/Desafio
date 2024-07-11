@@ -189,21 +189,21 @@ const removePack = async (userId, packId) => {
 
 const addModulo = async (userId, moduloId) => {
     try {
-        console.log("add pack", userId)
+        console.log("add modulo", userId)
         const user = await getById(userId);
         console.log("users", moduloId);
-        // if (!user.pack) {
-        //     user.pack = [];
-        // }
-        if (!user.pack.includes(moduloId)) {
-            user.pack.push(moduloId);
+        if (!user.modulo) {
+            user.modulo = [];
+        }
+        if (!user.modulo.includes(moduloId)) {
+            user.modulo.push(moduloId);
             await user.save();
             return user;
         }
         return user;
     } catch (error) {
         console.error(error);
-        return { error: "no se ha podido añadir el pack" };
+        return { error: "no se ha podido añadir el modulo" };
     }
 }
 const removeModulo = async (userId, moduloId) => {
@@ -213,8 +213,8 @@ const removeModulo = async (userId, moduloId) => {
     }
     try {
         const user = await getById(userId);
-        if (user.modulo.some(pack => pack.toString() === moduloId.toString())) {
-            user.modulo = user.modulo.filter(pack => pack.toString() !== moduloId.toString());
+        if (user.modulo.some(modulo => modulo.toString() === moduloId.toString())) {
+            user.modulo = user.modulo.filter(modulo => modulo.toString() !== moduloId.toString());
             await user.save();
             return user;
         }

@@ -142,6 +142,7 @@ const getModulos = async()=>{
     return result;
 }
 const addModulo = async(userId, moduloId)=>{
+    console.log("addModulo",userId, moduloId)
     const result = await fetchData("/users/"+userId+"/modulos","post",{moduloId});
     return result;
 }
