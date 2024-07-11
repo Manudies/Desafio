@@ -52,14 +52,21 @@ const TarjetaModulo = ({ modulo }) => {
           to: user.email,
           subject: `Información Adicional sobre Nuestros Módulos de Formación`,
           text: `Estimado/a ${user.username},
-            ¡Gracias por tu interés en nuestro módulo ${modulos.phaseName} de formación! Nos complace proporcionarte la información adicional que solicitaste.            
-            Adjunto a este correo encontrarás un archivo PDF con los detalles completos de nuestros módulos de formación, diseñados para abordar diferentes aspectos y etapas del desarrollo en la Silver Economy. Este documento incluye:
-            Descripciones detalladas de cada módulo
-            Objetivos específicos de cada fase
-            Duración de cada módulo
-            Información sobre los resultados esperados
+
+            ¡Gracias por tu interés en nuestro módulo ${modulo.phaseName} de formación! Nos complace proporcionarte la información adicional que solicitaste.            
+            Adjunto a este correo encontrarás un archivo PDF con los detalles completos de nuestras formaciones, diseñados para abordar diferentes aspectos y etapas del desarrollo en la Silver Economy. 
+            
+            Este documento incluye:
+
+            - Descripciones detalladas de cada módulo
+            - Objetivos específicos de cada fase
+            - Duración de cada módulo
+            - Información sobre los resultados esperados
+
             Si tienes alguna pregunta adicional o necesitas más detalles, no dudes en contactarnos. Estamos aquí para ayudarte a elegir el camino más adecuado para tus necesidades y objetivos.
+            
             Saludos cordiales,
+            
             Equipo de Seniority AI`
 
 
