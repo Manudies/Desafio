@@ -1,7 +1,7 @@
 
 .timeline {
     position: relative;
-    margin-top: 0px;
+    margin-top: 100px;
     margin-bottom: 60px;
     display: flex;
     flex-direction: column;
@@ -26,10 +26,10 @@
   .timeline-line {
     position: absolute;
     left: 150px;
-    top: 120px;
+    top: 200px;
     bottom: 10px;
-    width: 8px;
-    background-color: #07124B;
+    width: 12px;
+    background: linear-gradient(#10b59c, #d41e4d, #aac32d, #bd3d26);
 
   }
   
