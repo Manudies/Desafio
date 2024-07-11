@@ -20,7 +20,7 @@ const TarjetaModulo = ({ modulo }) => {
   const navigate = useNavigate();
 
   const openModal = () => {
-    console.log("saberMas", saberMas,modulo)
+    console.log("saberMas", saberMas, modulo)
     const faseInfo = saberMas.find(fase => fase.nombre === modulo.phaseName);
     if (faseInfo) {
       setModalContent(faseInfo);
@@ -45,13 +45,22 @@ const TarjetaModulo = ({ modulo }) => {
           didOpen: () => {
             Swal.showLoading();
           },
-          });
-        
-        const response = await sendMail( {
+        });
+
+        const response = await sendMail({
 
           to: user.email,
-          subject: 'Envio de información solicitada',
-          text: "holaaaaaa Modulitos!!"
+          subject: `Información Adicional sobre Nuestros Módulos de Formación`,
+          text: `Estimado/a ${user.username},
+            ¡Gracias por tu interés en nuestro módulo ${modulos.phaseName} de formación! Nos complace proporcionarte la información adicional que solicitaste.            
+            Adjunto a este correo encontrarás un archivo PDF con los detalles completos de nuestros módulos de formación, diseñados para abordar diferentes aspectos y etapas del desarrollo en la Silver Economy. Este documento incluye:
+            Descripciones detalladas de cada módulo
+            Objetivos específicos de cada fase
+            Duración de cada módulo
+            Información sobre los resultados esperados
+            Si tienes alguna pregunta adicional o necesitas más detalles, no dudes en contactarnos. Estamos aquí para ayudarte a elegir el camino más adecuado para tus necesidades y objetivos.
+            Saludos cordiales,
+            Equipo de Seniority AI`
 
 
           // text: `Hola ${user.username},\n\nGracias por comprar el viaje a ${pack.packName}. Disfruta de tu aventura!\n\nSaludos,\nEl equipo de Horizontes Lejanos`
@@ -78,7 +87,7 @@ const TarjetaModulo = ({ modulo }) => {
         icon: 'warning',
         title: 'Debes iniciar sesión',
         text: 'Para solicitar información de un modulo, debes iniciar sesión.',
-      }).then (() => {
+      }).then(() => {
         navigate("/register");
       })
     }

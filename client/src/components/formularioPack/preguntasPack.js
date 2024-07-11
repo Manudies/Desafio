@@ -59,7 +59,7 @@ const questions = [
             }
       },
       {
-        "question": "7.¿Qué nivel de soporte técnico esperas durante la implementación del proyecto?",
+        "question": "¿Qué nivel de soporte técnico esperas durante la implementación del proyecto?",
         "answers": 
             {
             "1": "Soporte continuo y dedicado",

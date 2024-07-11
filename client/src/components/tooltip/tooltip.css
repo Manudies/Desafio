@@ -3,9 +3,14 @@
     position: relative;
     display: inline-block;
     cursor: pointer;
-    font-size: 35px; /* Ajusta el tamaño del icono según sea necesario */
+    font-size: 30px; /* Ajusta el tamaño del icono según sea necesario */
     margin-left: 10px; /* Ajusta la posición del icono según sea necesario */
-  }
+    border: 2px solid #555;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-bottom: 10px; 
+ }
   
   /* Tooltip text */
   .tooltip .tooltiptext {
