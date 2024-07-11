@@ -1,12 +1,14 @@
 /* Estilos para el contenedor principal */
 .FcomienzoContainer {
-    height: 705px;
+    height: 800px;
+    Clip-path: inset(0px 0px 100px 0px);
     width: 100%;
-    background-image: url('./formacion/inicio.webp');
+    background-image: url('./formacion/inicio.png');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; /* No repetir la imagen */
     margin-top: 80px;
+    
 
 }
 

@@ -87,22 +87,6 @@ const Main = () => {
     setIndex(0);
   }
 
-  // const textoTooltip = ({ questions, currentQuestionIndex }) => {
-  //   return (
-  //     <div>
-  //       {questions.map((question, index) => (
-  //         <div key={index}>
-  //           <p>{question.text}</p>
-  //           {index === questions.length - 4 ? (
-  //             <Tooltip text="Un presupuesto bajo rondré los 5000€ o menos, uno medio sería inferior a 25.000€, y uno que superase esto sería uno alto." />
-  //           ) : null}
-  //         </div>
-  //       ))}
-  //     </div>
-  //   );
-  // };
-
-
   return (
     <div className="content-pack">
       <div className="question-header-pack">
@@ -120,16 +104,14 @@ const Main = () => {
       </div>
 
       <section className="section-form-pack">
-        {index === questions.length -4 && (
-          <Tooltip text ="Un presupuesto bajo rondré los 5000€ o menos, uno medio sería inferior a 25.000€, y uno que superase esto sería uno alto."/>
-        )}
-  
 
-        {/* <Tooltip text="Un presupuesto bajo rondaría los 5000€ o menos, uno medio sería inferior a 25.000€, y uno que superase esto sería uno alto." />
-        {formulario.question[0]} */}
+       <div className="preguntaInterrogacion">
 
-
-        <div className="questionForm-pack">{formulario.question}</div>
+          <div className="questionForm-pack">{formulario.question}</div>
+          {index === questions.length -6 && (
+            <Tooltip text ="Un presupuesto bajo rondré los 5000€ o menos, uno medio sería inferior a 25.000€, y uno que superase esto sería uno alto."/>
+          )}
+        </div>
         {showWarning && (
           <div className="warning">Por favor, responde todas las preguntas</div>
         )}
@@ -152,7 +134,7 @@ const Main = () => {
           <ActionButton
             label="Enviar"
             onClick={handleConsultoria}
-            className="button"
+            className="button-enviar"
             disabled={answers[questions.length - 1] === undefined}
           />
         ) : (
